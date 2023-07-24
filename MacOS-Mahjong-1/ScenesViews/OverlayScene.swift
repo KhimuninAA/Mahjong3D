@@ -151,7 +151,7 @@ extension OverlayScene {
 
 class GameInfoNode: SKSpriteNode {
     private let proportion: CGFloat = 3
-    private let scale: CGFloat = 0.1
+    private let scale: CGFloat = 0.15
     private var countImageNode: SKSpriteNode?
     private var freeDoubleImageNode: SKSpriteNode?
     private var helpImageNode: SKSpriteNode?

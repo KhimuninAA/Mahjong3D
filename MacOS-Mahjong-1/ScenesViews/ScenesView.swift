@@ -23,6 +23,11 @@ class SceneView: SCNView {
         super.init(frame: frame, options: options)
         initView()
     }
+    
+    override func viewDidMoveToWindow() {
+         //disable retina
+         layer?.contentsScale = 1.0
+    }
 
     required init?(coder: NSCoder) {
         super.init(coder: coder)
@@ -96,6 +101,9 @@ class SceneView: SCNView {
         self.loops = true
         self.isPlaying = true
 
+        //self.showsStatistics = true
+        self.antialiasingMode = .multisampling8X
+        
         scene = SCNScene(named: "SKScene.scnassets/Scene.scn")
 
         self.isJitteringEnabled = true
