@@ -3,4 +3,132 @@
    uuid = "63BEBC63-CD17-4C54-B3D4-2D1722FC203B"
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "254CEED5-3E98-4572-A1E5-D24DAB772369"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MacOS-Mahjong-1/ScenesViews/Items/MaterialUtils.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "166"
+            endingLineNumber = "166"
+            landmarkName = "createMaterialsOld(onProgressAction:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "254CEED5-3E98-4572-A1E5-D24DAB772369 - 5c4bcc8d05c6ad79"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Mahjong.MaterialUtils.getMaterial(by: Mahjong.ItemType) -&gt; __C.SCNMaterial"
+                  moduleName = "Mahjong"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/akhimunin/KhimuninGit/Mahjong3D/MacOS-Mahjong-1/ScenesViews/Items/MaterialUtils.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "166"
+                  endingLineNumber = "166"
+                  offsetFromSymbolStart = "568">
+               </Location>
+               <Location
+                  uuid = "254CEED5-3E98-4572-A1E5-D24DAB772369 - 24521d14ba8f5a69"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Mahjong.MaterialUtils.createMaterialsOld(onProgressAction: Swift.Optional&lt;(CoreGraphics.CGFloat) -&gt; ()&gt;) -&gt; ()"
+                  moduleName = "Mahjong"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/akhimunin/KhimuninGit/Mahjong3D/MacOS-Mahjong-1/ScenesViews/Items/MaterialUtils.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "166"
+                  endingLineNumber = "166"
+                  offsetFromSymbolStart = "7256">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "EA47BA4C-6290-484F-9299-B6DE3B36B634"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MacOS-Mahjong-1/ScenesViews/Items/MaterialUtils.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "81"
+            endingLineNumber = "81"
+            landmarkName = "createMaterials(onProgressAction:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "EA47BA4C-6290-484F-9299-B6DE3B36B634 - f0249a9520e5e15a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Mahjong.MaterialUtils.createMaterials(onProgressAction: Swift.Optional&lt;(CoreGraphics.CGFloat) -&gt; ()&gt;) -&gt; ()"
+                  moduleName = "Mahjong"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/akhimunin/KhimuninGit/Mahjong3D/MacOS-Mahjong-1/ScenesViews/Items/MaterialUtils.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "81"
+                  endingLineNumber = "81"
+                  offsetFromSymbolStart = "5804">
+               </Location>
+               <Location
+                  uuid = "EA47BA4C-6290-484F-9299-B6DE3B36B634 - f0249a9520e5e15a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Mahjong.MaterialUtils.createMaterials(onProgressAction: Swift.Optional&lt;(CoreGraphics.CGFloat) -&gt; ()&gt;) -&gt; ()"
+                  moduleName = "Mahjong"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/akhimunin/KhimuninGit/Mahjong3D/MacOS-Mahjong-1/ScenesViews/Items/MaterialUtils.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "81"
+                  endingLineNumber = "81"
+                  offsetFromSymbolStart = "6292">
+               </Location>
+               <Location
+                  uuid = "EA47BA4C-6290-484F-9299-B6DE3B36B634 - f0249a9520e5e15a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Mahjong.MaterialUtils.createMaterials(onProgressAction: Swift.Optional&lt;(CoreGraphics.CGFloat) -&gt; ()&gt;) -&gt; ()"
+                  moduleName = "Mahjong"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/akhimunin/KhimuninGit/Mahjong3D/MacOS-Mahjong-1/ScenesViews/Items/MaterialUtils.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "81"
+                  endingLineNumber = "81"
+                  offsetFromSymbolStart = "5816">
+               </Location>
+               <Location
+                  uuid = "EA47BA4C-6290-484F-9299-B6DE3B36B634 - f0249a9520e5e15a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Mahjong.MaterialUtils.createMaterials(onProgressAction: Swift.Optional&lt;(CoreGraphics.CGFloat) -&gt; ()&gt;) -&gt; ()"
+                  moduleName = "Mahjong"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/akhimunin/KhimuninGit/Mahjong3D/MacOS-Mahjong-1/ScenesViews/Items/MaterialUtils.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "81"
+                  endingLineNumber = "81"
+                  offsetFromSymbolStart = "6304">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum ItemType: CaseIterable {
+enum ItemType: Int, CaseIterable {
     case sou1
     case sou2
     case sou3

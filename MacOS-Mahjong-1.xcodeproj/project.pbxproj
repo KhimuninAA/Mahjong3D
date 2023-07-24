@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BF52129D2A6E4E4A00F72B5A /* MaterialUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF52129C2A6E4E4A00F72B5A /* MaterialUtils.swift */; };
+		BF52129F2A6E6B1600F72B5A /* items.png in Resources */ = {isa = PBXBuildFile; fileRef = BF52129E2A6E6B1600F72B5A /* items.png */; };
 		BFCE109E2A690B50004043FF /* ItemNone.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCE109D2A690B50004043FF /* ItemNone.swift */; };
 		BFCE10A62A6916C6004043FF /* TexturesCom_Metal_SteelRough2_1K_ao.tif in Resources */ = {isa = PBXBuildFile; fileRef = BFCE10A12A6916C6004043FF /* TexturesCom_Metal_SteelRough2_1K_ao.tif */; };
 		BFCE10A72A6916C6004043FF /* TexturesCom_Metal_SteelRough2_1K_metallic.tif in Resources */ = {isa = PBXBuildFile; fileRef = BFCE10A22A6916C6004043FF /* TexturesCom_Metal_SteelRough2_1K_metallic.tif */; };
@@ -71,6 +73,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BF52129C2A6E4E4A00F72B5A /* MaterialUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaterialUtils.swift; sourceTree = "<group>"; };
+		BF52129E2A6E6B1600F72B5A /* items.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = items.png; sourceTree = "<group>"; };
 		BFCE109D2A690B50004043FF /* ItemNone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemNone.swift; sourceTree = "<group>"; };
 		BFCE10A12A6916C6004043FF /* TexturesCom_Metal_SteelRough2_1K_ao.tif */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = TexturesCom_Metal_SteelRough2_1K_ao.tif; sourceTree = "<group>"; };
 		BFCE10A22A6916C6004043FF /* TexturesCom_Metal_SteelRough2_1K_metallic.tif */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = TexturesCom_Metal_SteelRough2_1K_metallic.tif; sourceTree = "<group>"; };
@@ -154,6 +158,7 @@
 				BFCE10FA2A694CB4004043FF /* Pos.swift */,
 				BFCE10FC2A694E0C004043FF /* Level.swift */,
 				BFCE10FE2A695980004043FF /* ItemType.swift */,
+				BF52129C2A6E4E4A00F72B5A /* MaterialUtils.swift */,
 			);
 			path = Items;
 			sourceTree = "<group>";
@@ -272,6 +277,7 @@
 		FDB11BFA2A69813500507D49 /* ItemsNew */ = {
 			isa = PBXGroup;
 			children = (
+				BF52129E2A6E6B1600F72B5A /* items.png */,
 				FDB11C312A69B64600507D49 /* Chun.png */,
 				FDB11C362A69B64600507D49 /* Haku.png */,
 				FDB11C352A69B64600507D49 /* Hatsu.png */,
@@ -414,6 +420,7 @@
 				BFCE10AA2A6916C6004043FF /* TexturesCom_Metal_SteelRough2_1K_normal.tif in Resources */,
 				FD8D3BD62A6C24A2001B4547 /* TexturesCom_Wood_TeakVeneer_512_normal.tif in Resources */,
 				FD8D3BD72A6C24A2001B4547 /* TexturesCom_Wood_TeakVeneer_512_albedo.tif in Resources */,
+				BF52129F2A6E6B1600F72B5A /* items.png in Resources */,
 				FDB11C2C2A69B35000507D49 /* Pin9.png in Resources */,
 				FDB11C162A69B0D000507D49 /* Man7.png in Resources */,
 				FDB11C2D2A69B35000507D49 /* Pin1.png in Resources */,
@@ -436,6 +443,7 @@
 				BFCE10FF2A695980004043FF /* ItemType.swift in Sources */,
 				BFCE10FD2A694E0C004043FF /* Level.swift in Sources */,
 				BFCE10FB2A694CB4004043FF /* Pos.swift in Sources */,
+				BF52129D2A6E4E4A00F72B5A /* MaterialUtils.swift in Sources */,
 				BFCE109E2A690B50004043FF /* ItemNone.swift in Sources */,
 				BFD8A9E52A6906E700F679CA /* RootView.swift in Sources */,
 				FD8D3BCA2A6B003A001B4547 /* OverlayScene.swift in Sources */,

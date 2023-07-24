@@ -159,7 +159,7 @@ extension ItemNone {
         itemMaterial.locksAmbientWithDiffuse = true
         itemMaterial.diffuse.contents = nil
         itemMaterial.lightingModel = .physicallyBased
-        itemMaterial.isDoubleSided = false //true //false
+        itemMaterial.isDoubleSided = false
         itemMaterial.normal.contents = NSImage(named: "TexturesCom_Metal_SteelRough2_1K_normal")
         itemMaterial.metalness.contents = NSImage(named: "TexturesCom_Metal_SteelRough2_1K_metallic")
         itemMaterial.roughness.contents = NSImage(named: "TexturesCom_Metal_SteelRough2_1K_roughness")
@@ -177,13 +177,11 @@ extension ItemNone {
         return itemMaterial
     }
 
-    static func make(baseMaterial: SCNMaterial, type: ItemType) -> ItemNone {
+    static func make(baseMaterial: SCNMaterial, material: SCNMaterial, type: ItemType) -> ItemNone {
         let itemGeometry: SCNGeometry? = SCNBox(width: ItemNone.size.x, height: ItemNone.size.y, length: ItemNone.size.z, chamferRadius: 0.05)
         let itemNode = ItemNone(geometry: itemGeometry, type: type)
 
-        let itemMaterial = baseMaterial.updateType(type)
-
-        itemNode.geometry?.materials = [baseMaterial, baseMaterial, baseMaterial, baseMaterial, itemMaterial, baseMaterial]
+        itemNode.geometry?.materials = [baseMaterial, baseMaterial, baseMaterial, baseMaterial, material, baseMaterial]
 
         return itemNode
     }

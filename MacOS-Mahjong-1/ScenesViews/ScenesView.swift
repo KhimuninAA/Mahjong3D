@@ -16,6 +16,7 @@ class SceneView: SCNView {
     var lightTick: CGFloat = 0
     var selectItemNode: ItemNone?
     var centerPoint: CGPoint = CGPoint(x: 0, y: 0)
+    private var materialUtils = MaterialUtils()
     private var overlayScene: OverlayScene?
 
     override init(frame: NSRect, options: [String : Any]? = nil) {
@@ -131,7 +132,7 @@ class SceneView: SCNView {
     private func createPole() {
         overlayScene?.progressViewHidden(false)
         doskaNode?.isHidden = true
-        let baseMaterial = ItemNone.getMaterial(mergeImage: nil)
+        let baseMaterial = materialUtils.getBaseMaterial()
         let level = Level.level2()
 
         //144
@@ -141,8 +142,12 @@ class SceneView: SCNView {
         var minY: CGFloat = CGFLOAT_MAX
         
         //background userInitiated
-        DispatchQueue.global(qos: .background).async { [weak self] in
+        //DispatchQueue.global(qos: .background).async { [weak self] in
             // All types
+            self.materialUtils.createMaterials(onProgressAction: { [weak self] progress in
+                self?.overlayScene?.progressViewSetProgress(progress)
+            })
+
             let typeCount = ItemType.allCases.count
             var types: [ItemType] = [ItemType]()
             for i in 0...typeCount-1 {
@@ -153,7 +158,7 @@ class SceneView: SCNView {
             
             for pos in level {
                 let progress = CGFloat(level.count - types.count)/CGFloat(level.count)
-                self?.overlayScene?.progressViewSetProgress(progress)
+                self.overlayScene?.progressViewSetProgress(progress)
                 //
                 let typesCount = types.count
                 let currentType: ItemType
@@ -166,10 +171,11 @@ class SceneView: SCNView {
                     print("Add haku!!!!!")
                 }
                 //
-                let item = ItemNone.make(baseMaterial: baseMaterial, type: currentType)
+                let material = self.materialUtils.getMaterial(by: currentType) ?? SCNMaterial()
+                let item = ItemNone.make(baseMaterial: baseMaterial, material: material, type: currentType)
                 item.pos = pos
                 item.position = item.defaultVector3()
-                self?.doskaNode?.addChildNode(item)
+                self.doskaNode?.addChildNode(item)
                 if maxX < item.position.x {
                     maxX = item.position.x
                 }
@@ -185,13 +191,13 @@ class SceneView: SCNView {
                 }
             }
             let cen = CGPoint(x: minX + (maxX - minX) * 0.5, y: minY + (maxY - minY) * 0.5)
-            self?.centerPoint = cen
+            self.centerPoint = cen
 
-            DispatchQueue.main.async { [weak self] in
-                self?.calcGameInfo()
-                self?.updateCameraAndDoska()
-            }
-        }
+            //DispatchQueue.main.async { [weak self] in
+                self.calcGameInfo()
+                self.updateCameraAndDoska()
+            //}
+        //}
     }
     
     private func updateCameraAndDoska() {
