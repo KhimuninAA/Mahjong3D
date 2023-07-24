@@ -97,6 +97,8 @@ class SceneView: SCNView {
         self.isPlaying = true
 
         scene = SCNScene(named: "SKScene.scnassets/Scene.scn")
+
+        self.isJitteringEnabled = true
         
         overlayScene = OverlayScene(size: bounds.size)
         overlayScene?.isHelpAction = { [weak self] in
