@@ -107,7 +107,8 @@ class SceneView: SCNView {
         scene = SCNScene(named: "SKScene.scnassets/Scene.scn")
 
         self.isJitteringEnabled = true
-        
+        preferredFramesPerSecond = 30
+
         overlayScene = OverlayScene(size: bounds.size)
         overlayScene?.isHelpAction = { [weak self] in
             self?.showAccessDouble()

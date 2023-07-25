@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		BF52129D2A6E4E4A00F72B5A /* MaterialUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF52129C2A6E4E4A00F72B5A /* MaterialUtils.swift */; };
 		BF52129F2A6E6B1600F72B5A /* items.png in Resources */ = {isa = PBXBuildFile; fileRef = BF52129E2A6E6B1600F72B5A /* items.png */; };
+		BF5212A82A6F92A400F72B5A /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5212A62A6F92A400F72B5A /* AboutView.swift */; };
+		BF5212A92A6F92A400F72B5A /* HelpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5212A72A6F92A400F72B5A /* HelpView.swift */; };
 		BFCE109E2A690B50004043FF /* ItemNone.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCE109D2A690B50004043FF /* ItemNone.swift */; };
 		BFCE10A62A6916C6004043FF /* TexturesCom_Metal_SteelRough2_1K_ao.tif in Resources */ = {isa = PBXBuildFile; fileRef = BFCE10A12A6916C6004043FF /* TexturesCom_Metal_SteelRough2_1K_ao.tif */; };
 		BFCE10A72A6916C6004043FF /* TexturesCom_Metal_SteelRough2_1K_metallic.tif in Resources */ = {isa = PBXBuildFile; fileRef = BFCE10A22A6916C6004043FF /* TexturesCom_Metal_SteelRough2_1K_metallic.tif */; };
@@ -34,47 +36,13 @@
 		FD8D3BD52A6C24A2001B4547 /* TexturesCom_Wood_TeakVeneer_512_roughness.tif in Resources */ = {isa = PBXBuildFile; fileRef = FD8D3BD22A6C24A2001B4547 /* TexturesCom_Wood_TeakVeneer_512_roughness.tif */; };
 		FD8D3BD62A6C24A2001B4547 /* TexturesCom_Wood_TeakVeneer_512_normal.tif in Resources */ = {isa = PBXBuildFile; fileRef = FD8D3BD32A6C24A2001B4547 /* TexturesCom_Wood_TeakVeneer_512_normal.tif */; };
 		FD8D3BD72A6C24A2001B4547 /* TexturesCom_Wood_TeakVeneer_512_albedo.tif in Resources */ = {isa = PBXBuildFile; fileRef = FD8D3BD42A6C24A2001B4547 /* TexturesCom_Wood_TeakVeneer_512_albedo.tif */; };
-		FDB11C042A69815300507D49 /* Sou2.png in Resources */ = {isa = PBXBuildFile; fileRef = FDB11BFB2A69815300507D49 /* Sou2.png */; };
-		FDB11C052A69815300507D49 /* Sou9.png in Resources */ = {isa = PBXBuildFile; fileRef = FDB11BFC2A69815300507D49 /* Sou9.png */; };
-		FDB11C062A69815300507D49 /* Sou3.png in Resources */ = {isa = PBXBuildFile; fileRef = FDB11BFD2A69815300507D49 /* Sou3.png */; };
-		FDB11C072A69815300507D49 /* Sou8.png in Resources */ = {isa = PBXBuildFile; fileRef = FDB11BFE2A69815300507D49 /* Sou8.png */; };
-		FDB11C082A69815300507D49 /* Sou4.png in Resources */ = {isa = PBXBuildFile; fileRef = FDB11BFF2A69815300507D49 /* Sou4.png */; };
-		FDB11C092A69815300507D49 /* Sou1.png in Resources */ = {isa = PBXBuildFile; fileRef = FDB11C002A69815300507D49 /* Sou1.png */; };
-		FDB11C0A2A69815300507D49 /* Sou7.png in Resources */ = {isa = PBXBuildFile; fileRef = FDB11C012A69815300507D49 /* Sou7.png */; };
-		FDB11C0B2A69815300507D49 /* Sou6.png in Resources */ = {isa = PBXBuildFile; fileRef = FDB11C022A69815300507D49 /* Sou6.png */; };
-		FDB11C0C2A69815300507D49 /* Sou5.png in Resources */ = {isa = PBXBuildFile; fileRef = FDB11C032A69815300507D49 /* Sou5.png */; };
-		FDB11C162A69B0D000507D49 /* Man7.png in Resources */ = {isa = PBXBuildFile; fileRef = FDB11C0D2A69B0D000507D49 /* Man7.png */; };
-		FDB11C172A69B0D000507D49 /* Man4.png in Resources */ = {isa = PBXBuildFile; fileRef = FDB11C0E2A69B0D000507D49 /* Man4.png */; };
-		FDB11C182A69B0D000507D49 /* Man3.png in Resources */ = {isa = PBXBuildFile; fileRef = FDB11C0F2A69B0D000507D49 /* Man3.png */; };
-		FDB11C192A69B0D000507D49 /* Man5.png in Resources */ = {isa = PBXBuildFile; fileRef = FDB11C102A69B0D000507D49 /* Man5.png */; };
-		FDB11C1A2A69B0D000507D49 /* Man9.png in Resources */ = {isa = PBXBuildFile; fileRef = FDB11C112A69B0D000507D49 /* Man9.png */; };
-		FDB11C1B2A69B0D000507D49 /* Man6.png in Resources */ = {isa = PBXBuildFile; fileRef = FDB11C122A69B0D000507D49 /* Man6.png */; };
-		FDB11C1C2A69B0D000507D49 /* Man8.png in Resources */ = {isa = PBXBuildFile; fileRef = FDB11C132A69B0D000507D49 /* Man8.png */; };
-		FDB11C1D2A69B0D000507D49 /* Man1.png in Resources */ = {isa = PBXBuildFile; fileRef = FDB11C142A69B0D000507D49 /* Man1.png */; };
-		FDB11C1E2A69B0D000507D49 /* Man2.png in Resources */ = {isa = PBXBuildFile; fileRef = FDB11C152A69B0D000507D49 /* Man2.png */; };
-		FDB11C282A69B35000507D49 /* Pin2.png in Resources */ = {isa = PBXBuildFile; fileRef = FDB11C1F2A69B35000507D49 /* Pin2.png */; };
-		FDB11C292A69B35000507D49 /* Pin8.png in Resources */ = {isa = PBXBuildFile; fileRef = FDB11C202A69B35000507D49 /* Pin8.png */; };
-		FDB11C2A2A69B35000507D49 /* Pin7.png in Resources */ = {isa = PBXBuildFile; fileRef = FDB11C212A69B35000507D49 /* Pin7.png */; };
-		FDB11C2B2A69B35000507D49 /* Pin3.png in Resources */ = {isa = PBXBuildFile; fileRef = FDB11C222A69B35000507D49 /* Pin3.png */; };
-		FDB11C2C2A69B35000507D49 /* Pin9.png in Resources */ = {isa = PBXBuildFile; fileRef = FDB11C232A69B35000507D49 /* Pin9.png */; };
-		FDB11C2D2A69B35000507D49 /* Pin1.png in Resources */ = {isa = PBXBuildFile; fileRef = FDB11C242A69B35000507D49 /* Pin1.png */; };
-		FDB11C2E2A69B35000507D49 /* Pin4.png in Resources */ = {isa = PBXBuildFile; fileRef = FDB11C252A69B35000507D49 /* Pin4.png */; };
-		FDB11C2F2A69B35000507D49 /* Pin5.png in Resources */ = {isa = PBXBuildFile; fileRef = FDB11C262A69B35000507D49 /* Pin5.png */; };
-		FDB11C302A69B35000507D49 /* Pin6.png in Resources */ = {isa = PBXBuildFile; fileRef = FDB11C272A69B35000507D49 /* Pin6.png */; };
-		FDB11C382A69B64600507D49 /* Chun.png in Resources */ = {isa = PBXBuildFile; fileRef = FDB11C312A69B64600507D49 /* Chun.png */; };
-		FDB11C392A69B64600507D49 /* Ton.png in Resources */ = {isa = PBXBuildFile; fileRef = FDB11C322A69B64600507D49 /* Ton.png */; };
-		FDB11C3A2A69B64600507D49 /* Shaa.png in Resources */ = {isa = PBXBuildFile; fileRef = FDB11C332A69B64600507D49 /* Shaa.png */; };
-		FDB11C3B2A69B64600507D49 /* Pei.png in Resources */ = {isa = PBXBuildFile; fileRef = FDB11C342A69B64600507D49 /* Pei.png */; };
-		FDB11C3C2A69B64600507D49 /* Hatsu.png in Resources */ = {isa = PBXBuildFile; fileRef = FDB11C352A69B64600507D49 /* Hatsu.png */; };
-		FDB11C3D2A69B64600507D49 /* Haku.png in Resources */ = {isa = PBXBuildFile; fileRef = FDB11C362A69B64600507D49 /* Haku.png */; };
-		FDB11C3E2A69B64600507D49 /* Nan.png in Resources */ = {isa = PBXBuildFile; fileRef = FDB11C372A69B64600507D49 /* Nan.png */; };
-		FDB11C492A69BDD700507D49 /* flow1.png in Resources */ = {isa = PBXBuildFile; fileRef = FDB11C472A69BDD700507D49 /* flow1.png */; };
-		FDB11C4A2A69BDD700507D49 /* flow2.png in Resources */ = {isa = PBXBuildFile; fileRef = FDB11C482A69BDD700507D49 /* flow2.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		BF52129C2A6E4E4A00F72B5A /* MaterialUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaterialUtils.swift; sourceTree = "<group>"; };
 		BF52129E2A6E6B1600F72B5A /* items.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = items.png; sourceTree = "<group>"; };
+		BF5212A62A6F92A400F72B5A /* AboutView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
+		BF5212A72A6F92A400F72B5A /* HelpView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelpView.swift; sourceTree = "<group>"; };
 		BFCE109D2A690B50004043FF /* ItemNone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemNone.swift; sourceTree = "<group>"; };
 		BFCE10A12A6916C6004043FF /* TexturesCom_Metal_SteelRough2_1K_ao.tif */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = TexturesCom_Metal_SteelRough2_1K_ao.tif; sourceTree = "<group>"; };
 		BFCE10A22A6916C6004043FF /* TexturesCom_Metal_SteelRough2_1K_metallic.tif */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = TexturesCom_Metal_SteelRough2_1K_metallic.tif; sourceTree = "<group>"; };
@@ -241,6 +209,8 @@
 		BFD8A9E32A6906D200F679CA /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				BF5212A62A6F92A400F72B5A /* AboutView.swift */,
+				BF5212A72A6F92A400F72B5A /* HelpView.swift */,
 				BFD8A9E42A6906E700F679CA /* RootView.swift */,
 			);
 			path = Views;
@@ -376,60 +346,24 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FDB11C3E2A69B64600507D49 /* Nan.png in Resources */,
 				BFCE11022A695D59004043FF /* env_star.png in Resources */,
 				BFCE10A92A6916C6004043FF /* TexturesCom_Metal_SteelRough2_1K_roughness.tif in Resources */,
-				FDB11C3C2A69B64600507D49 /* Hatsu.png in Resources */,
 				BFD8A9D92A69063A00F679CA /* Assets.xcassets in Resources */,
-				FDB11C392A69B64600507D49 /* Ton.png in Resources */,
-				FDB11C382A69B64600507D49 /* Chun.png in Resources */,
 				BFCE10A72A6916C6004043FF /* TexturesCom_Metal_SteelRough2_1K_metallic.tif in Resources */,
 				BFD8A9EB2A69087600F679CA /* SKScene.scnassets in Resources */,
-				FDB11C192A69B0D000507D49 /* Man5.png in Resources */,
-				FDB11C4A2A69BDD700507D49 /* flow2.png in Resources */,
 				BFCE10D32A691841004043FF /* Front.png in Resources */,
 				BFCE10F92A692990004043FF /* TexturesCom_Marble_SlabWhite2_New_512_albedo.tif in Resources */,
-				FDB11C292A69B35000507D49 /* Pin8.png in Resources */,
 				FD8D3BD52A6C24A2001B4547 /* TexturesCom_Wood_TeakVeneer_512_roughness.tif in Resources */,
-				FDB11C0A2A69815300507D49 /* Sou7.png in Resources */,
-				FDB11C2E2A69B35000507D49 /* Pin4.png in Resources */,
-				FDB11C3A2A69B64600507D49 /* Shaa.png in Resources */,
-				FDB11C092A69815300507D49 /* Sou1.png in Resources */,
-				FDB11C0B2A69815300507D49 /* Sou6.png in Resources */,
 				FD8D3BD02A6B1A3D001B4547 /* help_blue.png in Resources */,
-				FDB11C282A69B35000507D49 /* Pin2.png in Resources */,
-				FDB11C1B2A69B0D000507D49 /* Man6.png in Resources */,
-				FDB11C042A69815300507D49 /* Sou2.png in Resources */,
-				FDB11C062A69815300507D49 /* Sou3.png in Resources */,
 				BFCE10A62A6916C6004043FF /* TexturesCom_Metal_SteelRough2_1K_ao.tif in Resources */,
-				FDB11C2A2A69B35000507D49 /* Pin7.png in Resources */,
-				FDB11C2F2A69B35000507D49 /* Pin5.png in Resources */,
-				FDB11C1E2A69B0D000507D49 /* Man2.png in Resources */,
 				BFD8A9DC2A69063A00F679CA /* MainMenu.xib in Resources */,
-				FDB11C302A69B35000507D49 /* Pin6.png in Resources */,
 				BFCE10A82A6916C6004043FF /* TexturesCom_Metal_SteelRough2_1K_albedo.tif in Resources */,
-				FDB11C492A69BDD700507D49 /* flow1.png in Resources */,
-				FDB11C172A69B0D000507D49 /* Man4.png in Resources */,
 				FD8D3BCE2A6B19F8001B4547 /* mahjong_double.png in Resources */,
-				FDB11C1D2A69B0D000507D49 /* Man1.png in Resources */,
-				FDB11C1A2A69B0D000507D49 /* Man9.png in Resources */,
 				FD8D3BCD2A6B19F8001B4547 /* mahjong.png in Resources */,
-				FDB11C3B2A69B64600507D49 /* Pei.png in Resources */,
-				FDB11C3D2A69B64600507D49 /* Haku.png in Resources */,
-				FDB11C0C2A69815300507D49 /* Sou5.png in Resources */,
 				BFCE10AA2A6916C6004043FF /* TexturesCom_Metal_SteelRough2_1K_normal.tif in Resources */,
 				FD8D3BD62A6C24A2001B4547 /* TexturesCom_Wood_TeakVeneer_512_normal.tif in Resources */,
 				FD8D3BD72A6C24A2001B4547 /* TexturesCom_Wood_TeakVeneer_512_albedo.tif in Resources */,
 				BF52129F2A6E6B1600F72B5A /* items.png in Resources */,
-				FDB11C2C2A69B35000507D49 /* Pin9.png in Resources */,
-				FDB11C162A69B0D000507D49 /* Man7.png in Resources */,
-				FDB11C2D2A69B35000507D49 /* Pin1.png in Resources */,
-				FDB11C182A69B0D000507D49 /* Man3.png in Resources */,
-				FDB11C072A69815300507D49 /* Sou8.png in Resources */,
-				FDB11C052A69815300507D49 /* Sou9.png in Resources */,
-				FDB11C082A69815300507D49 /* Sou4.png in Resources */,
-				FDB11C2B2A69B35000507D49 /* Pin3.png in Resources */,
-				FDB11C1C2A69B0D000507D49 /* Man8.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -444,6 +378,8 @@
 				BFCE10FD2A694E0C004043FF /* Level.swift in Sources */,
 				BFCE10FB2A694CB4004043FF /* Pos.swift in Sources */,
 				BF52129D2A6E4E4A00F72B5A /* MaterialUtils.swift in Sources */,
+				BF5212A82A6F92A400F72B5A /* AboutView.swift in Sources */,
+				BF5212A92A6F92A400F72B5A /* HelpView.swift in Sources */,
 				BFCE109E2A690B50004043FF /* ItemNone.swift in Sources */,
 				BFD8A9E52A6906E700F679CA /* RootView.swift in Sources */,
 				FD8D3BCA2A6B003A001B4547 /* OverlayScene.swift in Sources */,
@@ -588,7 +524,7 @@
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_TEAM = UBMXWK5W6B;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -618,7 +554,7 @@
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_TEAM = UBMXWK5W6B;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
