@@ -157,10 +157,7 @@ class SceneView: SCNView {
         doskaNode?.isHidden = true
         let baseMaterial = materialUtils.getBaseMaterial()
 
-        //let level = levelsData.currentLevel().type.levelPos()
-        //Level.level2()
-
-        let level = LayoutLevels.getLevel()
+        let level = levelsData.currentLevel().type.levelPos()
 
         //144 204
         var maxX: CGFloat = 0
@@ -234,7 +231,18 @@ class SceneView: SCNView {
         if let doskaNode = doskaNode, let cameraNode = cameraNode {
             doskaNode.pivot = SCNMatrix4MakeTranslation(centerPoint.x, 0, centerPoint.y);
             doskaNode.position = SCNVector3Make(centerPoint.x, 0, centerPoint.y)
-            let z = 2 * max(centerPoint.x - ItemNone.paddingTop, centerPoint.y - ItemNone.paddingLeft) + 1
+            
+            let scaleY: CGFloat = 1 //self.bounds.width / self.bounds.height
+            let maxY = scaleY * (centerPoint.y - ItemNone.paddingLeft)
+            let maxCatet = max(centerPoint.x - ItemNone.paddingTop, maxY)
+            
+            let angle = cameraNode.camera?.fieldOfView ?? 0
+            
+            //let d = cameraNode.camera?.yFov
+
+            let dZ = maxCatet * tan((90 - 0.5 * angle) * CGFloat.pi / 180)
+            print("A: \(maxCatet) B: \(dZ) scale: \(scaleY)")
+            let z = dZ + 2 //2 * maxCatet + 1
             cameraNode.position = SCNVector3Make(centerPoint.x, z, centerPoint.y)
         }
         overlayScene?.progressViewHidden(true)
@@ -272,6 +280,15 @@ extension SceneView {
 
         let turnPageTrackingArea = NSTrackingArea(rect: self.bounds, options: NSTrackingArea.Options(rawValue: opt), owner: self, userInfo: nil)
         self.addTrackingArea(turnPageTrackingArea)
+    }
+    
+    override func scrollWheel(with event: NSEvent) {
+        let lenCam = event.deltaY
+        
+        if var camPos = cameraNode?.position {
+            camPos.y += (lenCam * 0.01)
+            cameraNode?.position = camPos
+        }
     }
     
     override func mouseMoved(with event: NSEvent) {

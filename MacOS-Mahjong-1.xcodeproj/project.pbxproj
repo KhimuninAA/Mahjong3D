@@ -35,6 +35,17 @@
 		BFD8A9E52A6906E700F679CA /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD8A9E42A6906E700F679CA /* RootView.swift */; };
 		BFD8A9E82A69071D00F679CA /* ScenesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD8A9E72A69071D00F679CA /* ScenesView.swift */; };
 		BFD8A9EB2A69087600F679CA /* SKScene.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = BFD8A9EA2A69087600F679CA /* SKScene.scnassets */; };
+		FD018BFE2A70170F00552F80 /* grid.layout in Resources */ = {isa = PBXBuildFile; fileRef = FD018BFD2A70170F00552F80 /* grid.layout */; };
+		FD018C002A70193F00552F80 /* glade.layout in Resources */ = {isa = PBXBuildFile; fileRef = FD018BFF2A70193F00552F80 /* glade.layout */; };
+		FD018C022A70194400552F80 /* girl.layout in Resources */ = {isa = PBXBuildFile; fileRef = FD018C012A70194300552F80 /* girl.layout */; };
+		FD018C0A2A701AB000552F80 /* enterprise.layout in Resources */ = {isa = PBXBuildFile; fileRef = FD018C032A701AB000552F80 /* enterprise.layout */; };
+		FD018C0B2A701AB000552F80 /* galaxy.layout in Resources */ = {isa = PBXBuildFile; fileRef = FD018C042A701AB000552F80 /* galaxy.layout */; };
+		FD018C0C2A701AB000552F80 /* garden.layout in Resources */ = {isa = PBXBuildFile; fileRef = FD018C052A701AB000552F80 /* garden.layout */; };
+		FD018C0D2A701AB000552F80 /* eagle.layout in Resources */ = {isa = PBXBuildFile; fileRef = FD018C062A701AB000552F80 /* eagle.layout */; };
+		FD018C0E2A701AB000552F80 /* explosion.layout in Resources */ = {isa = PBXBuildFile; fileRef = FD018C072A701AB000552F80 /* explosion.layout */; };
+		FD018C0F2A701AB000552F80 /* flowers.layout in Resources */ = {isa = PBXBuildFile; fileRef = FD018C082A701AB000552F80 /* flowers.layout */; };
+		FD018C102A701AB000552F80 /* future.layout in Resources */ = {isa = PBXBuildFile; fileRef = FD018C092A701AB000552F80 /* future.layout */; };
+		FD018C122A701C2C00552F80 /* dragon.layout in Resources */ = {isa = PBXBuildFile; fileRef = FD018C112A701C2C00552F80 /* dragon.layout */; };
 		FD8D3BCA2A6B003A001B4547 /* OverlayScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD8D3BC92A6B003A001B4547 /* OverlayScene.swift */; };
 		FD8D3BCD2A6B19F8001B4547 /* mahjong.png in Resources */ = {isa = PBXBuildFile; fileRef = FD8D3BCB2A6B19F8001B4547 /* mahjong.png */; };
 		FD8D3BCE2A6B19F8001B4547 /* mahjong_double.png in Resources */ = {isa = PBXBuildFile; fileRef = FD8D3BCC2A6B19F8001B4547 /* mahjong_double.png */; };
@@ -75,6 +86,17 @@
 		BFD8A9E42A6906E700F679CA /* RootView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		BFD8A9E72A69071D00F679CA /* ScenesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScenesView.swift; sourceTree = "<group>"; };
 		BFD8A9EA2A69087600F679CA /* SKScene.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = SKScene.scnassets; sourceTree = "<group>"; };
+		FD018BFD2A70170F00552F80 /* grid.layout */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = grid.layout; sourceTree = "<group>"; };
+		FD018BFF2A70193F00552F80 /* glade.layout */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = glade.layout; sourceTree = "<group>"; };
+		FD018C012A70194300552F80 /* girl.layout */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = girl.layout; sourceTree = "<group>"; };
+		FD018C032A701AB000552F80 /* enterprise.layout */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = enterprise.layout; sourceTree = "<group>"; };
+		FD018C042A701AB000552F80 /* galaxy.layout */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = galaxy.layout; sourceTree = "<group>"; };
+		FD018C052A701AB000552F80 /* garden.layout */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = garden.layout; sourceTree = "<group>"; };
+		FD018C062A701AB000552F80 /* eagle.layout */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = eagle.layout; sourceTree = "<group>"; };
+		FD018C072A701AB000552F80 /* explosion.layout */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = explosion.layout; sourceTree = "<group>"; };
+		FD018C082A701AB000552F80 /* flowers.layout */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = flowers.layout; sourceTree = "<group>"; };
+		FD018C092A701AB000552F80 /* future.layout */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = future.layout; sourceTree = "<group>"; };
+		FD018C112A701C2C00552F80 /* dragon.layout */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = dragon.layout; sourceTree = "<group>"; };
 		FD8D3BC92A6B003A001B4547 /* OverlayScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverlayScene.swift; sourceTree = "<group>"; };
 		FD8D3BCB2A6B19F8001B4547 /* mahjong.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mahjong.png; sourceTree = "<group>"; };
 		FD8D3BCC2A6B19F8001B4547 /* mahjong_double.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mahjong_double.png; sourceTree = "<group>"; };
@@ -160,7 +182,18 @@
 		BF5212C32A6FF46E00F72B5A /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				FD018BFD2A70170F00552F80 /* grid.layout */,
 				BF5212C42A6FF47F00F72B5A /* rocket.layout */,
+				FD018BFF2A70193F00552F80 /* glade.layout */,
+				FD018C012A70194300552F80 /* girl.layout */,
+				FD018C062A701AB000552F80 /* eagle.layout */,
+				FD018C032A701AB000552F80 /* enterprise.layout */,
+				FD018C072A701AB000552F80 /* explosion.layout */,
+				FD018C082A701AB000552F80 /* flowers.layout */,
+				FD018C092A701AB000552F80 /* future.layout */,
+				FD018C042A701AB000552F80 /* galaxy.layout */,
+				FD018C052A701AB000552F80 /* garden.layout */,
+				FD018C112A701C2C00552F80 /* dragon.layout */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -401,20 +434,31 @@
 				BF5212C52A6FF47F00F72B5A /* rocket.layout in Resources */,
 				BFD8A9D92A69063A00F679CA /* Assets.xcassets in Resources */,
 				BFCE10A72A6916C6004043FF /* TexturesCom_Metal_SteelRough2_1K_metallic.tif in Resources */,
+				FD018C0C2A701AB000552F80 /* garden.layout in Resources */,
 				BFD8A9EB2A69087600F679CA /* SKScene.scnassets in Resources */,
 				BFCE10D32A691841004043FF /* Front.png in Resources */,
+				FD018C0F2A701AB000552F80 /* flowers.layout in Resources */,
+				FD018BFE2A70170F00552F80 /* grid.layout in Resources */,
 				BFCE10F92A692990004043FF /* TexturesCom_Marble_SlabWhite2_New_512_albedo.tif in Resources */,
+				FD018C102A701AB000552F80 /* future.layout in Resources */,
+				FD018C0D2A701AB000552F80 /* eagle.layout in Resources */,
+				FD018C0B2A701AB000552F80 /* galaxy.layout in Resources */,
 				FD8D3BD52A6C24A2001B4547 /* TexturesCom_Wood_TeakVeneer_512_roughness.tif in Resources */,
 				FD8D3BD02A6B1A3D001B4547 /* help_blue.png in Resources */,
 				BF5212AF2A6FB30300F72B5A /* check_icon16.png in Resources */,
 				BFCE10A62A6916C6004043FF /* TexturesCom_Metal_SteelRough2_1K_ao.tif in Resources */,
+				FD018C0A2A701AB000552F80 /* enterprise.layout in Resources */,
 				BFD8A9DC2A69063A00F679CA /* MainMenu.xib in Resources */,
+				FD018C122A701C2C00552F80 /* dragon.layout in Resources */,
 				BFCE10A82A6916C6004043FF /* TexturesCom_Metal_SteelRough2_1K_albedo.tif in Resources */,
 				FD8D3BCE2A6B19F8001B4547 /* mahjong_double.png in Resources */,
+				FD018C002A70193F00552F80 /* glade.layout in Resources */,
 				FD8D3BCD2A6B19F8001B4547 /* mahjong.png in Resources */,
 				BFCE10AA2A6916C6004043FF /* TexturesCom_Metal_SteelRough2_1K_normal.tif in Resources */,
 				FD8D3BD62A6C24A2001B4547 /* TexturesCom_Wood_TeakVeneer_512_normal.tif in Resources */,
 				FD8D3BD72A6C24A2001B4547 /* TexturesCom_Wood_TeakVeneer_512_albedo.tif in Resources */,
+				FD018C0E2A701AB000552F80 /* explosion.layout in Resources */,
+				FD018C022A70194400552F80 /* girl.layout in Resources */,
 				BF5212AD2A6FB28E00F72B5A /* check_icon.png in Resources */,
 				BF52129F2A6E6B1600F72B5A /* items.png in Resources */,
 			);
