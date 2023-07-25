@@ -18,6 +18,18 @@ class SceneView: SCNView {
     var centerPoint: CGPoint = CGPoint(x: 0, y: 0)
     private var materialUtils = MaterialUtils()
     private var overlayScene: OverlayScene?
+    private var levelsData: LevelsData = LevelsData.create()
+
+    func getLevelData() -> LevelsData {
+        return levelsData
+    }
+
+    func setLevelIndex(_ index: Int) {
+        levelsData.currentIndex = index
+        let level = levelsData.currentLevel()
+        Storage.save(type: level.type)
+        newGame()
+    }
 
     override init(frame: NSRect, options: [String : Any]? = nil) {
         super.init(frame: frame, options: options)
@@ -144,9 +156,13 @@ class SceneView: SCNView {
         overlayScene?.progressViewHidden(false)
         doskaNode?.isHidden = true
         let baseMaterial = materialUtils.getBaseMaterial()
-        let level = Level.level2()
 
-        //144
+        //let level = levelsData.currentLevel().type.levelPos()
+        //Level.level2()
+
+        let level = LayoutLevels.getLevel()
+
+        //144 204
         var maxX: CGFloat = 0
         var maxY: CGFloat = 0
         var minX: CGFloat = CGFLOAT_MAX
@@ -161,9 +177,12 @@ class SceneView: SCNView {
 
             let typeCount = ItemType.allCases.count
             var types: [ItemType] = [ItemType]()
-            for i in 0...typeCount-1 {
+
+            let levelCount = level.count / 4
+
+            for i in 0...levelCount-1 {
                 for _ in 0...3 {
-                    types.append(ItemType.allCases[i])
+                    types.append(ItemType.allCases[i%typeCount])
                 }
             }
             
@@ -182,7 +201,7 @@ class SceneView: SCNView {
                     print("Add haku!!!!!")
                 }
                 //
-                let material = self.materialUtils.getMaterial(by: currentType) ?? SCNMaterial()
+                let material = self.materialUtils.getMaterial(by: currentType)
                 let item = ItemNone.make(baseMaterial: baseMaterial, material: material, type: currentType)
                 item.pos = pos
                 item.position = item.defaultVector3()

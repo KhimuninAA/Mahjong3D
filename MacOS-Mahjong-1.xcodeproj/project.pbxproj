@@ -11,6 +11,12 @@
 		BF52129F2A6E6B1600F72B5A /* items.png in Resources */ = {isa = PBXBuildFile; fileRef = BF52129E2A6E6B1600F72B5A /* items.png */; };
 		BF5212A82A6F92A400F72B5A /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5212A62A6F92A400F72B5A /* AboutView.swift */; };
 		BF5212A92A6F92A400F72B5A /* HelpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5212A72A6F92A400F72B5A /* HelpView.swift */; };
+		BF5212AD2A6FB28E00F72B5A /* check_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = BF5212AC2A6FB28E00F72B5A /* check_icon.png */; };
+		BF5212AF2A6FB30300F72B5A /* check_icon16.png in Resources */ = {isa = PBXBuildFile; fileRef = BF5212AE2A6FB30300F72B5A /* check_icon16.png */; };
+		BF5212B12A6FB40200F72B5A /* LevelItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5212B02A6FB40200F72B5A /* LevelItem.swift */; };
+		BF5212C12A6FD07A00F72B5A /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5212C02A6FD07A00F72B5A /* Storage.swift */; };
+		BF5212C52A6FF47F00F72B5A /* rocket.layout in Resources */ = {isa = PBXBuildFile; fileRef = BF5212C42A6FF47F00F72B5A /* rocket.layout */; };
+		BF5212C72A6FF56C00F72B5A /* LayoutLevels.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5212C62A6FF56C00F72B5A /* LayoutLevels.swift */; };
 		BFCE109E2A690B50004043FF /* ItemNone.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCE109D2A690B50004043FF /* ItemNone.swift */; };
 		BFCE10A62A6916C6004043FF /* TexturesCom_Metal_SteelRough2_1K_ao.tif in Resources */ = {isa = PBXBuildFile; fileRef = BFCE10A12A6916C6004043FF /* TexturesCom_Metal_SteelRough2_1K_ao.tif */; };
 		BFCE10A72A6916C6004043FF /* TexturesCom_Metal_SteelRough2_1K_metallic.tif in Resources */ = {isa = PBXBuildFile; fileRef = BFCE10A22A6916C6004043FF /* TexturesCom_Metal_SteelRough2_1K_metallic.tif */; };
@@ -43,6 +49,12 @@
 		BF52129E2A6E6B1600F72B5A /* items.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = items.png; sourceTree = "<group>"; };
 		BF5212A62A6F92A400F72B5A /* AboutView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
 		BF5212A72A6F92A400F72B5A /* HelpView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelpView.swift; sourceTree = "<group>"; };
+		BF5212AC2A6FB28E00F72B5A /* check_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = check_icon.png; sourceTree = "<group>"; };
+		BF5212AE2A6FB30300F72B5A /* check_icon16.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = check_icon16.png; sourceTree = "<group>"; };
+		BF5212B02A6FB40200F72B5A /* LevelItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelItem.swift; sourceTree = "<group>"; };
+		BF5212C02A6FD07A00F72B5A /* Storage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
+		BF5212C42A6FF47F00F72B5A /* rocket.layout */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = rocket.layout; sourceTree = "<group>"; };
+		BF5212C62A6FF56C00F72B5A /* LayoutLevels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutLevels.swift; sourceTree = "<group>"; };
 		BFCE109D2A690B50004043FF /* ItemNone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemNone.swift; sourceTree = "<group>"; };
 		BFCE10A12A6916C6004043FF /* TexturesCom_Metal_SteelRough2_1K_ao.tif */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = TexturesCom_Metal_SteelRough2_1K_ao.tif; sourceTree = "<group>"; };
 		BFCE10A22A6916C6004043FF /* TexturesCom_Metal_SteelRough2_1K_metallic.tif */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = TexturesCom_Metal_SteelRough2_1K_metallic.tif; sourceTree = "<group>"; };
@@ -119,6 +131,40 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BF5212AB2A6FB28400F72B5A /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				BF5212AE2A6FB30300F72B5A /* check_icon16.png */,
+				BF5212AC2A6FB28E00F72B5A /* check_icon.png */,
+			);
+			path = Menu;
+			sourceTree = "<group>";
+		};
+		BF5212BF2A6FD06500F72B5A /* Storage */ = {
+			isa = PBXGroup;
+			children = (
+				BF5212C02A6FD07A00F72B5A /* Storage.swift */,
+			);
+			path = Storage;
+			sourceTree = "<group>";
+		};
+		BF5212C22A6FF45A00F72B5A /* LayoutLevels */ = {
+			isa = PBXGroup;
+			children = (
+				BF5212C32A6FF46E00F72B5A /* Resources */,
+				BF5212C62A6FF56C00F72B5A /* LayoutLevels.swift */,
+			);
+			path = LayoutLevels;
+			sourceTree = "<group>";
+		};
+		BF5212C32A6FF46E00F72B5A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				BF5212C42A6FF47F00F72B5A /* rocket.layout */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		BFCE109C2A690B3A004043FF /* Items */ = {
 			isa = PBXGroup;
 			children = (
@@ -127,6 +173,7 @@
 				BFCE10FC2A694E0C004043FF /* Level.swift */,
 				BFCE10FE2A695980004043FF /* ItemType.swift */,
 				BF52129C2A6E4E4A00F72B5A /* MaterialUtils.swift */,
+				BF5212B02A6FB40200F72B5A /* LevelItem.swift */,
 			);
 			path = Items;
 			sourceTree = "<group>";
@@ -134,6 +181,7 @@
 		BFCE109F2A6916A5004043FF /* Texture */ = {
 			isa = PBXGroup;
 			children = (
+				BF5212AB2A6FB28400F72B5A /* Menu */,
 				FD8D3BD12A6C2496001B4547 /* Wood */,
 				FDB11BFA2A69813500507D49 /* ItemsNew */,
 				BFCE11002A695D4A004043FF /* Star */,
@@ -194,6 +242,8 @@
 		BFD8A9D52A69063800F679CA /* MacOS-Mahjong-1 */ = {
 			isa = PBXGroup;
 			children = (
+				BF5212C22A6FF45A00F72B5A /* LayoutLevels */,
+				BF5212BF2A6FD06500F72B5A /* Storage */,
 				BFCE109F2A6916A5004043FF /* Texture */,
 				BFD8A9E92A69082000F679CA /* Scenes */,
 				BFD8A9E62A69070900F679CA /* ScenesViews */,
@@ -348,6 +398,7 @@
 			files = (
 				BFCE11022A695D59004043FF /* env_star.png in Resources */,
 				BFCE10A92A6916C6004043FF /* TexturesCom_Metal_SteelRough2_1K_roughness.tif in Resources */,
+				BF5212C52A6FF47F00F72B5A /* rocket.layout in Resources */,
 				BFD8A9D92A69063A00F679CA /* Assets.xcassets in Resources */,
 				BFCE10A72A6916C6004043FF /* TexturesCom_Metal_SteelRough2_1K_metallic.tif in Resources */,
 				BFD8A9EB2A69087600F679CA /* SKScene.scnassets in Resources */,
@@ -355,6 +406,7 @@
 				BFCE10F92A692990004043FF /* TexturesCom_Marble_SlabWhite2_New_512_albedo.tif in Resources */,
 				FD8D3BD52A6C24A2001B4547 /* TexturesCom_Wood_TeakVeneer_512_roughness.tif in Resources */,
 				FD8D3BD02A6B1A3D001B4547 /* help_blue.png in Resources */,
+				BF5212AF2A6FB30300F72B5A /* check_icon16.png in Resources */,
 				BFCE10A62A6916C6004043FF /* TexturesCom_Metal_SteelRough2_1K_ao.tif in Resources */,
 				BFD8A9DC2A69063A00F679CA /* MainMenu.xib in Resources */,
 				BFCE10A82A6916C6004043FF /* TexturesCom_Metal_SteelRough2_1K_albedo.tif in Resources */,
@@ -363,6 +415,7 @@
 				BFCE10AA2A6916C6004043FF /* TexturesCom_Metal_SteelRough2_1K_normal.tif in Resources */,
 				FD8D3BD62A6C24A2001B4547 /* TexturesCom_Wood_TeakVeneer_512_normal.tif in Resources */,
 				FD8D3BD72A6C24A2001B4547 /* TexturesCom_Wood_TeakVeneer_512_albedo.tif in Resources */,
+				BF5212AD2A6FB28E00F72B5A /* check_icon.png in Resources */,
 				BF52129F2A6E6B1600F72B5A /* items.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -375,16 +428,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				BFCE10FF2A695980004043FF /* ItemType.swift in Sources */,
+				BF5212B12A6FB40200F72B5A /* LevelItem.swift in Sources */,
 				BFCE10FD2A694E0C004043FF /* Level.swift in Sources */,
 				BFCE10FB2A694CB4004043FF /* Pos.swift in Sources */,
 				BF52129D2A6E4E4A00F72B5A /* MaterialUtils.swift in Sources */,
 				BF5212A82A6F92A400F72B5A /* AboutView.swift in Sources */,
 				BF5212A92A6F92A400F72B5A /* HelpView.swift in Sources */,
 				BFCE109E2A690B50004043FF /* ItemNone.swift in Sources */,
+				BF5212C72A6FF56C00F72B5A /* LayoutLevels.swift in Sources */,
 				BFD8A9E52A6906E700F679CA /* RootView.swift in Sources */,
 				FD8D3BCA2A6B003A001B4547 /* OverlayScene.swift in Sources */,
 				BFD8A9E82A69071D00F679CA /* ScenesView.swift in Sources */,
 				BFD8A9D72A69063800F679CA /* AppDelegate.swift in Sources */,
+				BF5212C12A6FD07A00F72B5A /* Storage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

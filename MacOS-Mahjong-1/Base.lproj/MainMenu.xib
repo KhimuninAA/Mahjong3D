@@ -42,7 +42,7 @@
                         </items>
                     </menu>
                 </menuItem>
-                <menuItem title="Game" id="Otb-m5-Tdk" userLabel="Game">
+                <menuItem title="Game" identifier="game" id="Otb-m5-Tdk" userLabel="Game">
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <menu key="submenu" title="Game" id="bxV-Rc-pTu">
                         <items>
@@ -50,6 +50,20 @@
                                 <modifierMask key="keyEquivalentModifierMask"/>
                                 <connections>
                                     <action selector="newGame:" target="Voe-Tx-rLC" id="hcU-ah-qsZ"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem isSeparatorItem="YES" id="gsY-Db-iZ9"/>
+                            <menuItem title="Level" identifier="level" id="S22-al-aCx">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <menu key="submenu" id="4Zh-gL-wNi">
+                                    <items>
+                                        <menuItem title="Item 1" id="mpz-wR-a87">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                        </menuItem>
+                                    </items>
+                                </menu>
+                                <connections>
+                                    <action selector="showLevel:" target="Voe-Tx-rLC" id="YXG-zL-jw9"/>
                                 </connections>
                             </menuItem>
                         </items>

@@ -10,7 +10,7 @@ import AppKit
 import SceneKit
 
 class RootView: NSView{
-    private var scene :SceneView?
+    var scene :SceneView?
     
     override init(frame frameRect: NSRect) {
         super.init(frame: frameRect)
