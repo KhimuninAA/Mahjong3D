@@ -54,7 +54,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSWindowDelegate {
 
     @IBAction func showHelp(_ sender: Any) {
         if let mainSize = NSScreen.main?.frame.size{
-            let helpSize = CGSize(width: 400, height: 400)
+            let helpSize = CGSize(width: 400, height: 440)
             let helpFrame = CGRect(x: 0.5 * (mainSize.width - helpSize.width), y: 0.5 * (mainSize.height - helpSize.height), width: helpSize.width, height: helpSize.height)
             let helpView = HelpView(frame: helpFrame)
             openInWindow(view: helpView, rect: helpFrame, title: "О программе", isShowBar: true)
