@@ -10,6 +10,9 @@
 		BF1DE7D32A70FE3900B7E352 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = BF1DE7D52A70FE3900B7E352 /* Localizable.strings */; };
 		BF1DE7D82A70FF5700B7E352 /* default.layout in Resources */ = {isa = PBXBuildFile; fileRef = BF1DE7D72A70FF5700B7E352 /* default.layout */; };
 		BF1DE7DA2A71009700B7E352 /* pyramid.layout in Resources */ = {isa = PBXBuildFile; fileRef = BF1DE7D92A71009700B7E352 /* pyramid.layout */; };
+		BF1DE7DC2A71397000B7E352 /* YouLoseNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1DE7DB2A71397000B7E352 /* YouLoseNode.swift */; };
+		BF1DE7DF2A714B7400B7E352 /* GameInfoNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1DE7DE2A714B7400B7E352 /* GameInfoNode.swift */; };
+		BF1DE7E12A714C2400B7E352 /* ProgressNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1DE7E02A714C2400B7E352 /* ProgressNode.swift */; };
 		BF52129D2A6E4E4A00F72B5A /* MaterialUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF52129C2A6E4E4A00F72B5A /* MaterialUtils.swift */; };
 		BF52129F2A6E6B1600F72B5A /* items.png in Resources */ = {isa = PBXBuildFile; fileRef = BF52129E2A6E6B1600F72B5A /* items.png */; };
 		BF5212A82A6F92A400F72B5A /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5212A62A6F92A400F72B5A /* AboutView.swift */; };
@@ -63,6 +66,9 @@
 		BF1DE7D62A70FE3E00B7E352 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		BF1DE7D72A70FF5700B7E352 /* default.layout */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = default.layout; sourceTree = "<group>"; };
 		BF1DE7D92A71009700B7E352 /* pyramid.layout */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = pyramid.layout; sourceTree = "<group>"; };
+		BF1DE7DB2A71397000B7E352 /* YouLoseNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YouLoseNode.swift; sourceTree = "<group>"; };
+		BF1DE7DE2A714B7400B7E352 /* GameInfoNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameInfoNode.swift; sourceTree = "<group>"; };
+		BF1DE7E02A714C2400B7E352 /* ProgressNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressNode.swift; sourceTree = "<group>"; };
 		BF52129C2A6E4E4A00F72B5A /* MaterialUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaterialUtils.swift; sourceTree = "<group>"; };
 		BF52129E2A6E6B1600F72B5A /* items.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = items.png; sourceTree = "<group>"; };
 		BF5212A62A6F92A400F72B5A /* AboutView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
@@ -165,6 +171,17 @@
 				BF1DE7D52A70FE3900B7E352 /* Localizable.strings */,
 			);
 			path = LocalizedString;
+			sourceTree = "<group>";
+		};
+		BF1DE7DD2A714B5B00B7E352 /* Overlay */ = {
+			isa = PBXGroup;
+			children = (
+				FD8D3BC92A6B003A001B4547 /* OverlayScene.swift */,
+				BF1DE7E02A714C2400B7E352 /* ProgressNode.swift */,
+				BF1DE7DE2A714B7400B7E352 /* GameInfoNode.swift */,
+				BF1DE7DB2A71397000B7E352 /* YouLoseNode.swift */,
+			);
+			path = Overlay;
 			sourceTree = "<group>";
 		};
 		BF5212AB2A6FB28400F72B5A /* Menu */ = {
@@ -318,9 +335,9 @@
 		BFD8A9E62A69070900F679CA /* ScenesViews */ = {
 			isa = PBXGroup;
 			children = (
+				BF1DE7DD2A714B5B00B7E352 /* Overlay */,
 				BFCE109C2A690B3A004043FF /* Items */,
 				BFD8A9E72A69071D00F679CA /* ScenesView.swift */,
-				FD8D3BC92A6B003A001B4547 /* OverlayScene.swift */,
 			);
 			path = ScenesViews;
 			sourceTree = "<group>";
@@ -493,10 +510,13 @@
 			files = (
 				BFCE10FF2A695980004043FF /* ItemType.swift in Sources */,
 				BF5212B12A6FB40200F72B5A /* LevelItem.swift in Sources */,
+				BF1DE7DF2A714B7400B7E352 /* GameInfoNode.swift in Sources */,
 				BFCE10FB2A694CB4004043FF /* Pos.swift in Sources */,
 				BF52129D2A6E4E4A00F72B5A /* MaterialUtils.swift in Sources */,
 				BF5212A82A6F92A400F72B5A /* AboutView.swift in Sources */,
+				BF1DE7DC2A71397000B7E352 /* YouLoseNode.swift in Sources */,
 				BF5212A92A6F92A400F72B5A /* HelpView.swift in Sources */,
+				BF1DE7E12A714C2400B7E352 /* ProgressNode.swift in Sources */,
 				BFCE109E2A690B50004043FF /* ItemNone.swift in Sources */,
 				BF5212C72A6FF56C00F72B5A /* LayoutLevels.swift in Sources */,
 				BFD8A9E52A6906E700F679CA /* RootView.swift in Sources */,

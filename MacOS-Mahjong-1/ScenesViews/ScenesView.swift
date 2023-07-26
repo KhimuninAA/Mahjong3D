@@ -153,7 +153,7 @@ class SceneView: SCNView {
     }
 
     private func createPole() {
-        overlayScene?.progressViewHidden(false)
+        overlayScene?.set(type: .progress(value: 0))
         doskaNode?.isHidden = true
         let baseMaterial = materialUtils.getBaseMaterial()
 
@@ -169,7 +169,7 @@ class SceneView: SCNView {
         //DispatchQueue.global(qos: .background).async { [weak self] in
             // All types
             self.materialUtils.createMaterials(onProgressAction: { [weak self] progress in
-                self?.overlayScene?.progressViewSetProgress(progress)
+                self?.overlayScene?.set(type: .progress(value: progress))
             })
 
             let typeCount = ItemType.allCases.count
@@ -185,7 +185,7 @@ class SceneView: SCNView {
             
             for pos in level {
                 let progress = CGFloat(level.count - types.count)/CGFloat(level.count)
-                self.overlayScene?.progressViewSetProgress(progress)
+                self.overlayScene?.set(type: .progress(value: progress))
                 //
                 let typesCount = types.count
                 let currentType: ItemType
@@ -245,7 +245,6 @@ class SceneView: SCNView {
             let z = dZ + 2 //2 * maxCatet + 1
             cameraNode.position = SCNVector3Make(centerPoint.x, z, centerPoint.y)
         }
-        overlayScene?.progressViewHidden(true)
         doskaNode?.isHidden = false
     }
 }
@@ -421,9 +420,6 @@ extension SceneView {
                 }
             }
         }
-        if count == 0 {
-            //WINE!!!
-        }
         if accessedItems.count > 1 {
             let groupItems = Dictionary(grouping: accessedItems, by: { $0.type })
             let keys = Array(groupItems.keys)
@@ -438,12 +434,16 @@ extension SceneView {
                     }
                 }
             }
-        } else {
-            //Game ower
-            
         }
-        
-        overlayScene?.setValue(doubleCount: doubleCount, itemCount: count)
+        overlayScene?.set(type: .game(doubleCount: doubleCount, itemCount: count))
+        if count == 0 {
+            //WINE!!!
+            overlayScene?.set(type: .youWin)
+        }
+        if doubleCount == 0 && count > 0 {
+            //Game ower
+            overlayScene?.set(type: .youLose)
+        }
     }
     
     func showAccessDouble() {

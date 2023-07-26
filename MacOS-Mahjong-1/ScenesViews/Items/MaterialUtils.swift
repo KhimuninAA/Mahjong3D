@@ -161,9 +161,9 @@ class MaterialUtils {
                 }
             //}
         }
-        let url = FileManager.default.urls(for: .downloadsDirectory, in: .userDomainMask).first!
-        let destinationURL = url.appendingPathComponent("items.png")
-        returnImage.pngWrite(to: destinationURL, options: .withoutOverwriting)
+        //let url = FileManager.default.urls(for: .downloadsDirectory, in: .userDomainMask).first!
+        //let destinationURL = url.appendingPathComponent("items.png")
+        //returnImage.pngWrite(to: destinationURL, options: .withoutOverwriting)
     }
 
     func getMaterial(by type: ItemType) -> SCNMaterial {
