@@ -1,0 +1,78 @@
+
+/* Class = "NSMenuItem"; title = "Customize Toolbar…"; ObjectID = "1UK-8n-QPP"; */
+"1UK-8n-QPP.title" = "Customize Toolbar…";
+
+/* Class = "NSMenuItem"; title = "Mahjong"; ObjectID = "1Xt-HY-uBw"; */
+"1Xt-HY-uBw.title" = "Маджонг";
+
+/* Class = "NSMenuItem"; title = "Enter Full Screen"; ObjectID = "4J7-dP-txa"; */
+"4J7-dP-txa.title" = "Enter Full Screen";
+
+/* Class = "NSMenuItem"; title = "Quit Mahjong"; ObjectID = "4sb-4s-VLi"; */
+"4sb-4s-VLi.title" = "Выход из Маджонг";
+
+/* Class = "NSMenuItem"; title = "New"; ObjectID = "5iT-3S-4Jf"; */
+"5iT-3S-4Jf.title" = "Новая";
+
+/* Class = "NSMenuItem"; title = "About Mahjong"; ObjectID = "5kV-Vb-QxS"; */
+"5kV-Vb-QxS.title" = "О Маджонг";
+
+/* Class = "NSMenu"; title = "Main Menu"; ObjectID = "AYu-sK-qS6"; */
+"AYu-sK-qS6.title" = "Main Menu";
+
+/* Class = "NSMenuItem"; title = "Preferences…"; ObjectID = "BOF-NM-1cW"; */
+"BOF-NM-1cW.title" = "Настройки…";
+
+/* Class = "NSMenu"; title = "Help"; ObjectID = "F2S-fz-NVQ"; */
+"F2S-fz-NVQ.title" = "Помощь";
+
+/* Class = "NSMenuItem"; title = "Mahjong Help"; ObjectID = "FKE-Sm-Kum"; */
+"FKE-Sm-Kum.title" = "Помощь по Маджонг";
+
+/* Class = "NSMenuItem"; title = "View"; ObjectID = "H8h-7b-M4v"; */
+"H8h-7b-M4v.title" = "View";
+
+/* Class = "NSMenu"; title = "View"; ObjectID = "HyV-fh-RgO"; */
+"HyV-fh-RgO.title" = "View";
+
+/* Class = "NSMenuItem"; title = "Bring All to Front"; ObjectID = "LE2-aR-0XJ"; */
+"LE2-aR-0XJ.title" = "Bring All to Front";
+
+/* Class = "NSMenuItem"; title = "Minimize"; ObjectID = "OY7-WF-poV"; */
+"OY7-WF-poV.title" = "Minimize";
+
+/* Class = "NSMenuItem"; title = "Game"; ObjectID = "Otb-m5-Tdk"; */
+"Otb-m5-Tdk.title" = "Игра";
+
+/* Class = "NSWindow"; title = "MacOS-Mahjong-1"; ObjectID = "QvC-M9-y7g"; */
+"QvC-M9-y7g.title" = "Маджонг";
+
+/* Class = "NSMenuItem"; title = "Zoom"; ObjectID = "R4o-n2-Eq4"; */
+"R4o-n2-Eq4.title" = "Zoom";
+
+/* Class = "NSMenuItem"; title = "Level"; ObjectID = "S22-al-aCx"; */
+"S22-al-aCx.title" = "Уровни";
+
+/* Class = "NSMenu"; title = "Window"; ObjectID = "Td7-aD-5lo"; */
+"Td7-aD-5lo.title" = "Window";
+
+/* Class = "NSMenuItem"; title = "Window"; ObjectID = "aUF-d1-5bR"; */
+"aUF-d1-5bR.title" = "Window";
+
+/* Class = "NSMenu"; title = "Game"; ObjectID = "bxV-Rc-pTu"; */
+"bxV-Rc-pTu.title" = "Игра";
+
+/* Class = "NSMenuItem"; title = "Show Sidebar"; ObjectID = "kIP-vf-haE"; */
+"kIP-vf-haE.title" = "Show Sidebar";
+
+/* Class = "NSMenuItem"; title = "Item 1"; ObjectID = "mpz-wR-a87"; */
+"mpz-wR-a87.title" = "Item 1";
+
+/* Class = "NSMenuItem"; title = "Show Toolbar"; ObjectID = "snW-S8-Cw5"; */
+"snW-S8-Cw5.title" = "Show Toolbar";
+
+/* Class = "NSMenu"; title = "Mahjong"; ObjectID = "uQy-DD-JDr"; */
+"uQy-DD-JDr.title" = "Маджонг";
+
+/* Class = "NSMenuItem"; title = "Help"; ObjectID = "wpr-3q-Mcd"; */
+"wpr-3q-Mcd.title" = "Помощь";

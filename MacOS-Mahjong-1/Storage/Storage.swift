@@ -20,7 +20,7 @@ class Storage {
     static func readLevelType() -> LevelType{
         let storage = storage()
         let typeValue = storage.integer(forKey: "LevelType")
-        return LevelType(rawValue: typeValue) ?? LevelType.level1
+        return LevelType(rawValue: typeValue) ?? LevelType.def
     }
 
     static func save(windowFrame: CGRect) {

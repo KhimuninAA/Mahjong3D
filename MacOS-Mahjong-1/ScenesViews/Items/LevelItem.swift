@@ -8,8 +8,8 @@
 import Foundation
 
 enum LevelType: Int, CaseIterable {
-    case level1
-    case level2
+    case def
+    case pyramid
     case rocket
     case grid
     case glade
@@ -30,10 +30,10 @@ extension LevelType {
     func levelPos() -> [Pos] {
         let level: [Pos]
         switch self {
-        case .level1:
-            level = Level.level2()
-        case .level2:
-            level = Level.level3()
+        case .def:
+            level = LayoutLevels.getLevel(name: "default")
+        case .pyramid:
+            level = LayoutLevels.getLevel(name: "pyramid")
         case .rocket:
             level = LayoutLevels.getLevel(name: "rocket")
         case .grid:
@@ -74,22 +74,20 @@ extension LevelItem {
     static func getLevels() -> [LevelItem] {
         var levels = [LevelItem]()
 
-        levels.append(LevelItem(name: "стандартная", type: .level1))
-        levels.append(LevelItem(name: "пирамида", type: .level2))
-        levels.append(LevelItem(name: "rocket", type: .rocket))
-        levels.append(LevelItem(name: "grid", type: .grid))
-        levels.append(LevelItem(name: "glade", type: .glade))
-        levels.append(LevelItem(name: "girl", type: .girl))
-        
-        levels.append(LevelItem(name: "eagle", type: .eagle))
-        levels.append(LevelItem(name: "enterprise", type: .enterprise))
-        levels.append(LevelItem(name: "explosion", type: .explosion))
-        levels.append(LevelItem(name: "flowers", type: .flowers))
-        levels.append(LevelItem(name: "galaxy", type: .galaxy))
-        levels.append(LevelItem(name: "garden", type: .garden))
-        levels.append(LevelItem(name: "future", type: .future))
-        
-        levels.append(LevelItem(name: "dragon", type: .dragon))
+        levels.append(LevelItem(name: "l_default", type: .def))
+        levels.append(LevelItem(name: "l_pyramid", type: .pyramid))
+        levels.append(LevelItem(name: "l_rocket", type: .rocket))
+        levels.append(LevelItem(name: "l_grid", type: .grid))
+        levels.append(LevelItem(name: "l_glade", type: .glade))
+        levels.append(LevelItem(name: "l_girl", type: .girl))
+        levels.append(LevelItem(name: "l_eagle", type: .eagle))
+        levels.append(LevelItem(name: "l_enterprise", type: .enterprise))
+        levels.append(LevelItem(name: "l_explosion", type: .explosion))
+        levels.append(LevelItem(name: "l_flowers", type: .flowers))
+        levels.append(LevelItem(name: "l_galaxy", type: .galaxy))
+        levels.append(LevelItem(name: "l_garden", type: .garden))
+        levels.append(LevelItem(name: "l_future", type: .future))
+        levels.append(LevelItem(name: "l_dragon", type: .dragon))
         
         return levels
     }

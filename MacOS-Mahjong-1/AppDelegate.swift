@@ -19,7 +19,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSWindowDelegate, NSMenuDele
         window.contentView = rootView
         window.delegate = self
         window.menu?.delegate = self
-        self.window.title = "Mahjong 3D"
+        self.window.title = NSLocalizedString("Mahjong 3D", comment: "")
         let wFrame = Storage.readWindowFrame()
         if wFrame.width > 50 && wFrame.height > 50 {
             window.setFrame(wFrame, display: true)
@@ -96,7 +96,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSWindowDelegate, NSMenuDele
                 if let levelData = rootView?.scene?.getLevelData() {
                     let currentLevel = levelData.currentLevel()
                     for level in levelData.levels {
-                        let mItem = NSMenuItem(title: level.name, action: #selector(AppDelegate.levelAction), keyEquivalent: "")
+                        let mItem = NSMenuItem(title: NSLocalizedString(level.name, comment: ""), action: #selector(AppDelegate.levelAction), keyEquivalent: "")
                         mItem.tag = level.type.rawValue
                         if currentLevel.type == level.type {
                             mItem.image = NSImage(named: "check_icon16")

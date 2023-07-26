@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BF1DE7D32A70FE3900B7E352 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = BF1DE7D52A70FE3900B7E352 /* Localizable.strings */; };
+		BF1DE7D82A70FF5700B7E352 /* default.layout in Resources */ = {isa = PBXBuildFile; fileRef = BF1DE7D72A70FF5700B7E352 /* default.layout */; };
+		BF1DE7DA2A71009700B7E352 /* pyramid.layout in Resources */ = {isa = PBXBuildFile; fileRef = BF1DE7D92A71009700B7E352 /* pyramid.layout */; };
 		BF52129D2A6E4E4A00F72B5A /* MaterialUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF52129C2A6E4E4A00F72B5A /* MaterialUtils.swift */; };
 		BF52129F2A6E6B1600F72B5A /* items.png in Resources */ = {isa = PBXBuildFile; fileRef = BF52129E2A6E6B1600F72B5A /* items.png */; };
 		BF5212A82A6F92A400F72B5A /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5212A62A6F92A400F72B5A /* AboutView.swift */; };
@@ -26,7 +29,6 @@
 		BFCE10D32A691841004043FF /* Front.png in Resources */ = {isa = PBXBuildFile; fileRef = BFCE10AD2A691841004043FF /* Front.png */; };
 		BFCE10F92A692990004043FF /* TexturesCom_Marble_SlabWhite2_New_512_albedo.tif in Resources */ = {isa = PBXBuildFile; fileRef = BFCE10F82A692990004043FF /* TexturesCom_Marble_SlabWhite2_New_512_albedo.tif */; };
 		BFCE10FB2A694CB4004043FF /* Pos.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCE10FA2A694CB4004043FF /* Pos.swift */; };
-		BFCE10FD2A694E0C004043FF /* Level.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCE10FC2A694E0C004043FF /* Level.swift */; };
 		BFCE10FF2A695980004043FF /* ItemType.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCE10FE2A695980004043FF /* ItemType.swift */; };
 		BFCE11022A695D59004043FF /* env_star.png in Resources */ = {isa = PBXBuildFile; fileRef = BFCE11012A695D59004043FF /* env_star.png */; };
 		BFD8A9D72A69063800F679CA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD8A9D62A69063800F679CA /* AppDelegate.swift */; };
@@ -56,6 +58,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BF1DE7D22A70FE1200B7E352 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/MainMenu.strings; sourceTree = "<group>"; };
+		BF1DE7D42A70FE3900B7E352 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
+		BF1DE7D62A70FE3E00B7E352 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		BF1DE7D72A70FF5700B7E352 /* default.layout */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = default.layout; sourceTree = "<group>"; };
+		BF1DE7D92A71009700B7E352 /* pyramid.layout */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = pyramid.layout; sourceTree = "<group>"; };
 		BF52129C2A6E4E4A00F72B5A /* MaterialUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaterialUtils.swift; sourceTree = "<group>"; };
 		BF52129E2A6E6B1600F72B5A /* items.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = items.png; sourceTree = "<group>"; };
 		BF5212A62A6F92A400F72B5A /* AboutView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
@@ -75,7 +82,6 @@
 		BFCE10AD2A691841004043FF /* Front.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Front.png; sourceTree = "<group>"; };
 		BFCE10F82A692990004043FF /* TexturesCom_Marble_SlabWhite2_New_512_albedo.tif */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = TexturesCom_Marble_SlabWhite2_New_512_albedo.tif; sourceTree = "<group>"; };
 		BFCE10FA2A694CB4004043FF /* Pos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pos.swift; sourceTree = "<group>"; };
-		BFCE10FC2A694E0C004043FF /* Level.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Level.swift; sourceTree = "<group>"; };
 		BFCE10FE2A695980004043FF /* ItemType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemType.swift; sourceTree = "<group>"; };
 		BFCE11012A695D59004043FF /* env_star.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = env_star.png; sourceTree = "<group>"; };
 		BFD8A9D32A69063800F679CA /* Mahjong.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mahjong.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -153,6 +159,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BF1DE7CF2A70FDE600B7E352 /* LocalizedString */ = {
+			isa = PBXGroup;
+			children = (
+				BF1DE7D52A70FE3900B7E352 /* Localizable.strings */,
+			);
+			path = LocalizedString;
+			sourceTree = "<group>";
+		};
 		BF5212AB2A6FB28400F72B5A /* Menu */ = {
 			isa = PBXGroup;
 			children = (
@@ -182,6 +196,8 @@
 		BF5212C32A6FF46E00F72B5A /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				BF1DE7D92A71009700B7E352 /* pyramid.layout */,
+				BF1DE7D72A70FF5700B7E352 /* default.layout */,
 				FD018BFD2A70170F00552F80 /* grid.layout */,
 				BF5212C42A6FF47F00F72B5A /* rocket.layout */,
 				FD018BFF2A70193F00552F80 /* glade.layout */,
@@ -203,7 +219,6 @@
 			children = (
 				BFCE109D2A690B50004043FF /* ItemNone.swift */,
 				BFCE10FA2A694CB4004043FF /* Pos.swift */,
-				BFCE10FC2A694E0C004043FF /* Level.swift */,
 				BFCE10FE2A695980004043FF /* ItemType.swift */,
 				BF52129C2A6E4E4A00F72B5A /* MaterialUtils.swift */,
 				BF5212B02A6FB40200F72B5A /* LevelItem.swift */,
@@ -275,6 +290,7 @@
 		BFD8A9D52A69063800F679CA /* MacOS-Mahjong-1 */ = {
 			isa = PBXGroup;
 			children = (
+				BF1DE7CF2A70FDE600B7E352 /* LocalizedString */,
 				BF5212C22A6FF45A00F72B5A /* LayoutLevels */,
 				BF5212BF2A6FD06500F72B5A /* Storage */,
 				BFCE109F2A6916A5004043FF /* Texture */,
@@ -413,6 +429,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ru,
 			);
 			mainGroup = BFD8A9CA2A69063800F679CA;
 			productRefGroup = BFD8A9D42A69063800F679CA /* Products */;
@@ -439,9 +456,11 @@
 				BFCE10D32A691841004043FF /* Front.png in Resources */,
 				FD018C0F2A701AB000552F80 /* flowers.layout in Resources */,
 				FD018BFE2A70170F00552F80 /* grid.layout in Resources */,
+				BF1DE7DA2A71009700B7E352 /* pyramid.layout in Resources */,
 				BFCE10F92A692990004043FF /* TexturesCom_Marble_SlabWhite2_New_512_albedo.tif in Resources */,
 				FD018C102A701AB000552F80 /* future.layout in Resources */,
 				FD018C0D2A701AB000552F80 /* eagle.layout in Resources */,
+				BF1DE7D32A70FE3900B7E352 /* Localizable.strings in Resources */,
 				FD018C0B2A701AB000552F80 /* galaxy.layout in Resources */,
 				FD8D3BD52A6C24A2001B4547 /* TexturesCom_Wood_TeakVeneer_512_roughness.tif in Resources */,
 				FD8D3BD02A6B1A3D001B4547 /* help_blue.png in Resources */,
@@ -449,6 +468,7 @@
 				BFCE10A62A6916C6004043FF /* TexturesCom_Metal_SteelRough2_1K_ao.tif in Resources */,
 				FD018C0A2A701AB000552F80 /* enterprise.layout in Resources */,
 				BFD8A9DC2A69063A00F679CA /* MainMenu.xib in Resources */,
+				BF1DE7D82A70FF5700B7E352 /* default.layout in Resources */,
 				FD018C122A701C2C00552F80 /* dragon.layout in Resources */,
 				BFCE10A82A6916C6004043FF /* TexturesCom_Metal_SteelRough2_1K_albedo.tif in Resources */,
 				FD8D3BCE2A6B19F8001B4547 /* mahjong_double.png in Resources */,
@@ -473,7 +493,6 @@
 			files = (
 				BFCE10FF2A695980004043FF /* ItemType.swift in Sources */,
 				BF5212B12A6FB40200F72B5A /* LevelItem.swift in Sources */,
-				BFCE10FD2A694E0C004043FF /* Level.swift in Sources */,
 				BFCE10FB2A694CB4004043FF /* Pos.swift in Sources */,
 				BF52129D2A6E4E4A00F72B5A /* MaterialUtils.swift in Sources */,
 				BF5212A82A6F92A400F72B5A /* AboutView.swift in Sources */,
@@ -491,10 +510,20 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		BF1DE7D52A70FE3900B7E352 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BF1DE7D42A70FE3900B7E352 /* ru */,
+				BF1DE7D62A70FE3E00B7E352 /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		BFD8A9DA2A69063A00F679CA /* MainMenu.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
 				BFD8A9DB2A69063A00F679CA /* Base */,
+				BF1DE7D22A70FE1200B7E352 /* ru */,
 			);
 			name = MainMenu.xib;
 			sourceTree = "<group>";
@@ -506,6 +535,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -566,6 +596,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -624,7 +655,7 @@
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 6;
+				CURRENT_PROJECT_VERSION = 7;
 				DEVELOPMENT_TEAM = UBMXWK5W6B;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -654,7 +685,7 @@
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 6;
+				CURRENT_PROJECT_VERSION = 7;
 				DEVELOPMENT_TEAM = UBMXWK5W6B;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;

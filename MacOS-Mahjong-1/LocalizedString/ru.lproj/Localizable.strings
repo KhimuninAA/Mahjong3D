@@ -1,0 +1,28 @@
+/* 
+  Localizable.strings
+  MacOS-Mahjong-1
+
+  Created by Алексей Химунин on 26.07.2023.
+  
+*/
+
+"Mahjong 3D" = "Mahjong 3D";
+
+//Levels
+"l_default" = "По умолчанию";
+"l_pyramid" = "Пирамида";
+
+"l_rocket" = "Ракета";
+"l_grid" = "Сетка";
+"l_glade" = "Поляна";
+"l_girl" = "Девушка";
+
+"l_eagle" = "Орёл";
+"l_enterprise" = "Энтерпрайз";
+"l_explosion" = "Взрыв";
+"l_flowers" = "Цветы";
+
+"l_galaxy" = "Галактика";
+"l_garden" = "Сады";
+"l_future" = "Будущее";
+"l_dragon" = "Дракон";
