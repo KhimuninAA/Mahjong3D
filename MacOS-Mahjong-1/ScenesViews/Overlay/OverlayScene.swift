@@ -22,6 +22,7 @@ class OverlayScene: SKScene {
     private var progressNode: ProgressNode?
     private var gameInfoNode: GameInfoNode?
     private var youLoseNode: YouLoseNode?
+    private var youWinNode: YouWinNode?
     
     var isHelpAction: (() -> Void)?
     var isNewAction: (() -> Void)?
@@ -66,12 +67,20 @@ class OverlayScene: SKScene {
         if let youLoseNode = youLoseNode {
             addChild(youLoseNode)
         }
+
+        //You Win
+        youWinNode = YouWinNode()
+        youWinNode?.isHidden = true
+        if let youWinNode = youWinNode {
+            addChild(youWinNode)
+        }
     }
     
     func layout2DOverlay(newSize: CGSize) {
         progressNode?.setSuperSize(newSize)
         gameInfoNode?.setSuperSize(newSize)
         youLoseNode?.setSuperSize(newSize)
+        youWinNode?.setSuperSize(newSize)
     }
     
     override func mouseDown(with event: NSEvent) {
@@ -86,6 +95,13 @@ class OverlayScene: SKScene {
             //New
             let youLoseNodeLocation = event.location(in: youLoseNode)
             if youLoseNode.isNew(point: youLoseNodeLocation) {
+                isNewAction?()
+            }
+        }
+        if let youWinNode = youWinNode {
+            //New
+            let youWinNodeLocation = event.location(in: youWinNode)
+            if youWinNode.isNew(point: youWinNodeLocation) {
                 isNewAction?()
             }
         }
@@ -113,6 +129,7 @@ extension OverlayScene {
         progressNode?.isHidden = isProgressHidden
         gameInfoNode?.isHidden = isGameInfoHidden
         youLoseNode?.isHidden = isYouLoseHidden
+        youWinNode?.isHidden = isYouWinHidden
     }
 
     func set(type: OverlayType) {

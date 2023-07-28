@@ -1,17 +1,17 @@
 //
-//  YouLoseNode.swift
+//  YouWinNode.swift
 //  Mahjong
 //
-//  Created by Алексей Химунин on 26.07.2023.
+//  Created by Алексей Химунин on 28.07.2023.
 //
 
 import Foundation
 import SpriteKit
 
-class YouLoseNode: SKSpriteNode {
+class YouWinNode: SKSpriteNode {
 
     required init() {
-        super.init(texture: nil, color: .white, size: .zero)
+        super.init(texture: nil, color: .green, size: .zero)
         initView()
     }
 
@@ -36,4 +36,5 @@ class YouLoseNode: SKSpriteNode {
         //return helpImageNode?.contains(point) ?? false
         return false
     }
+
 }
