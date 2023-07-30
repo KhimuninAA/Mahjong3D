@@ -11,7 +11,8 @@ import SpriteKit
 class YouLoseNode: SKSpriteNode {
 
     required init() {
-        super.init(texture: nil, color: .white, size: .zero)
+        let texture = SKTexture(imageNamed: "YouWin")
+        super.init(texture: texture, color: .clear, size: .zero)
         initView()
     }
 
@@ -24,6 +25,8 @@ class YouLoseNode: SKSpriteNode {
     }
 
     func setSuperSize(_ superSize: CGSize) {
+        //2197
+        //2477
         let center = CGPoint(x: 0.5 * superSize.width, y: 0.5 * superSize.height)
         let progressViewWidth = 0.3 * superSize.width
         let progressViewHeight = 0.5 * progressViewWidth
