@@ -7,6 +7,8 @@
 */
 
 "Mahjong 3D" = "Mahjong 3D";
+"Moves made:" = "Moves made:";
+"Remaining chips:" = "Remaining chips:";
 
 //Levels
 "l_default" = "Default";

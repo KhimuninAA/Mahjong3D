@@ -42,7 +42,7 @@ class YouWinNode: SKSpriteNode {
         }
 
         totalTitleLabelNode = SKLabelNode(fontNamed: "Avenir")
-        totalTitleLabelNode?.text = NSLocalizedString("Сделано ходов:", comment: "")
+        totalTitleLabelNode?.text = NSLocalizedString("Moves made:", comment: "")
         totalTitleLabelNode?.fontColor = NSColor(hex: "5E4059")
         totalTitleLabelNode?.verticalAlignmentMode = .center
         totalTitleLabelNode?.horizontalAlignmentMode = .center

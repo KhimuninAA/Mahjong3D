@@ -42,7 +42,7 @@ class YouLoseNode: SKSpriteNode {
         }
 
         totalTitleLabelNode = SKLabelNode(fontNamed: "Avenir")
-        totalTitleLabelNode?.text = NSLocalizedString("Оставшиеся фишки:", comment: "")
+        totalTitleLabelNode?.text = NSLocalizedString("Remaining chips:", comment: "")
         totalTitleLabelNode?.fontColor = NSColor(hex: "5E4059")
         totalTitleLabelNode?.verticalAlignmentMode = .center
         totalTitleLabelNode?.horizontalAlignmentMode = .center
