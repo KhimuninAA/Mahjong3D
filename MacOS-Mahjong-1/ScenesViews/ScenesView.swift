@@ -19,6 +19,7 @@ class SceneView: SCNView {
     private var materialUtils = MaterialUtils()
     private var overlayScene: OverlayScene?
     private var levelsData: LevelsData = LevelsData.create()
+    private var stepCount: Int = 0
 
     func getLevelData() -> LevelsData {
         return levelsData
@@ -125,6 +126,9 @@ class SceneView: SCNView {
         overlayScene?.isHelpAction = { [weak self] in
             self?.showAccessDouble()
         }
+        overlayScene?.isNewAction = { [weak self] in
+            self?.newGame()
+        }
         if let overlayScene = overlayScene{
             overlayScene.scaleMode = .resizeFill
             self.overlaySKScene = overlayScene
@@ -146,6 +150,7 @@ class SceneView: SCNView {
                 }
             }
         }
+        stepCount = 0
         lightTick = 0
         selectItemNode = nil
         centerPoint = CGPoint(x: 0, y: 0)
@@ -241,7 +246,6 @@ class SceneView: SCNView {
             //let d = cameraNode.camera?.yFov
 
             let dZ = maxCatet * tan((90 - 0.5 * angle) * CGFloat.pi / 180)
-            print("A: \(maxCatet) B: \(dZ) scale: \(scaleY)")
             let z = dZ + 2 //2 * maxCatet + 1
             cameraNode.position = SCNVector3Make(centerPoint.x, z, centerPoint.y)
         }
@@ -328,12 +332,15 @@ extension SceneView {
                     selectItemNode?.setSelected(false)
                     selectItemNode = itemNode
                 }
+                stepCount += 1
             } else {
+                stepCount += 1
                 selectItemNode?.setSelected(false)
                 self.selectItemNode = nil
             }
         } else {
             if let selectItemNode = selectItemNode {
+                stepCount += 1
                 selectItemNode.setSelected(false)
                 self.selectItemNode = nil
             }
@@ -438,11 +445,11 @@ extension SceneView {
         overlayScene?.set(type: .game(doubleCount: doubleCount, itemCount: count))
         if count == 0 {
             //WINE!!!
-            overlayScene?.set(type: .youWin)
+            overlayScene?.set(type: .youWin(levalName: NSLocalizedString(levelsData.currentLevel().name, comment: ""), stepCount: stepCount))
         }
         if doubleCount == 0 && count > 0 {
             //Game ower
-            overlayScene?.set(type: .youLose)
+            overlayScene?.set(type: .youLose(levalName: NSLocalizedString(levelsData.currentLevel().name, comment: ""), itemCount: count))
         }
     }
     

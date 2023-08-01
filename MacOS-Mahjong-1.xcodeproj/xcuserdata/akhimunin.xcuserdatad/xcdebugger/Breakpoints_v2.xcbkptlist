@@ -82,5 +82,53 @@
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E849731B-B141-488C-9633-B1AAC246FDF8"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MacOS-Mahjong-1/ScenesViews/Overlay/YouLoseNode.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "92"
+            endingLineNumber = "92"
+            landmarkName = "setSuperSize(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "E849731B-B141-488C-9633-B1AAC246FDF8 - ad3297be2bf115e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Mahjong.YouLoseNode.setSuperSize(__C.CGSize) -&gt; ()"
+                  moduleName = "Mahjong"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/akhimunin/KhimuninGit/Mahjong3D/MacOS-Mahjong-1/ScenesViews/Overlay/YouLoseNode.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "45"
+                  endingLineNumber = "45"
+                  offsetFromSymbolStart = "1888">
+               </Location>
+               <Location
+                  uuid = "E849731B-B141-488C-9633-B1AAC246FDF8 - ad3297be2bf115e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Mahjong.YouLoseNode.setSuperSize(__C.CGSize) -&gt; ()"
+                  moduleName = "Mahjong"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/akhimunin/KhimuninGit/Mahjong3D/MacOS-Mahjong-1/ScenesViews/Overlay/YouLoseNode.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "45"
+                  endingLineNumber = "45"
+                  offsetFromSymbolStart = "1924">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

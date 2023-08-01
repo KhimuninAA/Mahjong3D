@@ -14,6 +14,10 @@
 		BF1DE7DF2A714B7400B7E352 /* GameInfoNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1DE7DE2A714B7400B7E352 /* GameInfoNode.swift */; };
 		BF1DE7E12A714C2400B7E352 /* ProgressNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1DE7E02A714C2400B7E352 /* ProgressNode.swift */; };
 		BF1DE8072A739E0400B7E352 /* YouWinNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1DE8062A739E0400B7E352 /* YouWinNode.swift */; };
+		BF1DE80F2A778D4E00B7E352 /* test4x4.layout in Resources */ = {isa = PBXBuildFile; fileRef = BF1DE80E2A778D4E00B7E352 /* test4x4.layout */; };
+		BF1DE8132A77916B00B7E352 /* OK.png in Resources */ = {isa = PBXBuildFile; fileRef = BF1DE8122A77916B00B7E352 /* OK.png */; };
+		BF1DE8402A78C2D400B7E352 /* Lose2.png in Resources */ = {isa = PBXBuildFile; fileRef = BF1DE83F2A78C2D400B7E352 /* Lose2.png */; };
+		BF1DE8422A78C4C300B7E352 /* YouWin2.png in Resources */ = {isa = PBXBuildFile; fileRef = BF1DE8412A78C4C300B7E352 /* YouWin2.png */; };
 		BF52129D2A6E4E4A00F72B5A /* MaterialUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF52129C2A6E4E4A00F72B5A /* MaterialUtils.swift */; };
 		BF52129F2A6E6B1600F72B5A /* items.png in Resources */ = {isa = PBXBuildFile; fileRef = BF52129E2A6E6B1600F72B5A /* items.png */; };
 		BF5212A82A6F92A400F72B5A /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5212A62A6F92A400F72B5A /* AboutView.swift */; };
@@ -52,7 +56,6 @@
 		FD018C0F2A701AB000552F80 /* flowers.layout in Resources */ = {isa = PBXBuildFile; fileRef = FD018C082A701AB000552F80 /* flowers.layout */; };
 		FD018C102A701AB000552F80 /* future.layout in Resources */ = {isa = PBXBuildFile; fileRef = FD018C092A701AB000552F80 /* future.layout */; };
 		FD018C122A701C2C00552F80 /* dragon.layout in Resources */ = {isa = PBXBuildFile; fileRef = FD018C112A701C2C00552F80 /* dragon.layout */; };
-		FD0DAAD72A76D08F00A0802F /* YouWin.tiff in Resources */ = {isa = PBXBuildFile; fileRef = FD0DAAD62A76D08F00A0802F /* YouWin.tiff */; };
 		FD8D3BCA2A6B003A001B4547 /* OverlayScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD8D3BC92A6B003A001B4547 /* OverlayScene.swift */; };
 		FD8D3BCD2A6B19F8001B4547 /* mahjong.png in Resources */ = {isa = PBXBuildFile; fileRef = FD8D3BCB2A6B19F8001B4547 /* mahjong.png */; };
 		FD8D3BCE2A6B19F8001B4547 /* mahjong_double.png in Resources */ = {isa = PBXBuildFile; fileRef = FD8D3BCC2A6B19F8001B4547 /* mahjong_double.png */; };
@@ -72,6 +75,10 @@
 		BF1DE7DE2A714B7400B7E352 /* GameInfoNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameInfoNode.swift; sourceTree = "<group>"; };
 		BF1DE7E02A714C2400B7E352 /* ProgressNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressNode.swift; sourceTree = "<group>"; };
 		BF1DE8062A739E0400B7E352 /* YouWinNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YouWinNode.swift; sourceTree = "<group>"; };
+		BF1DE80E2A778D4E00B7E352 /* test4x4.layout */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = test4x4.layout; sourceTree = "<group>"; };
+		BF1DE8122A77916B00B7E352 /* OK.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = OK.png; sourceTree = "<group>"; };
+		BF1DE83F2A78C2D400B7E352 /* Lose2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Lose2.png; sourceTree = "<group>"; };
+		BF1DE8412A78C4C300B7E352 /* YouWin2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = YouWin2.png; sourceTree = "<group>"; };
 		BF52129C2A6E4E4A00F72B5A /* MaterialUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaterialUtils.swift; sourceTree = "<group>"; };
 		BF52129E2A6E6B1600F72B5A /* items.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = items.png; sourceTree = "<group>"; };
 		BF5212A62A6F92A400F72B5A /* AboutView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
@@ -112,7 +119,6 @@
 		FD018C082A701AB000552F80 /* flowers.layout */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = flowers.layout; sourceTree = "<group>"; };
 		FD018C092A701AB000552F80 /* future.layout */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = future.layout; sourceTree = "<group>"; };
 		FD018C112A701C2C00552F80 /* dragon.layout */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = dragon.layout; sourceTree = "<group>"; };
-		FD0DAAD62A76D08F00A0802F /* YouWin.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = YouWin.tiff; sourceTree = "<group>"; };
 		FD8D3BC92A6B003A001B4547 /* OverlayScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverlayScene.swift; sourceTree = "<group>"; };
 		FD8D3BCB2A6B19F8001B4547 /* mahjong.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mahjong.png; sourceTree = "<group>"; };
 		FD8D3BCC2A6B19F8001B4547 /* mahjong_double.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mahjong_double.png; sourceTree = "<group>"; };
@@ -232,6 +238,7 @@
 				FD018C042A701AB000552F80 /* galaxy.layout */,
 				FD018C052A701AB000552F80 /* garden.layout */,
 				FD018C112A701C2C00552F80 /* dragon.layout */,
+				BF1DE80E2A778D4E00B7E352 /* test4x4.layout */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -359,7 +366,9 @@
 		FD0DAAD12A76C97E00A0802F /* Overlay */ = {
 			isa = PBXGroup;
 			children = (
-				FD0DAAD62A76D08F00A0802F /* YouWin.tiff */,
+				BF1DE8412A78C4C300B7E352 /* YouWin2.png */,
+				BF1DE83F2A78C2D400B7E352 /* Lose2.png */,
+				BF1DE8122A77916B00B7E352 /* OK.png */,
 			);
 			path = Overlay;
 			sourceTree = "<group>";
@@ -502,13 +511,16 @@
 				BF1DE7D82A70FF5700B7E352 /* default.layout in Resources */,
 				FD018C122A701C2C00552F80 /* dragon.layout in Resources */,
 				BFCE10A82A6916C6004043FF /* TexturesCom_Metal_SteelRough2_1K_albedo.tif in Resources */,
-				FD0DAAD72A76D08F00A0802F /* YouWin.tiff in Resources */,
+				BF1DE8132A77916B00B7E352 /* OK.png in Resources */,
 				FD8D3BCE2A6B19F8001B4547 /* mahjong_double.png in Resources */,
 				FD018C002A70193F00552F80 /* glade.layout in Resources */,
 				FD8D3BCD2A6B19F8001B4547 /* mahjong.png in Resources */,
 				BFCE10AA2A6916C6004043FF /* TexturesCom_Metal_SteelRough2_1K_normal.tif in Resources */,
+				BF1DE80F2A778D4E00B7E352 /* test4x4.layout in Resources */,
+				BF1DE8422A78C4C300B7E352 /* YouWin2.png in Resources */,
 				FD8D3BD62A6C24A2001B4547 /* TexturesCom_Wood_TeakVeneer_512_normal.tif in Resources */,
 				FD8D3BD72A6C24A2001B4547 /* TexturesCom_Wood_TeakVeneer_512_albedo.tif in Resources */,
+				BF1DE8402A78C2D400B7E352 /* Lose2.png in Resources */,
 				FD018C0E2A701AB000552F80 /* explosion.layout in Resources */,
 				FD018C022A70194400552F80 /* girl.layout in Resources */,
 				BF5212AD2A6FB28E00F72B5A /* check_icon.png in Resources */,
@@ -691,7 +703,7 @@
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 7;
+				CURRENT_PROJECT_VERSION = 8;
 				DEVELOPMENT_TEAM = UBMXWK5W6B;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -721,7 +733,7 @@
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 7;
+				CURRENT_PROJECT_VERSION = 8;
 				DEVELOPMENT_TEAM = UBMXWK5W6B;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;

@@ -24,6 +24,8 @@ enum LevelType: Int, CaseIterable {
     case future
     
     case dragon
+
+    case test4x4
 }
 
 extension LevelType {
@@ -58,6 +60,8 @@ extension LevelType {
             level = LayoutLevels.getLevel(name: "future")
         case .dragon:
             level = LayoutLevels.getLevel(name: "dragon")
+        case .test4x4:
+            level = LayoutLevels.getLevel(name: "test4x4")
         }
         return level
     }
@@ -88,7 +92,9 @@ extension LevelItem {
         levels.append(LevelItem(name: "l_garden", type: .garden))
         levels.append(LevelItem(name: "l_future", type: .future))
         levels.append(LevelItem(name: "l_dragon", type: .dragon))
-        
+
+
+        levels.append(LevelItem(name: "test4x4", type: .test4x4))        
         return levels
     }
 }

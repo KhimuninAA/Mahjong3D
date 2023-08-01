@@ -14,8 +14,8 @@ enum OverlayType {
     case none
     case progress(value: CGFloat)
     case game(doubleCount: Int, itemCount: Int)
-    case youWin
-    case youLose
+    case youWin(levalName: String, stepCount: Int)
+    case youLose(levalName: String, itemCount: Int)
 }
 
 class OverlayScene: SKScene {
@@ -84,21 +84,21 @@ class OverlayScene: SKScene {
     }
     
     override func mouseDown(with event: NSEvent) {
-        if let gameInfoNode = gameInfoNode {
+        if let gameInfoNode = gameInfoNode, gameInfoNode.isHidden == false {
             //Help
             let gameInfoNodeLocation = event.location(in: gameInfoNode)
             if gameInfoNode.isHelp(point: gameInfoNodeLocation) {
                 isHelpAction?()
             }
         }
-        if let youLoseNode = youLoseNode {
+        if let youLoseNode = youLoseNode, youLoseNode.isHidden == false {
             //New
             let youLoseNodeLocation = event.location(in: youLoseNode)
             if youLoseNode.isNew(point: youLoseNodeLocation) {
                 isNewAction?()
             }
         }
-        if let youWinNode = youWinNode {
+        if let youWinNode = youWinNode, youWinNode.isHidden == false {
             //New
             let youWinNodeLocation = event.location(in: youWinNode)
             if youWinNode.isNew(point: youWinNodeLocation) {
@@ -141,10 +141,12 @@ extension OverlayScene {
             progressNode?.setProgress(progress)
         case .game(doubleCount: let doubleCount, itemCount: let itemCount):
             gameInfoNode?.setValue(doubleCount: doubleCount, itemCount: itemCount)
-        case .youWin:
-            break
-        case .youLose:
-            break
+        case .youWin(levalName: let levalName, stepCount: let stepCount):
+            youWinNode?.setLevalName(levalName)
+            youWinNode?.setStepCount(stepCount)
+        case .youLose(levalName: let levalName, itemCount: let itemCount):
+            youLoseNode?.setLevalName(levalName)
+            youLoseNode?.setItemCount(itemCount)
         }
     }
 }
