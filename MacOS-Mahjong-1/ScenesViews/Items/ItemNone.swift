@@ -9,13 +9,16 @@ import Foundation
 import SceneKit
 
 class ItemNone: SCNNode {
+    private static var itemIndex: Int = 0
     var particleSystem: SCNParticleSystem?
     var pos: Pos = Pos(x: 0, y: 0, z: 0)
     var type: ItemType
-    
+
     init(geometry: SCNGeometry?, type: ItemType) {
         self.type = type
         super.init()
+        ItemNone.itemIndex += 1
+        self.name = "\(ItemNone.itemIndex)"
         self.geometry = geometry
     }
     /* Xcode required this */

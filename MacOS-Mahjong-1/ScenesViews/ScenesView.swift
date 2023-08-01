@@ -143,6 +143,7 @@ class SceneView: SCNView {
     }
     
     func newGame() {
+        doskaNode?.isHidden = true
         if let childNodes = self.doskaNode?.childNodes {
             for childNode in childNodes {
                 if let childNode = childNode as? ItemNone {
