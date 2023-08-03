@@ -9,7 +9,7 @@ import Foundation
 import SpriteKit
 
 class GameInfoNode: SKSpriteNode {
-    private let infoScale: CGFloat = 0.4 //0.6 //0.3
+    private let infoScale: CGFloat = 1000 //0.4 //0.6 //0.3
     private var countValueNode1 = InfoValueNode()
     private var countFreeDoubleValueNode1 = InfoValueNode()
     private var helpButtonNode = InfoButtonNode()
@@ -36,19 +36,21 @@ class GameInfoNode: SKSpriteNode {
     func setSuperSize(_ superSize: CGSize) {
         self.size = CGSize(width: 0, height: 0)
         self.position = CGPoint(x: superSize.width, y: superSize.height)
+        
+        let scale = superSize.height / infoScale
 
         if let infoSize = countValueNode1.infoSize() {
-            countValueNode1.size = CGSize(width: infoSize.width * infoScale, height: infoSize.height * infoScale)
+            countValueNode1.size = CGSize(width: infoSize.width * scale, height: infoSize.height * scale)
         }
         countValueNode1.updateUI()
 
         if let infoSize = countFreeDoubleValueNode1.infoSize() {
-            countFreeDoubleValueNode1.size = CGSize(width: infoSize.width * infoScale, height: infoSize.height * infoScale)
+            countFreeDoubleValueNode1.size = CGSize(width: infoSize.width * scale, height: infoSize.height * scale)
         }
         countFreeDoubleValueNode1.updateUI()
 
         if let infoSize = helpButtonNode.infoSize() {
-            helpButtonNode.size = CGSize(width: infoSize.width * infoScale, height: infoSize.height * infoScale)
+            helpButtonNode.size = CGSize(width: infoSize.width * scale, height: infoSize.height * scale)
         }
         helpButtonNode.updateUI()
 
