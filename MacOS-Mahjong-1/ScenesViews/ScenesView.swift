@@ -351,7 +351,8 @@ extension SceneView {
     func hitTestResultForEvent(_ event: NSEvent) -> SCNHitTestResult?{
         let viewPoint = viewPointForEvent(event)
         let cgPoint = CGPoint(x: viewPoint.x, y: viewPoint.y)
-        let points = self.hitTest(cgPoint, options: [:])
+        //let options: [SCNHitTestOption: Any] = [SCNHitTestOption.boundingBoxOnly: true]
+        let points = self.hitTest(cgPoint, options: [:]) //[:] options
         return points.first
     }
 
