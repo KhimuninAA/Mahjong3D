@@ -25,6 +25,7 @@
 		BF1DE8562A7B9E0500B7E352 /* CountItem.png in Resources */ = {isa = PBXBuildFile; fileRef = BF1DE8552A7B9E0500B7E352 /* CountItem.png */; };
 		BF1DE8582A7B9F8E00B7E352 /* CountItem2.png in Resources */ = {isa = PBXBuildFile; fileRef = BF1DE8572A7B9F8D00B7E352 /* CountItem2.png */; };
 		BF1DE85A2A7BA1D400B7E352 /* InfoButtonNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1DE8592A7BA1D400B7E352 /* InfoButtonNode.swift */; };
+		BF1DE85C2A7BAB7900B7E352 /* ProgressBG.png in Resources */ = {isa = PBXBuildFile; fileRef = BF1DE85B2A7BAB7900B7E352 /* ProgressBG.png */; };
 		BF52129D2A6E4E4A00F72B5A /* MaterialUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF52129C2A6E4E4A00F72B5A /* MaterialUtils.swift */; };
 		BF52129F2A6E6B1600F72B5A /* items.png in Resources */ = {isa = PBXBuildFile; fileRef = BF52129E2A6E6B1600F72B5A /* items.png */; };
 		BF5212A82A6F92A400F72B5A /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5212A62A6F92A400F72B5A /* AboutView.swift */; };
@@ -93,6 +94,7 @@
 		BF1DE8552A7B9E0500B7E352 /* CountItem.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CountItem.png; sourceTree = "<group>"; };
 		BF1DE8572A7B9F8D00B7E352 /* CountItem2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CountItem2.png; sourceTree = "<group>"; };
 		BF1DE8592A7BA1D400B7E352 /* InfoButtonNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoButtonNode.swift; sourceTree = "<group>"; };
+		BF1DE85B2A7BAB7900B7E352 /* ProgressBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ProgressBG.png; sourceTree = "<group>"; };
 		BF52129C2A6E4E4A00F72B5A /* MaterialUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaterialUtils.swift; sourceTree = "<group>"; };
 		BF52129E2A6E6B1600F72B5A /* items.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = items.png; sourceTree = "<group>"; };
 		BF5212A62A6F92A400F72B5A /* AboutView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
@@ -382,6 +384,7 @@
 		FD0DAAD12A76C97E00A0802F /* Overlay */ = {
 			isa = PBXGroup;
 			children = (
+				BF1DE85B2A7BAB7900B7E352 /* ProgressBG.png */,
 				BF1DE8572A7B9F8D00B7E352 /* CountItem2.png */,
 				BF1DE8552A7B9E0500B7E352 /* CountItem.png */,
 				BF1DE8532A7B9E0000B7E352 /* DoubleItem.png */,
@@ -518,6 +521,7 @@
 				BFCE10D32A691841004043FF /* Front.png in Resources */,
 				FD018C0F2A701AB000552F80 /* flowers.layout in Resources */,
 				FD018BFE2A70170F00552F80 /* grid.layout in Resources */,
+				BF1DE85C2A7BAB7900B7E352 /* ProgressBG.png in Resources */,
 				BF1DE7DA2A71009700B7E352 /* pyramid.layout in Resources */,
 				BF1DE8542A7B9E0000B7E352 /* DoubleItem.png in Resources */,
 				BFCE10F92A692990004043FF /* TexturesCom_Marble_SlabWhite2_New_512_albedo.tif in Resources */,
