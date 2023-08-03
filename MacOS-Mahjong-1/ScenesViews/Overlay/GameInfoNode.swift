@@ -9,16 +9,13 @@ import Foundation
 import SpriteKit
 
 class GameInfoNode: SKSpriteNode {
-    private let proportion: CGFloat = 3
-    private let scale: CGFloat = 0.15
-    private var countImageNode: SKSpriteNode?
-    private var freeDoubleImageNode: SKSpriteNode?
-    private var helpImageNode: SKSpriteNode?
-    private var countValueNode: SKLabelNode?
-    private var countFreeDoubleValueNode: SKLabelNode?
+    private let infoScale: CGFloat = 0.4 //0.6 //0.3
+    private var countValueNode1 = InfoValueNode()
+    private var countFreeDoubleValueNode1 = InfoValueNode()
+    private var helpButtonNode = InfoButtonNode()
 
     required init() {
-        super.init(texture: nil, color: .white, size: .zero)
+        super.init(texture: nil, color: .clear, size: .zero)
         initView()
     }
 
@@ -28,81 +25,49 @@ class GameInfoNode: SKSpriteNode {
     }
 
     private func initView() {
-        countImageNode = SKSpriteNode(imageNamed: "mahjong")
-        if let countImageNode = countImageNode {
-            addChild(countImageNode)
-        }
-
-        freeDoubleImageNode = SKSpriteNode(imageNamed: "mahjong_double")
-        if let freeDoubleImageNode = freeDoubleImageNode {
-            addChild(freeDoubleImageNode)
-        }
-
-        helpImageNode = SKSpriteNode(imageNamed: "help_blue")
-        if let helpImageNode = helpImageNode {
-            addChild(helpImageNode)
-        }
-
-        countValueNode = SKLabelNode(fontNamed: "Arial")
-        countValueNode?.text = "0"
-        countValueNode?.fontColor = .black
-        countValueNode?.verticalAlignmentMode = .center
-        countValueNode?.horizontalAlignmentMode = .center
-        countValueNode?.fontSize = 29.0
-        countValueNode?.zPosition = 1
-        if let countValueNode = countValueNode {
-            addChild(countValueNode)
-        }
-
-        countFreeDoubleValueNode = SKLabelNode(fontNamed: "Arial")
-        countFreeDoubleValueNode?.text = "0"
-        countFreeDoubleValueNode?.fontColor = .black
-        countFreeDoubleValueNode?.verticalAlignmentMode = .center
-        countFreeDoubleValueNode?.horizontalAlignmentMode = .center
-        countFreeDoubleValueNode?.fontSize = 29.0
-        countFreeDoubleValueNode?.zPosition = 1
-        if let countFreeDoubleValueNode = countFreeDoubleValueNode {
-            addChild(countFreeDoubleValueNode)
-        }
-
+        countValueNode1.set(image: .count)
+        addChild(countValueNode1)
+        countFreeDoubleValueNode1.set(image: .double)
+        addChild(countFreeDoubleValueNode1)
+        helpButtonNode.setType(.help)
+        addChild(helpButtonNode)
     }
 
     func setSuperSize(_ superSize: CGSize) {
-        let mainWidth = superSize.width * scale
-        let mainHeight = mainWidth / proportion
-        self.size = CGSize(width: mainWidth, height: mainHeight)
-        self.position = CGPoint(x: superSize.width - 0.5 * mainWidth, y: superSize.height - 0.5 * mainHeight)
+        self.size = CGSize(width: 0, height: 0)
+        self.position = CGPoint(x: superSize.width, y: superSize.height)
 
-        let itemStep: CGFloat = mainWidth / 3
-        let itemSize = CGSize(width: itemStep * 0.4, height: itemStep * 0.4)
-        let itemCentrY = itemSize.height * 0.5 + 2
-
-        if let countImageNode = countImageNode, let freeDoubleImageNode = freeDoubleImageNode, let helpImageNode = helpImageNode {
-            countImageNode.size = itemSize
-            freeDoubleImageNode.size = itemSize
-            helpImageNode.size = itemSize
-
-            countImageNode.position = CGPoint(x: -itemStep, y: itemCentrY)
-            freeDoubleImageNode.position = CGPoint(x: 0, y: itemCentrY)
-            helpImageNode.position = CGPoint(x: itemStep, y: itemCentrY)
+        if let infoSize = countValueNode1.infoSize() {
+            countValueNode1.size = CGSize(width: infoSize.width * infoScale, height: infoSize.height * infoScale)
         }
+        countValueNode1.updateUI()
 
-        let valueSize = CGSize(width: itemStep, height: itemStep * 0.4)
-        if let countValueNode = countValueNode, let countFreeDoubleValueNode = countFreeDoubleValueNode {
-            countValueNode.fontSize = valueSize.height
-            countFreeDoubleValueNode.fontSize = valueSize.height
-
-            countValueNode.position = CGPoint(x: -itemStep, y: -itemCentrY)
-            countFreeDoubleValueNode.position = CGPoint(x: 0, y: -itemCentrY)
+        if let infoSize = countFreeDoubleValueNode1.infoSize() {
+            countFreeDoubleValueNode1.size = CGSize(width: infoSize.width * infoScale, height: infoSize.height * infoScale)
         }
+        countFreeDoubleValueNode1.updateUI()
+
+        if let infoSize = helpButtonNode.infoSize() {
+            helpButtonNode.size = CGSize(width: infoSize.width * infoScale, height: infoSize.height * infoScale)
+        }
+        helpButtonNode.updateUI()
+
+        let nodeSpase = 0.3 * helpButtonNode.size.height
+        let infoY = -(0.5 * helpButtonNode.size.height + nodeSpase)
+        var left = -(0.5 * helpButtonNode.size.width + nodeSpase)
+        helpButtonNode.position = CGPoint(x: left, y: infoY)
+        left += -0.5 * helpButtonNode.size.width - 0.5 * countFreeDoubleValueNode1.size.width - nodeSpase
+        countFreeDoubleValueNode1.position = CGPoint(x: left, y: infoY)
+        left += -nodeSpase - 0.5 * countFreeDoubleValueNode1.size.width - 0.5 * countValueNode1.size.width
+        countValueNode1.position = CGPoint(x: left, y: infoY)
     }
 
     func setValue(doubleCount: Int, itemCount: Int) {
-        countValueNode?.text = "\(itemCount)"
-        countFreeDoubleValueNode?.text = "\(doubleCount)"
+        countFreeDoubleValueNode1.setValue(doubleCount)
+        countValueNode1.setValue(itemCount)
     }
 
     func isHelp(point: CGPoint) -> Bool {
-        return helpImageNode?.contains(point) ?? false
+        return helpButtonNode.contains(point)
     }
 }
