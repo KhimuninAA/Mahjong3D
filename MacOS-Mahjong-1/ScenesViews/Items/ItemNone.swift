@@ -40,6 +40,7 @@ extension ItemNone {
         if self.parent != nil {
             self.removeFromParentNode()
         }
+        cleanup()
     }
     
     func showHelp() {
@@ -214,5 +215,14 @@ extension SCNMaterial {
             newMat.diffuse.contents = image
         }
         return newMat
+    }
+}
+
+extension SCNNode {
+    func cleanup() {
+        for child in childNodes {
+            child.cleanup()
+        }
+        geometry = nil
     }
 }

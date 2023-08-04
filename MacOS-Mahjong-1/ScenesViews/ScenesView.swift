@@ -133,7 +133,11 @@ class SceneView: SCNView {
             overlayScene.scaleMode = .resizeFill
             self.overlaySKScene = overlayScene
         }
-        
+
+        self.materialUtils.createMaterials(onProgressAction: { [weak self] progress in
+            self?.overlayScene?.set(type: .progress(value: progress))
+        })
+
         //generatePNGs()
         createDoska()
         initLightNode()
@@ -173,10 +177,6 @@ class SceneView: SCNView {
         
         //background userInitiated
         //DispatchQueue.global(qos: .background).async { [weak self] in
-            // All types
-        self.materialUtils.createMaterials(onProgressAction: { [weak self] progress in
-            self?.overlayScene?.set(type: .progress(value: progress))
-        })
 
         let typeCount = ItemType.allCases.count
         var types: [ItemType] = [ItemType]()
