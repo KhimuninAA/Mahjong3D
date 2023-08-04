@@ -12,9 +12,11 @@ class ProgressNode: SKSpriteNode {
     private var progress: CGFloat = 0
     private var bgProgressNode: SKShapeNode?
     private var progressNode: SKShapeNode?
+    private var labelNode: SKLabelNode = SKLabelNode(fontNamed: "Avenir")
     
     required init() {
-        super.init(texture: nil, color: .gray, size: .zero)
+        let texture = SKTexture(imageNamed: "ProgressBG")
+        super.init(texture: texture, color: .clear, size: .zero)
         initView()
     }
 
@@ -28,10 +30,19 @@ class ProgressNode: SKSpriteNode {
         if let bgProgressNode = bgProgressNode {
             self.addChild(bgProgressNode)
         }
+
         progressNode = SKShapeNode()
         if let progressNode = progressNode {
             self.addChild(progressNode)
         }
+
+        labelNode.text = NSLocalizedString("Mixing the bones", comment: "")
+        labelNode.fontColor = NSColor(hex: "5E4059")
+        labelNode.verticalAlignmentMode = .center
+        labelNode.horizontalAlignmentMode = .center
+        labelNode.fontSize = 0.0
+        labelNode.zPosition = 1
+        addChild(labelNode)
     }
 
     func setProgress(_ progress: CGFloat) {
@@ -70,6 +81,9 @@ class ProgressNode: SKSpriteNode {
         progressNode?.fillColor = .green
         //progressNode?.position = CGPoint(x: center.x - 0.5 * (progressValueWidth - maxProgressWidth), y: center.y)
         progressNode?.position = CGPoint(x: center.x , y: center.y)
+
+        labelNode.fontSize = height
+        labelNode.position = CGPoint(x: 0, y: 2 * height)
     }
 
     func setSuperSize(_ superSize: CGSize) {
@@ -79,6 +93,7 @@ class ProgressNode: SKSpriteNode {
         let progressViewSize = CGSize(width: progressViewWidth, height: progressViewHeight)
         self.size = progressViewSize
         self.position = center
+
         updateProgress()
     }
 }

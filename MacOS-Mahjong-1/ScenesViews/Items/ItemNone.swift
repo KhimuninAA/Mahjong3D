@@ -180,11 +180,12 @@ extension ItemNone {
         return itemMaterial
     }
 
-    static func make(baseMaterial: SCNMaterial, material: SCNMaterial, type: ItemType) -> ItemNone {
+    static func make(baseMaterial: SCNMaterial, material: SCNMaterial?, type: ItemType) -> ItemNone {
         let itemGeometry: SCNGeometry? = SCNBox(width: ItemNone.size.x, height: ItemNone.size.y, length: ItemNone.size.z, chamferRadius: 0.05)
         let itemNode = ItemNone(geometry: itemGeometry, type: type)
 
-        itemNode.geometry?.materials = [baseMaterial, baseMaterial, baseMaterial, baseMaterial, material, baseMaterial]
+        let itemMaterial = material ?? baseMaterial
+        itemNode.geometry?.materials = [baseMaterial, baseMaterial, baseMaterial, baseMaterial, itemMaterial, baseMaterial]
 
         return itemNode
     }

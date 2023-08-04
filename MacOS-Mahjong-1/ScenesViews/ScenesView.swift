@@ -174,62 +174,67 @@ class SceneView: SCNView {
         //background userInitiated
         //DispatchQueue.global(qos: .background).async { [weak self] in
             // All types
-            self.materialUtils.createMaterials(onProgressAction: { [weak self] progress in
-                self?.overlayScene?.set(type: .progress(value: progress))
-            })
+        self.materialUtils.createMaterials(onProgressAction: { [weak self] progress in
+            self?.overlayScene?.set(type: .progress(value: progress))
+        })
 
-            let typeCount = ItemType.allCases.count
-            var types: [ItemType] = [ItemType]()
+        let typeCount = ItemType.allCases.count
+        var types: [ItemType] = [ItemType]()
 
-            let levelCount = level.count / 4
+        let levelCount = level.count / 4
 
-            for i in 0...levelCount-1 {
-                for _ in 0...3 {
-                    types.append(ItemType.allCases[i%typeCount])
-                }
+        for i in 0...levelCount-1 {
+            for _ in 0...3 {
+                types.append(ItemType.allCases[i%typeCount])
             }
+        }
             
-            for pos in level {
-                let progress = CGFloat(level.count - types.count)/CGFloat(level.count)
-                self.overlayScene?.set(type: .progress(value: progress))
-                //
-                let typesCount = types.count
-                let currentType: ItemType
-                if typesCount > 0 {
-                    let index = Int.random(in: 0...typesCount-1)
-                    currentType = types[index]
-                    types.remove(at: index)
-                } else {
-                    currentType = .haku
-                    print("Add haku!!!!!")
-                }
-                //
-                let material = self.materialUtils.getMaterial(by: currentType)
-                let item = ItemNone.make(baseMaterial: baseMaterial, material: material, type: currentType)
-                item.pos = pos
-                item.position = item.defaultVector3()
-                self.doskaNode?.addChildNode(item)
-                if maxX < item.position.x {
-                    maxX = item.position.x
-                }
-                if maxY < item.position.z {
-                    maxY = item.position.z
-                }
-                
-                if minX > item.position.x {
-                    minX = item.position.x
-                }
-                if minY > item.position.z {
-                    minY = item.position.z
-                }
+        for pos in level {
+            do {
+                usleep(10000)
+            }
+            let progress = CGFloat(level.count - types.count)/CGFloat(level.count)
+            self.overlayScene?.set(type: .progress(value: progress))
+            //
+            let typesCount = types.count
+            let currentType: ItemType
+            if typesCount > 0 {
+                let index = Int.random(in: 0...typesCount-1)
+                currentType = types[index]
+                types.remove(at: index)
+            } else {
+                currentType = .haku
+                print("Add haku!!!!!")
+            }
+            //
+            let material = self.materialUtils.getMaterial(by: currentType)
+            let item = ItemNone.make(baseMaterial: baseMaterial, material: material, type: currentType)
+
+            item.pos = pos
+            item.position = item.defaultVector3()
+            self.doskaNode?.addChildNode(item)
+            if maxX < item.position.x {
+                maxX = item.position.x
+            }
+            if maxY < item.position.z {
+                maxY = item.position.z
+            }
+
+            if minX > item.position.x {
+                minX = item.position.x
+            }
+            if minY > item.position.z {
+                minY = item.position.z
             }
             let cen = CGPoint(x: minX + (maxX - minX) * 0.5, y: minY + (maxY - minY) * 0.5)
             self.centerPoint = cen
+        }
 
-            //DispatchQueue.main.async { [weak self] in
-                self.calcGameInfo()
-                self.updateCameraAndDoska()
-            //}
+                //DispatchQueue.main.async { [weak self] in
+                    self.calcGameInfo()
+                    self.updateCameraAndDoska()
+                //}
+
         //}
     }
     

@@ -64,7 +64,6 @@ class MaterialUtils {
         if materials.count > 0 {
             return
         }
-
         var iX: CGFloat = 0
         var iY: CGFloat = 0
         let typeCount = ItemType.allCases.count
@@ -73,8 +72,6 @@ class MaterialUtils {
             for i in 0...typeCount-1 {
                 let progress = CGFloat(i + 1) / CGFloat(typeCount)
                 onProgressAction?(progress)
-                //let type = ItemType.allCases[i]
-
                 let rect = CGRect(x: iX, y: 256 * 5 - iY, width: 256, height: 256)
                 if let cgImage = cgImages.cropping(to: rect) {
                     let image = NSImage(cgImage: cgImage, size: CGSize(width: 256, height: 256))
