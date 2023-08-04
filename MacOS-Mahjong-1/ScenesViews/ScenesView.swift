@@ -147,6 +147,7 @@ class SceneView: SCNView {
     }
     
     func newGame() {
+        stop(nil)
         doskaNode?.isHidden = true
         if let childNodes = self.doskaNode?.childNodes {
             for childNode in childNodes {
@@ -256,6 +257,7 @@ class SceneView: SCNView {
             cameraNode.position = SCNVector3Make(centerPoint.x, z, centerPoint.y)
         }
         doskaNode?.isHidden = false
+        self.play(nil)
     }
 }
 
