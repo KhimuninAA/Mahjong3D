@@ -9,6 +9,25 @@ import Foundation
 import SceneKit
 import AVFAudio
 
+enum GameState: Equatable{
+    case game(doubleCount: Int)
+    case win
+    case gameOwer
+    
+    static func ==(lhs: GameState, rhs: GameState) -> Bool {
+        switch (lhs, rhs) {
+        case (let .game(a1), let .game(a2)):
+            return a1 == a2
+        case (.win,.win):
+            return true
+        case (.gameOwer,.gameOwer):
+            return true
+        default:
+            return false
+        }
+    }
+}
+
 class SceneView: SCNView {
     var lightNode: SCNNode?
     var cameraNode: SCNNode?
@@ -142,12 +161,11 @@ class SceneView: SCNView {
         createDoska()
         initLightNode()
         initCameraNode()
-        createPole()
+        newGame()
 
     }
     
-    func newGame() {
-        stop(nil)
+    private func clearOldGame() {
         doskaNode?.isHidden = true
         if let childNodes = self.doskaNode?.childNodes {
             for childNode in childNodes {
@@ -160,7 +178,27 @@ class SceneView: SCNView {
         lightTick = 0
         selectItemNode = nil
         centerPoint = CGPoint(x: 0, y: 0)
-        createPole()
+    }
+    
+    func newGame() {
+        stop(nil)
+        var state: GameState = .gameOwer
+        var doubleCount: Int = 0
+        while state == .gameOwer || doubleCount < 2 {
+            clearOldGame()
+            createPole()
+            state = self.calcGameInfo(needSetType: false)
+            switch state {
+            case .game(doubleCount: let val):
+                doubleCount = val
+            case .win, .gameOwer:
+                break
+            }
+            print(state)
+        }
+        
+        _ = self.calcGameInfo()
+        self.updateCameraAndDoska()
     }
 
     private func createPole() {
@@ -227,16 +265,10 @@ class SceneView: SCNView {
             if minY > item.position.z {
                 minY = item.position.z
             }
-            let cen = CGPoint(x: minX + (maxX - minX) * 0.5, y: minY + (maxY - minY) * 0.5)
-            self.centerPoint = cen
         }
-
-                //DispatchQueue.main.async { [weak self] in
-                    self.calcGameInfo()
-                    self.updateCameraAndDoska()
-                //}
-
         //}
+        let cen = CGPoint(x: minX + (maxX - minX) * 0.5, y: minY + (maxY - minY) * 0.5)
+        self.centerPoint = cen
     }
     
     private func updateCameraAndDoska() {
@@ -333,7 +365,7 @@ extension SceneView {
                         self?.selectItemNode?.remove()
                         itemNode.remove()
                         self?.selectItemNode = nil
-                        self?.calcGameInfo()
+                        _ = self?.calcGameInfo()
                     })
                 } else {
                     itemNode.setSelected(true)
@@ -422,7 +454,7 @@ extension SceneView {
         }
     }
     
-    func calcGameInfo() {
+    func calcGameInfo(needSetType: Bool = true) -> GameState {
         var count: Int = 0
         var doubleCount: Int = 0
         var accessedItems = [ItemNone]()
@@ -451,15 +483,24 @@ extension SceneView {
                 }
             }
         }
-        overlayScene?.set(type: .game(doubleCount: doubleCount, itemCount: count))
+        if needSetType {
+            overlayScene?.set(type: .game(doubleCount: doubleCount, itemCount: count))
+        }
         if count == 0 {
             //WINE!!!
-            overlayScene?.set(type: .youWin(levalName: NSLocalizedString(levelsData.currentLevel().name, comment: ""), stepCount: stepCount))
+            if needSetType {
+                overlayScene?.set(type: .youWin(levalName: NSLocalizedString(levelsData.currentLevel().name, comment: ""), stepCount: stepCount))
+            }
+            return .win
         }
         if doubleCount == 0 && count > 0 {
             //Game ower
-            overlayScene?.set(type: .youLose(levalName: NSLocalizedString(levelsData.currentLevel().name, comment: ""), itemCount: count))
+            if needSetType {
+                overlayScene?.set(type: .youLose(levalName: NSLocalizedString(levelsData.currentLevel().name, comment: ""), itemCount: count))
+            }
+            return .gameOwer
         }
+        return .game(doubleCount: doubleCount)
     }
     
     func showAccessDouble() {
