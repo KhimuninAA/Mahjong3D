@@ -17,6 +17,12 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSWindowDelegate, NSMenuDele
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         rootView = RootView()
+        rootView?.onUpdateLevelsAction = { [weak self] in
+            self?.updateLevels()
+        }
+        rootView?.onResizeAction = { [weak self] in
+            self?.saveWindowFrame()
+        }
         window.contentView = rootView
         window.delegate = self
         window.menu?.delegate = self
@@ -43,14 +49,21 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSWindowDelegate, NSMenuDele
 
     func windowShouldClose(_ sender: NSWindow) -> Bool {
         sender.orderOut(self)
-        //save window
+        saveWindowFrame()
+        return false
+    }
+
+    private func saveWindowFrame() {
         let frame = window.frame
         Storage.save(windowFrame: frame)
-        return false
     }
 
     func applicationShouldTerminateAfterLastWindowClosed(_ sender: NSApplication) -> Bool {
         return true
+    }
+
+    @IBAction func showLevel(_ sender: Any) {
+        rootView?.showLevels()
     }
 
     @IBAction func newGame(_ sender: Any) {
@@ -115,8 +128,11 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSWindowDelegate, NSMenuDele
     }
 
     @objc func levelAction(item: NSMenuItem) {
-        rootView?.scene?.setLevelIndex(item.tag)
-        updateLevels()
+        rootView?.levelsViewClear()
+        DispatchQueue.main.async { [weak self] in
+            self?.rootView?.scene?.setLevelIndex(item.tag)
+            self?.updateLevels()
+        }
     }
 
 

@@ -11,6 +11,10 @@ import SceneKit
 
 class RootView: NSView{
     var scene :SceneView?
+    private var  levelsView: LevelsScrollView?
+
+    var onUpdateLevelsAction: (() -> Void)?
+    var onResizeAction: (() -> Void)?
     
     override init(frame frameRect: NSRect) {
         super.init(frame: frameRect)
@@ -37,9 +41,39 @@ class RootView: NSView{
         
         scene?.frame = CGRect(x: 0, y: 0, width: selfSize.width, height: selfSize.height)
         scene?.resizeView()
+
+        levelsView?.frame = CGRect(x: 0, y: 0, width: selfSize.width, height: selfSize.height)
+        onResizeAction?()
     }
     
     func newGame() {
         scene?.newGame()
+    }
+
+    func levelsViewClear() {
+        levelsView?.removeFromSuperview()
+        levelsView = nil
+    }
+
+    func showLevels() {
+        if levelsView == nil {
+            levelsView = LevelsScrollView(frame: .zero)
+            if let levelsView = levelsView {
+                let levelData = scene?.getLevelData()
+                levelsView.levelsView.setLevelsData(levelData)
+                let selfSize = frame.size
+                levelsView.frame = CGRect(x: 0, y: 0, width: selfSize.width, height: selfSize.height)
+                addSubview(levelsView)
+                levelsView.levelsView.onLevelIndexAction = { [weak self] (index) in
+                    self?.levelsViewClear()
+                    DispatchQueue.main.async {
+                        self?.scene?.setLevelIndex(index)
+                        self?.onUpdateLevelsAction?()
+                    }
+                }
+            }
+        } else {
+            levelsViewClear()
+        }
     }
 }
