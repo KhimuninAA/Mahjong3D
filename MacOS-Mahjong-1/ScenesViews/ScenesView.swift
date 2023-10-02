@@ -180,13 +180,13 @@ class SceneView: SCNView {
         centerPoint = CGPoint(x: 0, y: 0)
     }
     
-    func newGame(levelItem: LevelItem) {
+    func newGame(levelItem: LevelItem, isProgress: Bool = true) {
         stop(nil)
         var state: GameState = .gameOwer
         var doubleCount: Int = 0
         while state == .gameOwer || doubleCount < 2 {
             clearOldGame()
-            createPole(levelItem: levelItem)
+            createPole(levelItem: levelItem, isProgress: isProgress)
             state = self.calcGameInfo(needSetType: false)
             switch state {
             case .game(doubleCount: let val):
@@ -202,7 +202,7 @@ class SceneView: SCNView {
     }
 
     //levelsData.currentLevel()
-    private func createPole(levelItem: LevelItem) {
+    private func createPole(levelItem: LevelItem, isProgress: Bool = true) {
         overlayScene?.set(type: .progress(value: 0))
         doskaNode?.isHidden = true
         let baseMaterial = materialUtils.getBaseMaterial()
@@ -230,11 +230,13 @@ class SceneView: SCNView {
         }
             
         for pos in level {
-            do {
-                usleep(10000)
+            if isProgress {
+                do {
+                    usleep(10000)
+                }
+                let progress = CGFloat(level.count - types.count)/CGFloat(level.count)
+                self.overlayScene?.set(type: .progress(value: progress))
             }
-            let progress = CGFloat(level.count - types.count)/CGFloat(level.count)
-            self.overlayScene?.set(type: .progress(value: progress))
             //
             let typesCount = types.count
             let currentType: ItemType
@@ -533,4 +535,37 @@ extension SceneView {
             items[1].showHelp()
         }
     }
+}
+
+extension SceneView {
+    func imageRepresentation() -> NSImage? {
+        return self.snapshot()
+//        let mySize = self.bounds.size
+//        let imgSize = NSSize(width: mySize.width, height: mySize.height)
+//        
+//        if let bir = self.bitmapImageRepForCachingDisplay(in: self.bounds) {
+//            bir.size = imgSize
+//            self.cacheDisplay(in: self.bounds, to: bir)
+//            
+//            let image = NSImage.init(size: imgSize)
+//            image.addRepresentation(bir)
+//            return image
+//        }
+//        
+//        return nil
+    }
+    
+//    - (NSImage *)imageRepresentation
+//    {
+//      NSSize mySize = self.bounds.size;
+//      NSSize imgSize = NSMakeSize( mySize.width, mySize.height );
+//
+//      NSBitmapImageRep *bir = [self bitmapImageRepForCachingDisplayInRect:[self bounds]];
+//      [bir setSize:imgSize];
+//      [self cacheDisplayInRect:[self bounds] toBitmapImageRep:bir];
+//
+//      NSImage* image = [[NSImage alloc]initWithSize:imgSize] ;
+//      [image addRepresentation:bir];
+//      return image;
+//    }
 }

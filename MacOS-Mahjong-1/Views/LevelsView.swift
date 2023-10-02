@@ -123,12 +123,13 @@ extension LevelsView: NSCollectionViewDataSource {
         return cell
     }
 
-    func getLevelImage(by index: Int) -> NSImage? {
-        let itemSize = levelsViewFlowLayout.itemSize
-        let scene = SceneView(frame: CGRect(x: 0, y: 0, width: itemSize.width, height: itemSize.height), options: nil)
-        //scene.
-        return nil
-    }
+//    func getLevelImage(by levelItem: LevelItem) -> NSImage? {
+//        let itemSize = levelsViewFlowLayout.itemSize
+//        let scene = SceneView(frame: CGRect(x: 0, y: 0, width: itemSize.width, height: itemSize.height), options: nil)
+//        scene.newGame(levelItem: levelItem, isProgress: false)
+//        let img = scene.imageRepresentation()
+//        return img
+//    }
 }
 
 extension LevelsView: NSCollectionViewDelegate {
@@ -141,6 +142,7 @@ extension LevelsView: NSCollectionViewDelegate {
 
 class LevelView: NSView {
     var label: KhLabel = KhLabel()
+    var imageView = NSImageView(frame: .zero)
 
     override init(frame frameRect: NSRect) {
         super.init(frame: frameRect)
@@ -156,10 +158,24 @@ class LevelView: NSView {
         label.stringValue = "..."
         label.alignment = .center
         addSubview(label)
+        
+        imageView.imageScaling = .scaleProportionallyUpOrDown
+        imageView.wantsLayer = true
+        //imageView.layer?.backgroundColor = NSColor.blue.cgColor
+        addSubview(imageView)
     }
 
     func setLevelItem(_ levelItem: LevelItem) {
         label.stringValue = NSLocalizedString(levelItem.name, comment: "")
+        //
+        DispatchQueue.global(qos: .userInitiated).async { [weak self] in
+            if let self = self {
+                let img = self.getLevelImage(by: levelItem, itemSize: self.imageView.bounds.size)
+                DispatchQueue.main.async { [weak self] in
+                    self?.imageView.image = img
+                }
+            }
+        }
     }
 
     override func resizeSubviews(withOldSize oldSize: NSSize) {
@@ -168,7 +184,19 @@ class LevelView: NSView {
 
         let labelHeight = CGFloat(Int(selfSize.height * 0.2))
         label.font = NSFont.systemFont(ofSize: labelHeight * 0.7)
-        label.frame = CGRect(x: 0, y: selfSize.height - labelHeight, width: selfSize.width, height: labelHeight)
+        let labelFrame = CGRect(x: 0, y: selfSize.height - labelHeight, width: selfSize.width, height: labelHeight)
+        label.frame = labelFrame
+        
+        
+        let imageViewFrame = CGRect(x: 0, y: 0, width: selfSize.width, height: labelFrame.minY)
+        imageView.frame = imageViewFrame
+    }
+    
+    func getLevelImage(by levelItem: LevelItem, itemSize: CGSize) -> NSImage? {
+        let scene = SceneView(frame: CGRect(x: 0, y: 0, width: itemSize.width, height: itemSize.height), options: nil)
+        scene.newGame(levelItem: levelItem, isProgress: false)
+        let img = scene.imageRepresentation()
+        return img
     }
 }
 
@@ -182,6 +210,12 @@ class LevelViewItem: NSCollectionViewItem {
     func setLevelItem(_ levelItem: LevelItem) {
         if let view = self.view as? LevelView {
             view.setLevelItem(levelItem)
+        }
+    }
+    
+    func setImage(_ image: NSImage?) {
+        if let view = self.view as? LevelView {
+            view.imageView.image = image
         }
     }
 }
