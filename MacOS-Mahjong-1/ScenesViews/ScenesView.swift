@@ -48,7 +48,7 @@ class SceneView: SCNView {
         levelsData.currentIndex = index
         let level = levelsData.currentLevel()
         Storage.save(type: level.type)
-        newGame()
+        newGame(levelItem: level)
     }
 
     override init(frame: NSRect, options: [String : Any]? = nil) {
@@ -146,7 +146,9 @@ class SceneView: SCNView {
             self?.showAccessDouble()
         }
         overlayScene?.isNewAction = { [weak self] in
-            self?.newGame()
+            if let level = self?.levelsData.currentLevel() {
+                self?.newGame(levelItem: level)
+            }
         }
         if let overlayScene = overlayScene{
             overlayScene.scaleMode = .resizeFill
@@ -161,8 +163,6 @@ class SceneView: SCNView {
         createDoska()
         initLightNode()
         initCameraNode()
-        newGame()
-
     }
     
     private func clearOldGame() {
@@ -180,13 +180,13 @@ class SceneView: SCNView {
         centerPoint = CGPoint(x: 0, y: 0)
     }
     
-    func newGame() {
+    func newGame(levelItem: LevelItem) {
         stop(nil)
         var state: GameState = .gameOwer
         var doubleCount: Int = 0
         while state == .gameOwer || doubleCount < 2 {
             clearOldGame()
-            createPole()
+            createPole(levelItem: levelItem)
             state = self.calcGameInfo(needSetType: false)
             switch state {
             case .game(doubleCount: let val):
@@ -201,12 +201,13 @@ class SceneView: SCNView {
         self.updateCameraAndDoska()
     }
 
-    private func createPole() {
+    //levelsData.currentLevel()
+    private func createPole(levelItem: LevelItem) {
         overlayScene?.set(type: .progress(value: 0))
         doskaNode?.isHidden = true
         let baseMaterial = materialUtils.getBaseMaterial()
 
-        let level = levelsData.currentLevel().type.levelPos()
+        let level = levelItem.type.levelPos()
 
         //144 204
         var maxX: CGFloat = 0

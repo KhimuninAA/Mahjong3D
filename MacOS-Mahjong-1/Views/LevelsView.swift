@@ -122,6 +122,13 @@ extension LevelsView: NSCollectionViewDataSource {
 
         return cell
     }
+
+    func getLevelImage(by index: Int) -> NSImage? {
+        let itemSize = levelsViewFlowLayout.itemSize
+        let scene = SceneView(frame: CGRect(x: 0, y: 0, width: itemSize.width, height: itemSize.height), options: nil)
+        //scene.
+        return nil
+    }
 }
 
 extension LevelsView: NSCollectionViewDelegate {

@@ -31,6 +31,8 @@ class RootView: NSView{
         scene = SceneView(frame: .zero, options: nil)
         if let scene = scene {
             addSubview(scene)
+            let levelItem = scene.getLevelData().currentLevel()
+            scene.newGame(levelItem: levelItem)
         }
     }
     
@@ -47,7 +49,9 @@ class RootView: NSView{
     }
     
     func newGame() {
-        scene?.newGame()
+        if let levelData = scene?.getLevelData() {
+            scene?.newGame(levelItem: levelData.currentLevel())
+        }
     }
 
     func levelsViewClear() {
