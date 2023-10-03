@@ -44,11 +44,11 @@ class SceneView: SCNView {
         return levelsData
     }
 
-    func setLevelIndex(_ index: Int) {
+    func setLevelIndex(_ index: Int, isProgress: Bool = true) {
         levelsData.currentIndex = index
         let level = levelsData.currentLevel()
         Storage.save(type: level.type)
-        newGame(levelItem: level)
+        newGame(levelItem: level, isProgress: isProgress)
     }
 
     override init(frame: NSRect, options: [String : Any]? = nil) {

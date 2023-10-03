@@ -42,7 +42,8 @@ class LevelsView: NSCollectionView{
     private var levelsViewFlowLayout: LevelsViewFlowLayout = LevelsViewFlowLayout()
     private var levelsData: LevelsData?
 
-    var onLevelIndexAction: ((_ index: Int) -> Void)?
+    var onLevelIndexAction: ((_ index: Int, _ rect: CGRect) -> Void)?
+    var onUpdateLevelsAction: (() -> Void)?
 
     override init(frame frameRect: NSRect) {
         super.init(frame: frameRect)
@@ -57,6 +58,10 @@ class LevelsView: NSCollectionView{
     func setLevelsData(_ levelsData: LevelsData?) {
         self.levelsData = levelsData
         reloadData()
+        LevelImageCashe.updateImageCashe(levelsData: levelsData, onComplition: { [weak self] in
+            self?.reloadData()
+            self?.onUpdateLevelsAction?()
+        })
     }
 
     private func initView() {
@@ -122,20 +127,19 @@ extension LevelsView: NSCollectionViewDataSource {
 
         return cell
     }
-
-//    func getLevelImage(by levelItem: LevelItem) -> NSImage? {
-//        let itemSize = levelsViewFlowLayout.itemSize
-//        let scene = SceneView(frame: CGRect(x: 0, y: 0, width: itemSize.width, height: itemSize.height), options: nil)
-//        scene.newGame(levelItem: levelItem, isProgress: false)
-//        let img = scene.imageRepresentation()
-//        return img
-//    }
 }
 
 extension LevelsView: NSCollectionViewDelegate {
     func collectionView(_ collectionView: NSCollectionView, didSelectItemsAt indexPaths: Set<IndexPath>) {
         if let indexPath = indexPaths.first {
-            onLevelIndexAction?(indexPath.item)
+            var rect = CGRect.zero
+            if let cell = collectionView.item(at: indexPath) as? LevelViewItem {
+                if let levelView = cell.view as? LevelView {
+                    rect = self.convert(levelView.imageView.frame, from: levelView)
+                }
+            }
+
+            onLevelIndexAction?(indexPath.item, rect)
         }
     }
 }
@@ -143,6 +147,7 @@ extension LevelsView: NSCollectionViewDelegate {
 class LevelView: NSView {
     var label: KhLabel = KhLabel()
     var imageView = NSImageView(frame: .zero)
+    var progressIndicator: NSProgressIndicator = NSProgressIndicator()
 
     override init(frame frameRect: NSRect) {
         super.init(frame: frameRect)
@@ -161,20 +166,23 @@ class LevelView: NSView {
         
         imageView.imageScaling = .scaleProportionallyUpOrDown
         imageView.wantsLayer = true
-        //imageView.layer?.backgroundColor = NSColor.blue.cgColor
         addSubview(imageView)
+
+        progressIndicator.isHidden = true
+        progressIndicator.style = .spinning
+        addSubview(progressIndicator)
     }
 
     func setLevelItem(_ levelItem: LevelItem) {
         label.stringValue = NSLocalizedString(levelItem.name, comment: "")
-        //
-        DispatchQueue.global(qos: .userInitiated).async { [weak self] in
-            if let self = self {
-                let img = self.getLevelImage(by: levelItem, itemSize: self.imageView.bounds.size)
-                DispatchQueue.main.async { [weak self] in
-                    self?.imageView.image = img
-                }
-            }
+        if let image = LevelImageCashe.getImage(by: levelItem.name) {
+            imageView.image = image
+            progressIndicator.isHidden = true
+            progressIndicator.stopAnimation(nil)
+        } else {
+            imageView.image = nil
+            progressIndicator.isHidden = false
+            progressIndicator.startAnimation(nil)
         }
     }
 
@@ -190,6 +198,8 @@ class LevelView: NSView {
         
         let imageViewFrame = CGRect(x: 0, y: 0, width: selfSize.width, height: labelFrame.minY)
         imageView.frame = imageViewFrame
+
+        progressIndicator.frame = imageViewFrame
     }
     
     func getLevelImage(by levelItem: LevelItem, itemSize: CGSize) -> NSImage? {
@@ -204,7 +214,7 @@ class LevelViewItem: NSCollectionViewItem {
     override func loadView() {
         self.view = LevelView()
         view.wantsLayer = true
-        view.layer?.backgroundColor = NSColor.lightGray.cgColor
+        view.layer?.backgroundColor = NSColor.clear.cgColor
     }
 
     func setLevelItem(_ levelItem: LevelItem) {

@@ -114,12 +114,16 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSWindowDelegate, NSMenuDele
                 levelItem.submenu = NSMenu()
                 if let levelData = rootView?.scene?.getLevelData() {
                     let currentLevel = levelData.currentLevel()
+                    LevelImageCashe.updateImageCashe(levelsData: levelData, onComplition: { [weak self] in
+                        self?.updateLevels()
+                    })
                     for level in levelData.levels {
                         let mItem = NSMenuItem(title: NSLocalizedString(level.name, comment: ""), action: #selector(AppDelegate.levelAction), keyEquivalent: "")
                         mItem.tag = level.type.rawValue
                         if currentLevel.type == level.type {
                             mItem.image = NSImage(named: "check_icon16")
                         }
+                        mItem.image = LevelImageCashe.getImageForMenu(by: level.name)
                         levelItem.submenu?.addItem(mItem)
                     }
                 }
