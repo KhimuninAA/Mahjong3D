@@ -75,8 +75,8 @@ class LevelImageCashe {
         if let image = getImage(by: name) {
             let rH: CGFloat = 44
             let rW = image.size.width * (rH / image.size.height)
-            var destSize = NSMakeSize(CGFloat(rW), CGFloat(rH))
-            var newImage = NSImage(size: destSize)
+            let destSize = NSMakeSize(CGFloat(rW), CGFloat(rH))
+            let newImage = NSImage(size: destSize)
             newImage.lockFocus()
             image.draw(in: NSMakeRect(0, 0, destSize.width, destSize.height), from: NSMakeRect(0, 0, image.size.width, image.size.height), operation: .sourceOver, fraction: CGFloat(1))
             newImage.unlockFocus()

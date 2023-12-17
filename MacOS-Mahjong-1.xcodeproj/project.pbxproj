@@ -73,6 +73,7 @@
 		FD8D3BD52A6C24A2001B4547 /* TexturesCom_Wood_TeakVeneer_512_roughness.tif in Resources */ = {isa = PBXBuildFile; fileRef = FD8D3BD22A6C24A2001B4547 /* TexturesCom_Wood_TeakVeneer_512_roughness.tif */; };
 		FD8D3BD62A6C24A2001B4547 /* TexturesCom_Wood_TeakVeneer_512_normal.tif in Resources */ = {isa = PBXBuildFile; fileRef = FD8D3BD32A6C24A2001B4547 /* TexturesCom_Wood_TeakVeneer_512_normal.tif */; };
 		FD8D3BD72A6C24A2001B4547 /* TexturesCom_Wood_TeakVeneer_512_albedo.tif in Resources */ = {isa = PBXBuildFile; fileRef = FD8D3BD42A6C24A2001B4547 /* TexturesCom_Wood_TeakVeneer_512_albedo.tif */; };
+		FDA96D2A2B2C3FBA008CC44D /* SceneKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDA96D282B2C3F9B008CC44D /* SceneKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -146,6 +147,7 @@
 		FD8D3BD22A6C24A2001B4547 /* TexturesCom_Wood_TeakVeneer_512_roughness.tif */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = TexturesCom_Wood_TeakVeneer_512_roughness.tif; sourceTree = "<group>"; };
 		FD8D3BD32A6C24A2001B4547 /* TexturesCom_Wood_TeakVeneer_512_normal.tif */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = TexturesCom_Wood_TeakVeneer_512_normal.tif; sourceTree = "<group>"; };
 		FD8D3BD42A6C24A2001B4547 /* TexturesCom_Wood_TeakVeneer_512_albedo.tif */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = TexturesCom_Wood_TeakVeneer_512_albedo.tif; sourceTree = "<group>"; };
+		FDA96D282B2C3F9B008CC44D /* SceneKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SceneKit.framework; path = System/Library/Frameworks/SceneKit.framework; sourceTree = SDKROOT; };
 		FDB11BFB2A69815300507D49 /* Sou2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Sou2.png; sourceTree = "<group>"; };
 		FDB11BFC2A69815300507D49 /* Sou9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Sou9.png; sourceTree = "<group>"; };
 		FDB11BFD2A69815300507D49 /* Sou3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Sou3.png; sourceTree = "<group>"; };
@@ -189,6 +191,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FDA96D2A2B2C3FBA008CC44D /* SceneKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -328,6 +331,7 @@
 			children = (
 				BFD8A9D52A69063800F679CA /* MacOS-Mahjong-1 */,
 				BFD8A9D42A69063800F679CA /* Products */,
+				FDA96D272B2C3F9B008CC44D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -411,6 +415,14 @@
 				FD8D3BD22A6C24A2001B4547 /* TexturesCom_Wood_TeakVeneer_512_roughness.tif */,
 			);
 			path = Wood;
+			sourceTree = "<group>";
+		};
+		FDA96D272B2C3F9B008CC44D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FDA96D282B2C3F9B008CC44D /* SceneKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		FDB11BFA2A69813500507D49 /* ItemsNew */ = {
@@ -738,14 +750,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "MacOS-Mahjong-1/MacOS_Mahjong_1.entitlements";
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 10;
+				CURRENT_PROJECT_VERSION = 11;
 				DEVELOPMENT_TEAM = UBMXWK5W6B;
 				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.board-games";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
@@ -755,7 +770,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.khimunin.Mahjong;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -768,14 +783,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "MacOS-Mahjong-1/MacOS_Mahjong_1.entitlements";
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 10;
+				CURRENT_PROJECT_VERSION = 11;
 				DEVELOPMENT_TEAM = UBMXWK5W6B;
 				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.board-games";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
@@ -785,7 +803,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.khimunin.Mahjong;
 				PRODUCT_NAME = "$(TARGET_NAME)";

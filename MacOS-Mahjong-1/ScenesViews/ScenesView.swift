@@ -8,6 +8,7 @@
 import Foundation
 import SceneKit
 import AVFAudio
+import QuartzCore
 
 enum GameState: Equatable{
     case game(doubleCount: Int)
@@ -57,8 +58,9 @@ class SceneView: SCNView {
     }
     
     override func viewDidMoveToWindow() {
-         //disable retina
-         layer?.contentsScale = 1.0
+        super.viewDidMoveToWindow()
+        //disable retina
+        layer?.contentsScale = 1.0
     }
 
     required init?(coder: NSCoder) {
@@ -133,7 +135,7 @@ class SceneView: SCNView {
         self.loops = true
         self.isPlaying = true
 
-        //self.showsStatistics = true
+        //self.showsStatistics = false
         self.antialiasingMode = .multisampling8X
         
         scene = SCNScene(named: "SKScene.scnassets/Scene.scn")

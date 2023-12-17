@@ -71,19 +71,24 @@ class RootView: NSView{
                 levelsView.levelsView.onLevelIndexAction = { [weak self] (index, rect) in
                     let newRect = self?.convert(rect, from: levelsView) ?? rect
                     self?.scene?.setLevelIndex(index, isProgress: false)
-                    let img = self?.scene?.imageRepresentation()
+                    //let img = self?.scene?.imageRepresentation()
                     DispatchQueue.main.async {
-                        let view = NSImageView(frame: newRect)
+                        //let view = NSImageView(frame: newRect)
                         //view.layer = CALayer()
                         //view.layer?.contentsGravity = CALayerContentsGravity.resizeAspectFill
                         //view.layer?.contents = img
                         //view.wantsLayer = true
-                        view.image = img
-                        view.imageScaling = .scaleProportionallyUpOrDown
                         //view.image = img
-                        view.wantsLayer = true
-                        view.layer?.backgroundColor = NSColor.red.cgColor
-                        self?.addSubview(view)
+                        //view.imageScaling = .scaleProportionallyUpOrDown
+                        //view.image = img
+                        //view.wantsLayer = true
+                        //view.layer?.backgroundColor = NSColor.red.cgColor
+                        //self?.addSubview(view)
+                        self?.scene?.removeFromSuperview()
+                        self?.scene?.frame = newRect
+                        if let scene = self?.scene {
+                            self?.addSubview(scene)
+                        }
 
 //                        CATransaction.begin()
 //                        CATransaction.setCompletionBlock({
@@ -103,17 +108,18 @@ class RootView: NSView{
 //                        CATransaction.commit()
 
                         NSAnimationContext.runAnimationGroup { [weak self] context in
-                            context.duration = 20
+                            context.duration = 50
                             context.allowsImplicitAnimation = true
                             if let self = self {
-                                view.animator().frame = self.bounds
-                                //view.frame = self.bounds
+                                //view.animator().frame = self.bounds
+                                //self.scene?.frame = self.bounds
+                                self.scene?.animator().frame = self.bounds
                             }
                         } completionHandler: {
                             self?.levelsViewClear()
-                            view.isHidden = true
-                            view.alphaValue = 0
-                            view.removeFromSuperview()
+                            //view.isHidden = true
+                            //view.alphaValue = 0
+                            //view.removeFromSuperview()
                             self?.levelsViewClear()
                             self?.onUpdateLevelsAction?()
                         }

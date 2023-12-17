@@ -34,8 +34,9 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSWindowDelegate, NSMenuDele
         updateLevels()
 
         Timer.scheduledTimer(withTimeInterval: 1, repeats: true, block: { [weak self] (timer) in
-            let usedMBStr = self?.formattedMemoryFootprint()
-            print(usedMBStr)
+            if let usedMBStr = self?.formattedMemoryFootprint() as? String {
+                print(usedMBStr)
+            }
         })
     }
 
