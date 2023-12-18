@@ -98,7 +98,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSWindowDelegate, NSMenuDele
                 subStr = NSLocalizedString("v_disable", comment: "")
             }
             let str = NSLocalizedString("Follow the cursor", comment: "")
-            menuItem.title = str + " " + subStr
+            menuItem.title = str + " : " + subStr
         }
     }
     

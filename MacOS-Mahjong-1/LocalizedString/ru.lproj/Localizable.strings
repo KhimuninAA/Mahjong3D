@@ -15,6 +15,14 @@
 "v_enable" = "включено";
 
 //Levels
+"l_4winds" = "4 крыла";
+"l_alien" = "Чужой";
+"l_altar" = "Алтарь";
+"l_arena" = "Арена";
+"l_arrow" = "Стрела";
+"l_atlantis" = "Атлантида";
+"l_aztec" = "Ацтек";
+
 "l_default" = "По умолчанию";
 "l_pyramid" = "Пирамида";
 

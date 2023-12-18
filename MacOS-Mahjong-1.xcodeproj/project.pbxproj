@@ -74,6 +74,13 @@
 		FD8D3BD62A6C24A2001B4547 /* TexturesCom_Wood_TeakVeneer_512_normal.tif in Resources */ = {isa = PBXBuildFile; fileRef = FD8D3BD32A6C24A2001B4547 /* TexturesCom_Wood_TeakVeneer_512_normal.tif */; };
 		FD8D3BD72A6C24A2001B4547 /* TexturesCom_Wood_TeakVeneer_512_albedo.tif in Resources */ = {isa = PBXBuildFile; fileRef = FD8D3BD42A6C24A2001B4547 /* TexturesCom_Wood_TeakVeneer_512_albedo.tif */; };
 		FDA96D2A2B2C3FBA008CC44D /* SceneKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDA96D282B2C3F9B008CC44D /* SceneKit.framework */; };
+		FDC7EF592B30AED7009455F3 /* 4_winds.layout in Resources */ = {isa = PBXBuildFile; fileRef = FDC7EF522B30AED7009455F3 /* 4_winds.layout */; };
+		FDC7EF5A2B30AED7009455F3 /* atlantis.layout in Resources */ = {isa = PBXBuildFile; fileRef = FDC7EF532B30AED7009455F3 /* atlantis.layout */; };
+		FDC7EF5B2B30AED7009455F3 /* alien.layout in Resources */ = {isa = PBXBuildFile; fileRef = FDC7EF542B30AED7009455F3 /* alien.layout */; };
+		FDC7EF5C2B30AED7009455F3 /* aztec.layout in Resources */ = {isa = PBXBuildFile; fileRef = FDC7EF552B30AED7009455F3 /* aztec.layout */; };
+		FDC7EF5D2B30AED7009455F3 /* arrow.layout in Resources */ = {isa = PBXBuildFile; fileRef = FDC7EF562B30AED7009455F3 /* arrow.layout */; };
+		FDC7EF5E2B30AED7009455F3 /* altar.layout in Resources */ = {isa = PBXBuildFile; fileRef = FDC7EF572B30AED7009455F3 /* altar.layout */; };
+		FDC7EF5F2B30AED7009455F3 /* arena.layout in Resources */ = {isa = PBXBuildFile; fileRef = FDC7EF582B30AED7009455F3 /* arena.layout */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -184,6 +191,13 @@
 		FDB11C372A69B64600507D49 /* Nan.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Nan.png; sourceTree = "<group>"; };
 		FDB11C472A69BDD700507D49 /* flow1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = flow1.png; sourceTree = "<group>"; };
 		FDB11C482A69BDD700507D49 /* flow2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = flow2.png; sourceTree = "<group>"; };
+		FDC7EF522B30AED7009455F3 /* 4_winds.layout */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = 4_winds.layout; sourceTree = "<group>"; };
+		FDC7EF532B30AED7009455F3 /* atlantis.layout */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = atlantis.layout; sourceTree = "<group>"; };
+		FDC7EF542B30AED7009455F3 /* alien.layout */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = alien.layout; sourceTree = "<group>"; };
+		FDC7EF552B30AED7009455F3 /* aztec.layout */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = aztec.layout; sourceTree = "<group>"; };
+		FDC7EF562B30AED7009455F3 /* arrow.layout */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = arrow.layout; sourceTree = "<group>"; };
+		FDC7EF572B30AED7009455F3 /* altar.layout */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = altar.layout; sourceTree = "<group>"; };
+		FDC7EF582B30AED7009455F3 /* arena.layout */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = arena.layout; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -249,6 +263,13 @@
 		BF5212C32A6FF46E00F72B5A /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				FDC7EF522B30AED7009455F3 /* 4_winds.layout */,
+				FDC7EF542B30AED7009455F3 /* alien.layout */,
+				FDC7EF572B30AED7009455F3 /* altar.layout */,
+				FDC7EF582B30AED7009455F3 /* arena.layout */,
+				FDC7EF562B30AED7009455F3 /* arrow.layout */,
+				FDC7EF532B30AED7009455F3 /* atlantis.layout */,
+				FDC7EF552B30AED7009455F3 /* aztec.layout */,
 				BF1DE7D92A71009700B7E352 /* pyramid.layout */,
 				BF1DE7D72A70FF5700B7E352 /* default.layout */,
 				FD018BFD2A70170F00552F80 /* grid.layout */,
@@ -535,6 +556,7 @@
 				BFCE10A72A6916C6004043FF /* TexturesCom_Metal_SteelRough2_1K_metallic.tif in Resources */,
 				BF1DE8562A7B9E0500B7E352 /* CountItem.png in Resources */,
 				FD018C0C2A701AB000552F80 /* garden.layout in Resources */,
+				FDC7EF5D2B30AED7009455F3 /* arrow.layout in Resources */,
 				BFD8A9EB2A69087600F679CA /* SKScene.scnassets in Resources */,
 				BFCE10D32A691841004043FF /* Front.png in Resources */,
 				FD018C0F2A701AB000552F80 /* flowers.layout in Resources */,
@@ -545,6 +567,8 @@
 				BFCE10F92A692990004043FF /* TexturesCom_Marble_SlabWhite2_New_512_albedo.tif in Resources */,
 				FD018C102A701AB000552F80 /* future.layout in Resources */,
 				FD018C0D2A701AB000552F80 /* eagle.layout in Resources */,
+				FDC7EF5E2B30AED7009455F3 /* altar.layout in Resources */,
+				FDC7EF5B2B30AED7009455F3 /* alien.layout in Resources */,
 				BF1DE8502A7B921D00B7E352 /* InfoValue.png in Resources */,
 				BF1DE7D32A70FE3900B7E352 /* Localizable.strings in Resources */,
 				FD018C0B2A701AB000552F80 /* galaxy.layout in Resources */,
@@ -552,18 +576,21 @@
 				FD8D3BD52A6C24A2001B4547 /* TexturesCom_Wood_TeakVeneer_512_roughness.tif in Resources */,
 				FD8D3BD02A6B1A3D001B4547 /* help_blue.png in Resources */,
 				BF5212AF2A6FB30300F72B5A /* check_icon16.png in Resources */,
+				FDC7EF5A2B30AED7009455F3 /* atlantis.layout in Resources */,
 				BFCE10A62A6916C6004043FF /* TexturesCom_Metal_SteelRough2_1K_ao.tif in Resources */,
 				FD018C0A2A701AB000552F80 /* enterprise.layout in Resources */,
 				BFD8A9DC2A69063A00F679CA /* MainMenu.xib in Resources */,
 				BF1DE7D82A70FF5700B7E352 /* default.layout in Resources */,
 				FD018C122A701C2C00552F80 /* dragon.layout in Resources */,
 				BFCE10A82A6916C6004043FF /* TexturesCom_Metal_SteelRough2_1K_albedo.tif in Resources */,
+				FDC7EF592B30AED7009455F3 /* 4_winds.layout in Resources */,
 				BF1DE8132A77916B00B7E352 /* OK.png in Resources */,
 				FD8D3BCE2A6B19F8001B4547 /* mahjong_double.png in Resources */,
 				FD018C002A70193F00552F80 /* glade.layout in Resources */,
 				FD8D3BCD2A6B19F8001B4547 /* mahjong.png in Resources */,
 				BFCE10AA2A6916C6004043FF /* TexturesCom_Metal_SteelRough2_1K_normal.tif in Resources */,
 				BF1DE80F2A778D4E00B7E352 /* test4x4.layout in Resources */,
+				FDC7EF5C2B30AED7009455F3 /* aztec.layout in Resources */,
 				BF1DE8422A78C4C300B7E352 /* YouWin2.png in Resources */,
 				FD8D3BD62A6C24A2001B4547 /* TexturesCom_Wood_TeakVeneer_512_normal.tif in Resources */,
 				FD8D3BD72A6C24A2001B4547 /* TexturesCom_Wood_TeakVeneer_512_albedo.tif in Resources */,
@@ -573,6 +600,7 @@
 				BF5212AD2A6FB28E00F72B5A /* check_icon.png in Resources */,
 				BF1DE84E2A7B921800B7E352 /* InfoBtn.png in Resources */,
 				BF52129F2A6E6B1600F72B5A /* items.png in Resources */,
+				FDC7EF5F2B30AED7009455F3 /* arena.layout in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

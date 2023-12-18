@@ -12,10 +12,18 @@
 "Mixing the bones" = "Mixing the bones";
 
 "Follow the cursor" = "Follow the cursor";
-"v_disable" = "disable";
-"v_enable" = "enable";
+"v_disable" = "disabled";
+"v_enable" = "enabled";
 
 //Levels
+"l_4winds" = "4 Winds";
+"l_alien" = "Alien";
+"l_altar" = "Altar";
+"l_arena" = "Arena";
+"l_arrow" = "Arrow";
+"l_atlantis" = "Atlantis";
+"l_aztec" = "Aztec";
+
 "l_default" = "Default";
 "l_pyramid" = "Pyramid";
 

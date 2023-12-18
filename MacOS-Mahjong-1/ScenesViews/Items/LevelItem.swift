@@ -8,6 +8,15 @@
 import Foundation
 
 enum LevelType: Int, CaseIterable {
+    
+    case winds4 //4_winds
+    case alien
+    case altar
+    case arena
+    case arrow
+    case atlantis
+    case aztec
+    
     case def
     case pyramid
     case rocket
@@ -32,6 +41,21 @@ extension LevelType {
     func levelPos() -> [Pos] {
         let level: [Pos]
         switch self {
+        case .winds4:
+            level = LayoutLevels.getLevel(name: "4_winds")
+        case .alien:
+            level = LayoutLevels.getLevel(name: "alien")
+        case .altar:
+            level = LayoutLevels.getLevel(name: "altar")
+        case .arena:
+            level = LayoutLevels.getLevel(name: "arena")
+        case .arrow:
+            level = LayoutLevels.getLevel(name: "arrow")
+        case .atlantis:
+            level = LayoutLevels.getLevel(name: "atlantis")
+        case .aztec:
+            level = LayoutLevels.getLevel(name: "aztec")
+            
         case .def:
             level = LayoutLevels.getLevel(name: "default")
         case .pyramid:
@@ -77,6 +101,14 @@ struct LevelItem {
 extension LevelItem {
     static func getLevels() -> [LevelItem] {
         var levels = [LevelItem]()
+        
+        levels.append(LevelItem(name: "l_4winds", type: .winds4))
+        levels.append(LevelItem(name: "l_alien", type: .alien))
+        levels.append(LevelItem(name: "l_altar", type: .altar))
+        levels.append(LevelItem(name: "l_arena", type: .arena))
+        levels.append(LevelItem(name: "l_arrow", type: .arrow))
+        levels.append(LevelItem(name: "l_atlantis", type: .atlantis))
+        levels.append(LevelItem(name: "l_aztec", type: .aztec))
 
         levels.append(LevelItem(name: "l_default", type: .def))
         levels.append(LevelItem(name: "l_pyramid", type: .pyramid))
