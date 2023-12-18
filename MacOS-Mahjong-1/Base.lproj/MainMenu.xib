@@ -53,9 +53,9 @@
                                 </connections>
                             </menuItem>
                             <menuItem isSeparatorItem="YES" id="N26-j5-xWR"/>
-                            <menuItem title="Menu" identifier="Settings" id="Z2i-yz-z1b" userLabel="Settings">
+                            <menuItem title="Settings" identifier="Settings" id="Z2i-yz-z1b" userLabel="Settings">
                                 <modifierMask key="keyEquivalentModifierMask"/>
-                                <menu key="submenu" title="Menu" id="eBY-b3-JUu">
+                                <menu key="submenu" title="Settings" id="eBY-b3-JUu">
                                     <items>
                                         <menuItem title="follow the cursor" identifier="follow_cursor" id="xDc-Qn-JDS">
                                             <modifierMask key="keyEquivalentModifierMask"/>
