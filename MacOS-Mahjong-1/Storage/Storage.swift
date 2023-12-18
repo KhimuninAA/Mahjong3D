@@ -11,6 +11,17 @@ class Storage {
     private static func storage() -> UserDefaults {
         return UserDefaults.standard
     }
+    
+    static func saveFollowCursor(val: Bool) {
+        let storage = storage()
+        storage.set(val, forKey: "FollowCursor")
+    }
+    
+    static func readFollowCursor() -> Bool {
+        let storage = storage()
+        let value = storage.bool(forKey: "FollowCursor")
+        return value
+    }
 
     static func save(type: LevelType) {
         let storage = storage()

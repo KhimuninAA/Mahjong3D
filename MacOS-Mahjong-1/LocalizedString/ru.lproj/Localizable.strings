@@ -10,6 +10,9 @@
 "Moves made:" = "Сделано ходов:";
 "Remaining chips:" = "Оставшиеся фишки:";
 "Mixing the bones" = "Перемешиваем кости";
+"Follow the cursor" = "Слежение за курсором";
+"v_disable" = "выключено";
+"v_enable" = "включено";
 
 //Levels
 "l_default" = "По умолчанию";

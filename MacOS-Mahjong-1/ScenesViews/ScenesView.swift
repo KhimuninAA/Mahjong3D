@@ -341,18 +341,27 @@ extension SceneView {
     
     override func mouseMoved(with event: NSEvent) {
         super.mouseMoved(with: event)
-        let windowPoint = event.locationInWindow
-        let sizeX = self.bounds.size.width * 0.5
-        let sizeY = self.bounds.size.height * 0.5
-
-        let x = (sizeX - windowPoint.x)/sizeX
-        let y = (sizeY - windowPoint.y)/sizeY
         
-        if let doskaNode = doskaNode {
-            //let angle = CGFloat.pi * sin(lightTick * 5) * 0.05
-            let angleX = CGFloat.pi * x * 0.05
-            let angleY = CGFloat.pi * y * 0.05
-            doskaNode.eulerAngles = SCNVector3Make(-angleY, 0, -angleX)
+        let isFollowCursor = Storage.readFollowCursor()
+        
+        if isFollowCursor {
+            let windowPoint = event.locationInWindow
+            let sizeX = self.bounds.size.width * 0.5
+            let sizeY = self.bounds.size.height * 0.5
+            
+            let x = (sizeX - windowPoint.x)/sizeX
+            let y = (sizeY - windowPoint.y)/sizeY
+            
+            if let doskaNode = doskaNode {
+                //let angle = CGFloat.pi * sin(lightTick * 5) * 0.05
+                let angleX = CGFloat.pi * x * 0.05
+                let angleY = CGFloat.pi * y * 0.05
+                doskaNode.eulerAngles = SCNVector3Make(-angleY, 0, -angleX)
+            }
+        } else {
+            if let doskaNode = doskaNode {
+                doskaNode.eulerAngles = SCNVector3Make(0, 0, 0)
+            }
         }
     }
     

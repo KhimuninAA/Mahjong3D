@@ -11,6 +11,10 @@
 "Remaining chips:" = "Remaining chips:";
 "Mixing the bones" = "Mixing the bones";
 
+"Follow the cursor" = "Follow the cursor";
+"v_disable" = "disable";
+"v_enable" = "enable";
+
 //Levels
 "l_default" = "Default";
 "l_pyramid" = "Pyramid";

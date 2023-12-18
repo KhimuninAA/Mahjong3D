@@ -32,6 +32,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSWindowDelegate, NSMenuDele
             window.setFrame(wFrame, display: true)
         }
         updateLevels()
+        updateFollowCursor()
 
         Timer.scheduledTimer(withTimeInterval: 1, repeats: true, block: { [weak self] (timer) in
             if let usedMBStr = self?.formattedMemoryFootprint() as? String {
@@ -81,6 +82,26 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSWindowDelegate, NSMenuDele
         }
     }
 
+    @IBAction func followCursor(_ sender: Any) {
+        let isFollowCursor = Storage.readFollowCursor()
+        Storage.saveFollowCursor(val: !isFollowCursor)
+        updateFollowCursor()
+    }
+    
+    private func updateFollowCursor() {
+        if let menuItem = getMenuItem(from: window.menu, name: "follow_cursor") {
+            let isFollowCursor = Storage.readFollowCursor()
+            let subStr: String
+            if isFollowCursor {
+                subStr = NSLocalizedString("v_enable", comment: "")
+            } else {
+                subStr = NSLocalizedString("v_disable", comment: "")
+            }
+            let str = NSLocalizedString("Follow the cursor", comment: "")
+            menuItem.title = str + " " + subStr
+        }
+    }
+    
     @IBAction func showHelp(_ sender: Any) {
         if let mainSize = NSScreen.main?.frame.size{
             let helpSize = CGSize(width: 400, height: 440)
@@ -149,6 +170,11 @@ extension AppDelegate {
             for item in menu.items {
                 if let identifier = item.identifier?.rawValue as? String, identifier == name {
                     return item
+                }
+                if let subMenu = item.submenu {
+                    if let subItem = getMenuItem(from: subMenu, name: name) {
+                        return subItem
+                    }
                 }
             }
         }
