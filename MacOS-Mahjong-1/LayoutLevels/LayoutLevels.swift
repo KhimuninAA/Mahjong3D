@@ -5,6 +5,8 @@
 //  Created by Алексей Химунин on 25.07.2023.
 //
 
+// http://www.247mahjong.com/
+// KDE https://github.com/KDE/kmahjongg/blob/master/layouts/pyramid.layout
 import Foundation
 
 class LayoutLevels {

@@ -16,7 +16,7 @@
 "v_enable" = "enabled";
 
 //Levels
-"l_4winds" = "4 Winds";
+"l_winds4" = "4 Winds";
 "l_alien" = "Alien";
 "l_altar" = "Altar";
 "l_arena" = "Arena";
@@ -41,3 +41,5 @@
 "l_garden" = "Garden";
 "l_future" = "Future";
 "l_dragon" = "Dragon";
+
+"l_test4x4" = "test4x4";

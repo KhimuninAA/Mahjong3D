@@ -46,6 +46,10 @@ class RootView: NSView{
 
         levelsView?.frame = CGRect(x: 0, y: 0, width: selfSize.width, height: selfSize.height)
         onResizeAction?()
+        
+        if let frame = window?.frame {
+            Storage.save(windowFrame: frame)
+        }
     }
     
     func newGame() {

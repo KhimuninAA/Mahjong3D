@@ -15,7 +15,7 @@
 "v_enable" = "включено";
 
 //Levels
-"l_4winds" = "4 крыла";
+"l_winds4" = "4 крыла";
 "l_alien" = "Чужой";
 "l_altar" = "Алтарь";
 "l_arena" = "Арена";
@@ -40,3 +40,5 @@
 "l_garden" = "Сады";
 "l_future" = "Будущее";
 "l_dragon" = "Дракон";
+
+"l_test4x4" = "test4x4";

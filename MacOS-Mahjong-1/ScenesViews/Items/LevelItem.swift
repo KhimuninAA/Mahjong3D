@@ -17,7 +17,7 @@ enum LevelType: Int, CaseIterable {
     case atlantis
     case aztec
     
-    case def
+    case `default`
     case pyramid
     case rocket
     case grid
@@ -39,55 +39,11 @@ enum LevelType: Int, CaseIterable {
 
 extension LevelType {
     func levelPos() -> [Pos] {
-        let level: [Pos]
-        switch self {
-        case .winds4:
-            level = LayoutLevels.getLevel(name: "4_winds")
-        case .alien:
-            level = LayoutLevels.getLevel(name: "alien")
-        case .altar:
-            level = LayoutLevels.getLevel(name: "altar")
-        case .arena:
-            level = LayoutLevels.getLevel(name: "arena")
-        case .arrow:
-            level = LayoutLevels.getLevel(name: "arrow")
-        case .atlantis:
-            level = LayoutLevels.getLevel(name: "atlantis")
-        case .aztec:
-            level = LayoutLevels.getLevel(name: "aztec")
-            
-        case .def:
-            level = LayoutLevels.getLevel(name: "default")
-        case .pyramid:
-            level = LayoutLevels.getLevel(name: "pyramid")
-        case .rocket:
-            level = LayoutLevels.getLevel(name: "rocket")
-        case .grid:
-            level = LayoutLevels.getLevel(name: "grid")
-        case .glade:
-            level = LayoutLevels.getLevel(name: "glade")
-        case .girl:
-            level = LayoutLevels.getLevel(name: "girl")
-        case .eagle:
-            level = LayoutLevels.getLevel(name: "eagle")
-        case .enterprise:
-            level = LayoutLevels.getLevel(name: "enterprise")
-        case .explosion:
-            level = LayoutLevels.getLevel(name: "explosion")
-        case .flowers:
-            level = LayoutLevels.getLevel(name: "flowers")
-        case .galaxy:
-            level = LayoutLevels.getLevel(name: "galaxy")
-        case .garden:
-            level = LayoutLevels.getLevel(name: "garden")
-        case .future:
-            level = LayoutLevels.getLevel(name: "future")
-        case .dragon:
-            level = LayoutLevels.getLevel(name: "dragon")
-        case .test4x4:
-            level = LayoutLevels.getLevel(name: "test4x4")
+        var name = "\(self)"
+        if name == "winds4" {
+            name = "4_winds"
         }
-        return level
+        return LayoutLevels.getLevel(name: name)
     }
 }
 
@@ -102,31 +58,10 @@ extension LevelItem {
     static func getLevels() -> [LevelItem] {
         var levels = [LevelItem]()
         
-        levels.append(LevelItem(name: "l_4winds", type: .winds4))
-        levels.append(LevelItem(name: "l_alien", type: .alien))
-        levels.append(LevelItem(name: "l_altar", type: .altar))
-        levels.append(LevelItem(name: "l_arena", type: .arena))
-        levels.append(LevelItem(name: "l_arrow", type: .arrow))
-        levels.append(LevelItem(name: "l_atlantis", type: .atlantis))
-        levels.append(LevelItem(name: "l_aztec", type: .aztec))
-
-        levels.append(LevelItem(name: "l_default", type: .def))
-        levels.append(LevelItem(name: "l_pyramid", type: .pyramid))
-        levels.append(LevelItem(name: "l_rocket", type: .rocket))
-        levels.append(LevelItem(name: "l_grid", type: .grid))
-        levels.append(LevelItem(name: "l_glade", type: .glade))
-        levels.append(LevelItem(name: "l_girl", type: .girl))
-        levels.append(LevelItem(name: "l_eagle", type: .eagle))
-        levels.append(LevelItem(name: "l_enterprise", type: .enterprise))
-        levels.append(LevelItem(name: "l_explosion", type: .explosion))
-        levels.append(LevelItem(name: "l_flowers", type: .flowers))
-        levels.append(LevelItem(name: "l_galaxy", type: .galaxy))
-        levels.append(LevelItem(name: "l_garden", type: .garden))
-        levels.append(LevelItem(name: "l_future", type: .future))
-        levels.append(LevelItem(name: "l_dragon", type: .dragon))
-
-
-        levels.append(LevelItem(name: "test4x4", type: .test4x4))        
+        for itemCase in LevelType.allCases {
+            let str = "l_\(itemCase)"
+            levels.append(LevelItem(name: str, type: itemCase))
+        }
         return levels
     }
 }

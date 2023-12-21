@@ -16,6 +16,12 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSWindowDelegate, NSMenuDele
 
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
+        //-- frame from storage
+        let wFrame = Storage.readWindowFrame()
+        if wFrame.width > 50 && wFrame.height > 50 {
+            window.setFrame(wFrame, display: true)
+        }
+        //---
         rootView = RootView()
         rootView?.onUpdateLevelsAction = { [weak self] in
             self?.updateLevels()
@@ -27,10 +33,6 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSWindowDelegate, NSMenuDele
         window.delegate = self
         window.menu?.delegate = self
         self.window.title = NSLocalizedString("Mahjong 3D", comment: "")
-        let wFrame = Storage.readWindowFrame()
-        if wFrame.width > 50 && wFrame.height > 50 {
-            window.setFrame(wFrame, display: true)
-        }
         updateLevels()
         updateFollowCursor()
 
