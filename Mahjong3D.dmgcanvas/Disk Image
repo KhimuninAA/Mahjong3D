@@ -1,0 +1,53 @@
+{
+  "diskImage" : {
+    "autoopen" : true,
+    "background" : {
+      "image" : "backgroundImage",
+      "imageScaleOption" : 100,
+      "layoutObjects" : [
+
+      ],
+      "type" : 0
+    },
+    "iconPreviewVisible" : false,
+    "iconSize" : 128,
+    "itemInfoVisible" : false,
+    "labelPosition" : 0,
+    "licenses" : [
+
+    ],
+    "nameFontSize" : 12,
+    "statusBarVisible" : false,
+    "suggestedDiskImageName" : "Mahjong3D.dmg",
+    "toolbarVisible" : false,
+    "uid" : "xadgyclanq",
+    "validationScheme" : 0,
+    "viewLayout" : 0,
+    "volumeName" : "Mahjong3D",
+    "volumeSize" : 0,
+    "volumeSizeOption" : "Automatic",
+    "windowContentHeight" : 360,
+    "windowContents" : [
+      {
+        "filePath" : "\/Users\/khimuninaa\/Downloads\/Mahjong 2024-07-31 20-11-03\/Mahjong.app",
+        "iconSize" : 100,
+        "invisible" : false,
+        "isAnAlias" : false,
+        "location" : "{160, 180}",
+        "relativeFilePath" : "..\/Downloads\/Mahjong 2024-07-31 20-11-03\/Mahjong.app"
+      },
+      {
+        "filePath" : "\/Applications",
+        "iconSize" : 100,
+        "invisible" : false,
+        "isAnAlias" : true,
+        "location" : "{454, 180}",
+        "relativeFilePath" : "..\/..\/..\/Applications"
+      }
+    ],
+    "windowContentWidth" : 600,
+    "windowLeft" : 200,
+    "windowTop" : 120
+  },
+  "version" : 4
+}
