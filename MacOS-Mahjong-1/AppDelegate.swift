@@ -14,6 +14,20 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSWindowDelegate, NSMenuDele
     @IBOutlet var window: NSWindow!
     private var startUsedMB: Double = 0
 
+    func applicationWillFinishLaunching(_ notification: Notification) {
+        window.alphaValue = 0
+
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(didWindowChange),
+            name: NSWindow.didMoveNotification,
+            object: nil
+        )
+    }
+
+    @objc func didWindowChange() {
+        saveWindowFrame()
+    }
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         //-- frame from storage
@@ -33,6 +47,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSWindowDelegate, NSMenuDele
         window.delegate = self
         window.menu?.delegate = self
         self.window.title = NSLocalizedString("Mahjong 3D", comment: "")
+        window.alphaValue = 1
         updateLevels()
         updateFollowCursor()
 
