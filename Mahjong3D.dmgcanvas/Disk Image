@@ -29,20 +29,20 @@
     "windowContentHeight" : 360,
     "windowContents" : [
       {
-        "filePath" : "\/Users\/khimuninaa\/Downloads\/Mahjong 2024-07-31 20-11-03\/Mahjong.app",
-        "iconSize" : 100,
-        "invisible" : false,
-        "isAnAlias" : false,
-        "location" : "{160, 180}",
-        "relativeFilePath" : "..\/Downloads\/Mahjong 2024-07-31 20-11-03\/Mahjong.app"
-      },
-      {
         "filePath" : "\/Applications",
         "iconSize" : 100,
         "invisible" : false,
         "isAnAlias" : true,
         "location" : "{454, 180}",
-        "relativeFilePath" : "..\/..\/..\/Applications"
+        "relativeFilePath" : "..\/..\/..\/..\/Applications"
+      },
+      {
+        "filePath" : "\/Users\/khimuninaa\/Downloads\/Mahjong 2024-08-29 12-44-40\/Mahjong.app",
+        "iconSize" : 100,
+        "invisible" : false,
+        "isAnAlias" : false,
+        "location" : "{161, 175}",
+        "relativeFilePath" : "..\/..\/Downloads\/Mahjong 2024-08-29 12-44-40\/Mahjong.app"
       }
     ],
     "windowContentWidth" : 600,
