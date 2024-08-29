@@ -49,6 +49,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSWindowDelegate, NSMenuDele
         self.window.title = NSLocalizedString("Mahjong 3D", comment: "")
         window.alphaValue = 1
         updateLevels()
+        updateTables()
         updateFollowCursor()
 
         Timer.scheduledTimer(withTimeInterval: 1, repeats: true, block: { [weak self] (timer) in
@@ -145,6 +146,42 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSWindowDelegate, NSMenuDele
         preferenceWindow?.title = title
         preferenceWindow?.contentView = view
         preferenceWindow?.contentView?.frame = CGRect(x: 0, y: 0, width: rect.width, height: rect.height)
+    }
+    
+    private func updateTables() {
+        if let menuItem = getMenuItem(from: window.menu, name: "game") {
+            if let settingsItem = getMenuItem(from: menuItem.submenu, name: "Settings") {
+                let tablesItem: NSMenuItem
+                if let getMenuItem = getMenuItem(from: settingsItem.submenu, name: "Tables") {
+                    tablesItem = getMenuItem
+                } else {
+                    tablesItem = NSMenuItem(title: "Tables", action: nil, keyEquivalent: "")
+                    tablesItem.identifier = NSUserInterfaceItemIdentifier(rawValue: "Tables")
+                    settingsItem.submenu?.addItem(tablesItem)
+                }
+                
+                tablesItem.submenu = NSMenu()
+                for tableItem in DoskaItem.create() {
+                    let mItem = NSMenuDoskaItem(title: NSLocalizedString(tableItem.name, comment: ""), action: #selector(AppDelegate.tablesAction), keyEquivalent: "")
+                    
+                    mItem.item = tableItem
+                    let selectItemName = Storage.readTableName()
+                    
+                    if selectItemName == mItem.item.name {
+                        mItem.image = NSImage(named: "check_icon16")
+                    }
+                    tablesItem.submenu?.addItem(mItem)
+                }
+            }
+        }
+    }
+    
+    @objc func tablesAction(item: NSMenuItem) {
+        if let menuDoskaItem = item as? NSMenuDoskaItem {
+            Storage.saveTableName(menuDoskaItem.item.name)
+            self.rootView?.scene?.setDoskaItem(menuDoskaItem.item)
+            self.updateTables()
+        }
     }
 
     private func updateLevels() {

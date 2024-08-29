@@ -31,7 +31,7 @@ enum GameState: Equatable{
 
 class SceneView: SCNView {
     var lightNode: SCNNode?
-    var cameraNode: SCNNode?
+    var cameraNode: CameraNode?
     var doskaNode: SCNNode?
     var lightTick: CGFloat = 0
     var selectItemNode: ItemNone?
@@ -40,6 +40,8 @@ class SceneView: SCNView {
     private var overlayScene: OverlayScene?
     private var levelsData: LevelsData = LevelsData.create()
     private var stepCount: Int = 0
+    var dLevelX: CGFloat = 0
+    var dLevelY: CGFloat = 0
 
     func getLevelData() -> LevelsData {
         return levelsData
@@ -93,22 +95,30 @@ class SceneView: SCNView {
     }
     
     private func initCameraNode(){
-        cameraNode = scene?.rootNode.childNode(withName: "camera", recursively: true)
+        cameraNode = CameraNode()
+        if let cameraNode = self.cameraNode {
+            cameraNode.camera = SCNCamera()
+            cameraNode.eulerAngles = SCNVector3Make(-CGFloat.pi*0.5, 0, 0)
+            //cameraNode.position = cameraPosition
+            scene?.rootNode.addChildNode(cameraNode)
+            self.pointOfView = cameraNode
+        }
+        
+//        cameraNode = scene?.rootNode.childNode(withName: "camera", recursively: true)
     }
     
     private func createDoska() {
-        let doskaGeometry: SCNGeometry = SCNBox(width: 20, height: 0.01, length: 12, chamferRadius: 0)
+        let doskaSize = SCNVector3Make(20, 0.01, 12)
+        let doskaGeometry: SCNGeometry = SCNBox(width: doskaSize.x, height: doskaSize.y
+                                                , length: doskaSize.z, chamferRadius: 0)
         doskaNode = SCNNode(geometry: doskaGeometry)
-        doskaNode?.position = SCNVector3Make(-0, -0, -0)
+        //doskaNode?.position = SCNVector3Make(-(doskaSize.x/2), -0, -0)
         
         let itemMaterial = SCNMaterial.init()
         itemMaterial.locksAmbientWithDiffuse = true
         itemMaterial.diffuse.contents = nil
         itemMaterial.lightingModel = .physicallyBased
         itemMaterial.isDoubleSided = false
-        itemMaterial.diffuse.contents = NSImage(named: "TexturesCom_Wood_TeakVeneer_512_albedo")
-        itemMaterial.normal.contents = NSImage(named: "TexturesCom_Wood_TeakVeneer_512_normal")
-        itemMaterial.roughness.contents = NSImage(named: "TexturesCom_Wood_TeakVeneer_512_roughness")
         
         itemMaterial.diffuse.contentsTransform = SCNMatrix4MakeScale(2, 2, 1)
         itemMaterial.normal.contentsTransform = SCNMatrix4MakeScale(2, 2, 1)
@@ -125,8 +135,20 @@ class SceneView: SCNView {
         
         doskaNode?.geometry?.materials = [itemMaterial]
         
+        if let item = DoskaItem.getItem(by: Storage.readTableName()) {
+            setDoskaItem(item)
+        }
+        
         if let doskaNode = doskaNode {
             self.scene?.rootNode.addChildNode(doskaNode)
+        }
+    }
+    
+    func setDoskaItem(_ item: DoskaItem) {
+        if let doskaNode = doskaNode, let material = doskaNode.geometry?.materials.first {
+            material.diffuse.contents = NSImage(named: item.diffuseName)
+            material.normal.contents = NSImage(named: item.normalName)
+            material.roughness.contents = NSImage(named: item.roughnNameess)
         }
     }
 
@@ -272,26 +294,52 @@ class SceneView: SCNView {
             }
         }
         //}
-        let cen = CGPoint(x: minX + (maxX - minX) * 0.5, y: minY + (maxY - minY) * 0.5)
+        let cen = CGPoint(x: 0, y: 0)
+        //CGPoint(x: minX + (maxX - minX) * 0.5, y: minY + (maxY - minY) * 0.5)
+        
+        let dLeft = minX + 0.5 * (maxX - minX)
+        let dTop = minY + 0.5 * (maxY - minY)
+        dLevelX = 0.5 * (maxX - minX)
+        dLevelY = 0.5 * (maxY - minY)
+        
+        if let doskaNode = self.doskaNode {
+            for item in doskaNode.childNodes {
+                if let item = item as? ItemNone {
+                    item.paddingLeft = -dLeft
+                    item.paddingTop = -dTop
+                    item.position = item.defaultVector3()
+                }
+            }
+        }
+        
         self.centerPoint = cen
     }
     
     private func updateCameraAndDoska() {
         if let doskaNode = doskaNode, let cameraNode = cameraNode {
-            doskaNode.pivot = SCNMatrix4MakeTranslation(centerPoint.x, 0, centerPoint.y);
-            doskaNode.position = SCNVector3Make(centerPoint.x, 0, centerPoint.y)
+            if let angle = cameraNode.camera?.fieldOfView {
+                let dX = self.dLevelX * tan((90 - 0.5 * angle) * CGFloat.pi / 180)
+                let dY = self.dLevelY * tan((90 - 0.5 * angle) * CGFloat.pi / 180)
+                let z = max(dX, dY)
+                cameraNode.position = SCNVector3Make(centerPoint.x, z, centerPoint.y)
+            }
             
-            let scaleY: CGFloat = 1 //self.bounds.width / self.bounds.height
-            let maxY = scaleY * (centerPoint.y - ItemNone.paddingLeft)
-            let maxCatet = max(centerPoint.x - ItemNone.paddingTop, maxY)
             
-            let angle = cameraNode.camera?.fieldOfView ?? 0
-            
-            //let d = cameraNode.camera?.yFov
-
-            let dZ = maxCatet * tan((90 - 0.5 * angle) * CGFloat.pi / 180)
-            let z = dZ + 2 //2 * maxCatet + 1
-            cameraNode.position = SCNVector3Make(centerPoint.x, z, centerPoint.y)
+//            
+//            doskaNode.pivot = SCNMatrix4MakeTranslation(centerPoint.x, 0, centerPoint.y);
+//            doskaNode.position = SCNVector3Make(centerPoint.x, 0, centerPoint.y)
+//            
+//            let scaleY: CGFloat = 1 //self.bounds.width / self.bounds.height
+//            let maxY = scaleY * (centerPoint.y) //scaleY * (centerPoint.y - ItemNone.paddingLeft)
+//            let maxCatet = max(centerPoint.x , maxY) //max(centerPoint.x - ItemNone.paddingTop, maxY)
+//            
+//            let angle = cameraNode.camera?.fieldOfView ?? 0
+//            
+//            //let d = cameraNode.camera?.yFov
+//
+//            let dZ = maxCatet * tan((90 - 0.5 * angle) * CGFloat.pi / 180)
+//            let z = dZ + 2 //2 * maxCatet + 1
+//            cameraNode.position = SCNVector3Make(centerPoint.x, z, centerPoint.y)
         }
         doskaNode?.isHidden = false
         self.play(nil)
@@ -334,8 +382,12 @@ extension SceneView {
         let lenCam = event.deltaY
         
         if var camPos = cameraNode?.position {
+            if camPos.y <= 2.0 && lenCam < 0 {
+                return
+            }
             camPos.y += (lenCam * 0.01)
-            cameraNode?.position = camPos
+            //cameraNode?.position = camPos
+            cameraNode?.setHeight(camPos.y)
         }
     }
     
@@ -343,6 +395,19 @@ extension SceneView {
         super.mouseMoved(with: event)
         
         let isFollowCursor = Storage.readFollowCursor()
+//        if let cameraNode = self.cameraNode {
+//            if isFollowCursor {
+//                let windowPoint = event.locationInWindow
+//                let sizeX = self.bounds.size.width * 0.5
+//                let sizeY = self.bounds.size.height * 0.5
+//    
+//                let x = (sizeX - windowPoint.x)/sizeX
+//                let y = (sizeY - windowPoint.y)/sizeY
+//                cameraNode.setXY(x, y)
+//            } else {
+//                cameraNode.setXY(0, 0)
+//            }
+//        }
         
         if isFollowCursor {
             let windowPoint = event.locationInWindow

@@ -51,4 +51,16 @@ class Storage {
         let frame = CGRect(x: windowFrameX, y: windowFrameY, width: windowFrameW, height: windowFrameH)
         return frame
     }
+    
+    // TableName
+    static func readTableName() -> String {
+        let storage = storage()
+        let tableName = storage.string(forKey: "tableName")
+        return tableName ?? DoskaItem.defaultName()
+    }
+    
+    static func saveTableName(_ name: String) {
+        let storage = storage()
+        storage.setValue(name, forKey: "tableName")
+    }
 }

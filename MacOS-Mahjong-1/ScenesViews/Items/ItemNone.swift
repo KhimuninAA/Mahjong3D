@@ -30,8 +30,10 @@ class ItemNone: SCNNode {
         return SCNVector3(x: 0.6, y: 0.4, z: 0.8)
     }
     static let selectHeight: CGFloat = 0.5
-    static let paddingLeft: CGFloat = -4
-    static let paddingTop: CGFloat = -3
+//    static let paddingLeft: CGFloat = 0//-4
+//    static let paddingTop: CGFloat = 0//-3
+    var paddingLeft: CGFloat = 0
+    var paddingTop: CGFloat = 0
 }
 
 extension ItemNone {
@@ -112,11 +114,11 @@ extension ItemNone {
     }
 
     func defaultVector3() -> SCNVector3{
-        return SCNVector3Make(CGFloat(pos.x - 1) * ItemNone.size.x + ItemNone.paddingLeft, CGFloat(pos.z - 1) * ItemNone.size.y + ItemNone.size.y * 0.5, CGFloat(pos.y - 1) * ItemNone.size.z + ItemNone.paddingTop)
+        return SCNVector3Make(CGFloat(pos.x - 1) * ItemNone.size.x + self.paddingLeft, CGFloat(pos.z - 1) * ItemNone.size.y + ItemNone.size.y * 0.5, CGFloat(pos.y - 1) * ItemNone.size.z + self.paddingTop)
     }
 
     func selectVector3() -> SCNVector3{
-        return SCNVector3Make(CGFloat(pos.x - 1) * ItemNone.size.x + ItemNone.paddingLeft, CGFloat(pos.z - 1) * ItemNone.size.y + ItemNone.selectHeight + ItemNone.size.y * 0.5, CGFloat(pos.y - 1) * ItemNone.size.z + ItemNone.paddingTop)
+        return SCNVector3Make(CGFloat(pos.x - 1) * ItemNone.size.x + self.paddingLeft, CGFloat(pos.z - 1) * ItemNone.size.y + ItemNone.selectHeight + ItemNone.size.y * 0.5, CGFloat(pos.y - 1) * ItemNone.size.z + self.paddingTop)
     }
 
     static func scale(topImage: NSImage, scale: CGFloat) -> NSImage {

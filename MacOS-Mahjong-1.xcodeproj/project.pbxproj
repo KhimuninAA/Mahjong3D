@@ -66,6 +66,7 @@
 		FD018C0F2A701AB000552F80 /* flowers.layout in Resources */ = {isa = PBXBuildFile; fileRef = FD018C082A701AB000552F80 /* flowers.layout */; };
 		FD018C102A701AB000552F80 /* future.layout in Resources */ = {isa = PBXBuildFile; fileRef = FD018C092A701AB000552F80 /* future.layout */; };
 		FD018C122A701C2C00552F80 /* dragon.layout in Resources */ = {isa = PBXBuildFile; fileRef = FD018C112A701C2C00552F80 /* dragon.layout */; };
+		FD804A0B2C80667200E037BA /* DoskaItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD804A0A2C80667200E037BA /* DoskaItem.swift */; };
 		FD8D3BCA2A6B003A001B4547 /* OverlayScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD8D3BC92A6B003A001B4547 /* OverlayScene.swift */; };
 		FD8D3BCD2A6B19F8001B4547 /* mahjong.png in Resources */ = {isa = PBXBuildFile; fileRef = FD8D3BCB2A6B19F8001B4547 /* mahjong.png */; };
 		FD8D3BCE2A6B19F8001B4547 /* mahjong_double.png in Resources */ = {isa = PBXBuildFile; fileRef = FD8D3BCC2A6B19F8001B4547 /* mahjong_double.png */; };
@@ -81,6 +82,12 @@
 		FDC7EF5D2B30AED7009455F3 /* arrow.layout in Resources */ = {isa = PBXBuildFile; fileRef = FDC7EF562B30AED7009455F3 /* arrow.layout */; };
 		FDC7EF5E2B30AED7009455F3 /* altar.layout in Resources */ = {isa = PBXBuildFile; fileRef = FDC7EF572B30AED7009455F3 /* altar.layout */; };
 		FDC7EF5F2B30AED7009455F3 /* arena.layout in Resources */ = {isa = PBXBuildFile; fileRef = FDC7EF582B30AED7009455F3 /* arena.layout */; };
+		FDF82ED42C60B31E00A7959C /* book_pattern_col1_1k.png in Resources */ = {isa = PBXBuildFile; fileRef = FDF82ED12C60B31D00A7959C /* book_pattern_col1_1k.png */; };
+		FDF82ED52C60B31E00A7959C /* book_pattern_nor_gl_1k.png in Resources */ = {isa = PBXBuildFile; fileRef = FDF82ED22C60B31D00A7959C /* book_pattern_nor_gl_1k.png */; };
+		FDF82ED62C60B31E00A7959C /* book_pattern_rough_1k.png in Resources */ = {isa = PBXBuildFile; fileRef = FDF82ED32C60B31E00A7959C /* book_pattern_rough_1k.png */; };
+		FDF82ED92C60D03A00A7959C /* lythwood_terrace_2k.hdr in Resources */ = {isa = PBXBuildFile; fileRef = FDF82ED82C60D03A00A7959C /* lythwood_terrace_2k.hdr */; };
+		FDFEA3612C61F6CF002DCE8B /* CameraNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDFEA3602C61F6CF002DCE8B /* CameraNode.swift */; };
+		FDFEA3642C621FC7002DCE8B /* extVector3.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDFEA3632C621FC7002DCE8B /* extVector3.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -147,6 +154,7 @@
 		FD018C082A701AB000552F80 /* flowers.layout */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = flowers.layout; sourceTree = "<group>"; };
 		FD018C092A701AB000552F80 /* future.layout */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = future.layout; sourceTree = "<group>"; };
 		FD018C112A701C2C00552F80 /* dragon.layout */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = dragon.layout; sourceTree = "<group>"; };
+		FD804A0A2C80667200E037BA /* DoskaItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoskaItem.swift; sourceTree = "<group>"; };
 		FD8D3BC92A6B003A001B4547 /* OverlayScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverlayScene.swift; sourceTree = "<group>"; };
 		FD8D3BCB2A6B19F8001B4547 /* mahjong.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mahjong.png; sourceTree = "<group>"; };
 		FD8D3BCC2A6B19F8001B4547 /* mahjong_double.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mahjong_double.png; sourceTree = "<group>"; };
@@ -198,6 +206,12 @@
 		FDC7EF562B30AED7009455F3 /* arrow.layout */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = arrow.layout; sourceTree = "<group>"; };
 		FDC7EF572B30AED7009455F3 /* altar.layout */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = altar.layout; sourceTree = "<group>"; };
 		FDC7EF582B30AED7009455F3 /* arena.layout */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = arena.layout; sourceTree = "<group>"; };
+		FDF82ED12C60B31D00A7959C /* book_pattern_col1_1k.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = book_pattern_col1_1k.png; sourceTree = "<group>"; };
+		FDF82ED22C60B31D00A7959C /* book_pattern_nor_gl_1k.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = book_pattern_nor_gl_1k.png; sourceTree = "<group>"; };
+		FDF82ED32C60B31E00A7959C /* book_pattern_rough_1k.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = book_pattern_rough_1k.png; sourceTree = "<group>"; };
+		FDF82ED82C60D03A00A7959C /* lythwood_terrace_2k.hdr */ = {isa = PBXFileReference; lastKnownFileType = file; path = lythwood_terrace_2k.hdr; sourceTree = "<group>"; };
+		FDFEA3602C61F6CF002DCE8B /* CameraNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraNode.swift; sourceTree = "<group>"; };
+		FDFEA3632C621FC7002DCE8B /* extVector3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = extVector3.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -297,6 +311,7 @@
 				BFCE10FE2A695980004043FF /* ItemType.swift */,
 				BF52129C2A6E4E4A00F72B5A /* MaterialUtils.swift */,
 				BF5212B02A6FB40200F72B5A /* LevelItem.swift */,
+				FDFEA3602C61F6CF002DCE8B /* CameraNode.swift */,
 			);
 			path = Items;
 			sourceTree = "<group>";
@@ -304,6 +319,8 @@
 		BFCE109F2A6916A5004043FF /* Texture */ = {
 			isa = PBXGroup;
 			children = (
+				FDF82ED72C60D03000A7959C /* HDRI */,
+				FDF82ED02C60B2C300A7959C /* book_pattern */,
 				FD0DAAD12A76C97E00A0802F /* Overlay */,
 				BF5212AB2A6FB28400F72B5A /* Menu */,
 				FD8D3BD12A6C2496001B4547 /* Wood */,
@@ -367,6 +384,7 @@
 		BFD8A9D52A69063800F679CA /* MacOS-Mahjong-1 */ = {
 			isa = PBXGroup;
 			children = (
+				FDFEA3622C621FAA002DCE8B /* 3D */,
 				BF1DE7CF2A70FDE600B7E352 /* LocalizedString */,
 				BF5212C22A6FF45A00F72B5A /* LayoutLevels */,
 				BF5212BF2A6FD06500F72B5A /* Storage */,
@@ -397,6 +415,7 @@
 		BFD8A9E62A69070900F679CA /* ScenesViews */ = {
 			isa = PBXGroup;
 			children = (
+				FD804A092C80665A00E037BA /* Doska */,
 				BF1DE7DD2A714B5B00B7E352 /* Overlay */,
 				BFCE109C2A690B3A004043FF /* Items */,
 				BFD8A9E72A69071D00F679CA /* ScenesView.swift */,
@@ -426,6 +445,14 @@
 				BF1DE8122A77916B00B7E352 /* OK.png */,
 			);
 			path = Overlay;
+			sourceTree = "<group>";
+		};
+		FD804A092C80665A00E037BA /* Doska */ = {
+			isa = PBXGroup;
+			children = (
+				FD804A0A2C80667200E037BA /* DoskaItem.swift */,
+			);
+			path = Doska;
 			sourceTree = "<group>";
 		};
 		FD8D3BD12A6C2496001B4547 /* Wood */ = {
@@ -490,6 +517,32 @@
 			path = ItemsNew;
 			sourceTree = "<group>";
 		};
+		FDF82ED02C60B2C300A7959C /* book_pattern */ = {
+			isa = PBXGroup;
+			children = (
+				FDF82ED12C60B31D00A7959C /* book_pattern_col1_1k.png */,
+				FDF82ED22C60B31D00A7959C /* book_pattern_nor_gl_1k.png */,
+				FDF82ED32C60B31E00A7959C /* book_pattern_rough_1k.png */,
+			);
+			path = book_pattern;
+			sourceTree = "<group>";
+		};
+		FDF82ED72C60D03000A7959C /* HDRI */ = {
+			isa = PBXGroup;
+			children = (
+				FDF82ED82C60D03A00A7959C /* lythwood_terrace_2k.hdr */,
+			);
+			path = HDRI;
+			sourceTree = "<group>";
+		};
+		FDFEA3622C621FAA002DCE8B /* 3D */ = {
+			isa = PBXGroup;
+			children = (
+				FDFEA3632C621FC7002DCE8B /* extVector3.swift */,
+			);
+			path = 3D;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -550,6 +603,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BFCE11022A695D59004043FF /* env_star.png in Resources */,
+				FDF82ED62C60B31E00A7959C /* book_pattern_rough_1k.png in Resources */,
 				BFCE10A92A6916C6004043FF /* TexturesCom_Metal_SteelRough2_1K_roughness.tif in Resources */,
 				BF5212C52A6FF47F00F72B5A /* rocket.layout in Resources */,
 				BFD8A9D92A69063A00F679CA /* Assets.xcassets in Resources */,
@@ -562,6 +616,7 @@
 				FD018C0F2A701AB000552F80 /* flowers.layout in Resources */,
 				FD018BFE2A70170F00552F80 /* grid.layout in Resources */,
 				BF1DE85C2A7BAB7900B7E352 /* ProgressBG.png in Resources */,
+				FDF82ED92C60D03A00A7959C /* lythwood_terrace_2k.hdr in Resources */,
 				BF1DE7DA2A71009700B7E352 /* pyramid.layout in Resources */,
 				BF1DE8542A7B9E0000B7E352 /* DoubleItem.png in Resources */,
 				BFCE10F92A692990004043FF /* TexturesCom_Marble_SlabWhite2_New_512_albedo.tif in Resources */,
@@ -575,6 +630,7 @@
 				BF1DE8582A7B9F8E00B7E352 /* CountItem2.png in Resources */,
 				FD8D3BD52A6C24A2001B4547 /* TexturesCom_Wood_TeakVeneer_512_roughness.tif in Resources */,
 				FD8D3BD02A6B1A3D001B4547 /* help_blue.png in Resources */,
+				FDF82ED52C60B31E00A7959C /* book_pattern_nor_gl_1k.png in Resources */,
 				BF5212AF2A6FB30300F72B5A /* check_icon16.png in Resources */,
 				FDC7EF5A2B30AED7009455F3 /* atlantis.layout in Resources */,
 				BFCE10A62A6916C6004043FF /* TexturesCom_Metal_SteelRough2_1K_ao.tif in Resources */,
@@ -585,6 +641,7 @@
 				BFCE10A82A6916C6004043FF /* TexturesCom_Metal_SteelRough2_1K_albedo.tif in Resources */,
 				FDC7EF592B30AED7009455F3 /* 4_winds.layout in Resources */,
 				BF1DE8132A77916B00B7E352 /* OK.png in Resources */,
+				FDF82ED42C60B31E00A7959C /* book_pattern_col1_1k.png in Resources */,
 				FD8D3BCE2A6B19F8001B4547 /* mahjong_double.png in Resources */,
 				FD018C002A70193F00552F80 /* glade.layout in Resources */,
 				FD8D3BCD2A6B19F8001B4547 /* mahjong.png in Resources */,
@@ -618,13 +675,16 @@
 				BF1DE7DF2A714B7400B7E352 /* GameInfoNode.swift in Sources */,
 				BFCE10FB2A694CB4004043FF /* Pos.swift in Sources */,
 				BF52129D2A6E4E4A00F72B5A /* MaterialUtils.swift in Sources */,
+				FDFEA3642C621FC7002DCE8B /* extVector3.swift in Sources */,
 				BF5212A82A6F92A400F72B5A /* AboutView.swift in Sources */,
 				BF1DE7DC2A71397000B7E352 /* YouLoseNode.swift in Sources */,
 				BF5212A92A6F92A400F72B5A /* HelpView.swift in Sources */,
+				FD804A0B2C80667200E037BA /* DoskaItem.swift in Sources */,
 				BF1DE8522A7B92EF00B7E352 /* InfoValueNode.swift in Sources */,
 				BF1DE85A2A7BA1D400B7E352 /* InfoButtonNode.swift in Sources */,
 				BF1DE7E12A714C2400B7E352 /* ProgressNode.swift in Sources */,
 				BFCE109E2A690B50004043FF /* ItemNone.swift in Sources */,
+				FDFEA3612C61F6CF002DCE8B /* CameraNode.swift in Sources */,
 				BF2C24302ACABEF500138433 /* LevelsView.swift in Sources */,
 				BF5212C72A6FF56C00F72B5A /* LayoutLevels.swift in Sources */,
 				BFD8A9E52A6906E700F679CA /* RootView.swift in Sources */,
@@ -786,7 +846,7 @@
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 14;
+				CURRENT_PROJECT_VERSION = 15;
 				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = UBMXWK5W6B;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -802,7 +862,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 13.0;
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.khimunin.Mahjong;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -820,7 +880,7 @@
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 14;
+				CURRENT_PROJECT_VERSION = 15;
 				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = UBMXWK5W6B;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -836,7 +896,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 13.0;
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.khimunin.Mahjong;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
